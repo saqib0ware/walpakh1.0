@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packages | Wal Pakh</title>
+  <meta name="description" content="Browse WALPAKH collections for Kashmir, graduation travel, offbeat camping, culture and winter experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="packages-page">
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo logo--image" aria-label="Wal Pakh home"><img src="assets/images/walpakh-logo.jpeg" alt="Wal Pakh"></a>
+    <nav>
+      <button class="menu-close" type="button" aria-label="Close menu"></button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a class="active" href="packages.html" aria-current="page">Packages</a></li>
+        <li><a href="index.html#hotels">Hotels</a></li>
+        <li><a href="index.html#adventure">Adventures</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="book-btn" href="#package-list">Explore packages</a>
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false"></button>
+  </div>
+</header>
+
+<main>
+  <!-- <section class="packages-page-hero">
+    <img src="assets/images/hero-map-real.png" alt="Illustrated terrain of Jammu, Kashmir and Ladakh">
+    <div class="packages-page-hero-overlay"></div>
+    <div class="packages-page-hero-content">
+      <p class="eyebrow">WALPAKH Collections</p>
+      <h1>Travel, <em>thoughtfully</em> assembled.</h1>
+      <p>Explore Kashmir, group celebrations, offbeat camps, cultural encounters, winter journeys and standalone experiences.</p>
+      <a href="#package-list" class="primary-btn">Browse collections</a>
+    </div>
+  </section> -->
+
+  <section class="package-catalogue" id="package-list">
+    <div class="container">
+      <div class="section-title" data-reveal="up">
+        <p>WalPakh Collections</p>
+        <h2>Travel, <em>thoughtfully</em> assembled.</em></h2>
+        <div class="contour-divider"></div>
+      </div>
+
+      <div class="package-filter" role="toolbar" aria-label="Filter package collections">
+        <button class="active" type="button" data-package-filter="all" aria-pressed="true">All collections</button>
+        <button type="button" data-package-filter="Kashmir Collection" aria-pressed="false">Kashmir</button>
+        <button type="button" data-package-filter="Graduation Trips" aria-pressed="false">Graduation trips</button>
+        <button type="button" data-package-filter="Offbeat &amp; Camping" aria-pressed="false">Offbeat &amp; camping</button>
+        <button type="button" data-package-filter="Culture &amp; Heritage" aria-pressed="false">Culture &amp; heritage</button>
+        <button type="button" data-package-filter="Winter Special" aria-pressed="false">Winter</button>
+        <button type="button" data-package-filter="Experience Collection" aria-pressed="false">Experiences</button>
+      </div>
+
+      <p class="package-count" aria-live="polite"><span id="packageCount">0</span> package options</p>
+      <div class="package-catalog-grid" id="packageGrid"></div>
+      <p class="package-empty" id="packageEmpty" hidden>No packages match that collection.</p>
+
+      <aside class="package-guidance" aria-label="Package planning notes">
+        <div>
+          <p class="package-guidance-label">Before you plan</p>
+          <h2>Details that depend on your journey</h2>
+          <p>Hotel names depend on group size, dates and availability. Adventure activities, camping, access and attraction operation remain subject to season, weather, permissions, safety conditions and local requirements.</p>
+        </div>
+        <ul>
+          <li>Gurez, Keran, Bangus and other sensitive or border destinations require current access, road-condition and permission confirmation.</li>
+          <li>Camping is only at authorised or permitted campsites and follows local environmental and waste-management rules.</li>
+          <li>Visa and entry requirements vary by nationality for international journeys.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container"><div class="footer-bottom"><p>&copy; 2026 Wal Pakh. All rights reserved.</p><div class="legal-links"><a href="index.html#contact">Contact</a><a href="index.html">Back to home</a></div></div></div>
+</footer>
+
+<script src="js/navigation.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/packages-data.js"></script>
+<script src="js/packages.js"></script>
+</body>
+</html>

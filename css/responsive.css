@@ -1,0 +1,905 @@
+/* ==================================================
+   WAL PAKH — RESPONSIVE
+   Breakpoints: 1200 (laptop) / 992 (tablet) / 768 (mobile) / 480 (small)
+   ================================================== */
+
+/* ==========================
+   LAPTOP
+   ========================== */
+@media (max-width:1200px){
+
+  .hero h1{ font-size:60px; }
+
+  .adventure-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery-grid{
+    columns:3 200px;
+  }
+
+  .planner-inner{
+    padding:60px 40px;
+  }
+}
+
+/* ==========================
+   TABLETS
+   ========================== */
+@media (max-width:992px){
+
+  :root{
+    --section-padding:90px;
+  }
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .search-card{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .search-card button{
+    grid-column:1/-1;
+  }
+
+  nav{
+    display:none;
+  }
+
+  nav.active{
+    display:block;
+    position:absolute;
+    top:76px;
+    left:0;
+    width:100%;
+    background:var(--ink);
+    padding:26px 24px;
+    box-shadow:var(--shadow-lg);
+    animation:fadeUp .35s ease both;
+  }
+
+  nav.active ul{
+    flex-direction:column;
+    gap:22px;
+    align-items:flex-start;
+  }
+
+  nav.active a{
+    color:var(--sage);
+    font-size:16px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .book-btn{
+    display:none;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .planner-inner{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    row-gap:40px;
+  }
+
+  .pin-marker{
+    width:28px;
+    height:28px;
+  }
+
+}
+
+/* ==========================
+   MOBILES
+   ========================== */
+@media (max-width:768px){
+
+  .logo--image img{
+    height:42px;
+    border-radius:7px;
+  }
+
+  :root{
+    --section-padding:64px;
+  }
+
+  /* Keep the complete map visible and retain the hero copy as an overlay. */
+  .hero{
+    height:auto;
+    min-height:0;
+    aspect-ratio:3 / 2;
+    align-items:center;
+    padding:0;
+  }
+
+  .hero-map-bg{
+    inset:0;
+    height:auto;
+    background:radial-gradient(circle at 50% 42%,#30452b 0%,var(--primary-dark) 52%,var(--bg) 100%);
+  }
+
+  .hero-map-img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center;
+  }
+
+  .hero .overlay{
+    background:
+      linear-gradient(180deg,rgba(11,25,14,.48) 0%,rgba(11,25,14,.3) 45%,rgba(10,20,12,.66) 100%),
+      radial-gradient(ellipse 82% 45% at 50% 45%,rgba(10,20,12,.42) 0%,transparent 76%),
+      radial-gradient(ellipse at 50% 100%,var(--hero-tint) 0%,transparent 62%);
+  }
+
+  .hero-content{
+    width:min(92%,600px);
+    margin:0;
+  }
+
+  .hero h1{
+    font-size:clamp(26px,6vw,38px);
+    margin-bottom:10px;
+  }
+
+  .hero p{
+    font-size:clamp(11px,2.4vw,16px);
+    margin-bottom:14px;
+    line-height:1.5;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .hero-buttons .primary-btn,
+  .hero-buttons .secondary-btn{
+    width:min(100%,270px);
+    padding:12px 20px;
+    font-size:13px;
+  }
+
+  .subtitle{
+    letter-spacing:3px;
+    font-size:clamp(10px,2vw,14px);
+    margin-bottom:10px;
+  }
+
+  .search-box{
+    margin-top:-40px;
+  }
+
+  .scroll-indicator{
+    display:none;
+  }
+
+  .pin-marker{
+    width:24px;
+    height:24px;
+  }
+
+  .pin-marker span{
+    font-size:11px;
+  }
+
+  .map-pin .pin-label{
+    display:none;
+  }
+
+  .map-popup{
+    padding:15px;
+    bottom:auto;
+    max-height:calc(100% - 22px);
+  }
+
+  .map-popup.has-image .map-popup-layout{
+    grid-template-columns:120px minmax(0,1fr);
+    gap:13px;
+  }
+
+  .map-popup-image{
+    height:118px;
+  }
+
+  .map-popup h4{
+    font-size:18px;
+  }
+
+  .search-card{
+    grid-template-columns:1fr;
+    padding:22px;
+    gap:14px;
+  }
+
+  .section-title h2{
+    font-size:32px;
+    line-height:1.2;
+  }
+
+  .destination-grid,
+  .package-grid{
+    grid-template-columns:1fr;
+  }
+
+  /* Hotels */
+  .hotel-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hotel-content h3{
+    font-size:23px;
+  }
+
+  .hotel-info{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .destination-content,
+  .package-info,
+  .hotel-content{
+    padding:24px;
+  }
+
+  /* Adventure */
+  .adventure-grid{
+    grid-template-columns:1fr;
+  }
+
+  .adventure-card{
+    height:320px;
+  }
+
+  .adventure-card .overlay h3{
+    font-size:24px;
+  }
+
+  .adventure-card .overlay p,
+  .adventure-card .overlay a{
+    opacity:1;
+    max-height:60px;
+    transform:none;
+  }
+
+  /* Gallery */
+  .gallery-grid{
+    columns:2 160px;
+  }
+
+  /* Testimonials */
+  .testimonial-card{
+    padding:30px 24px;
+  }
+
+  .testimonial-card p.quote{
+    font-size:16px;
+  }
+
+  /* Planner */
+  .planner-inner{
+    padding:44px 24px;
+  }
+
+  .planner-text h2{
+    font-size:30px;
+  }
+
+  /* Footer */
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .newsletter-form{
+    flex-wrap:wrap;
+  }
+
+  .newsletter-form input{
+    min-width:0;
+  }
+}
+
+@media (min-width:769px){
+
+  .hero-content{
+    position:absolute;
+    inset:0;
+    width:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:48px 24px 118px;
+  }
+
+  .hero-buttons{
+    position:static;
+    display:block;
+  }
+
+  .hero-buttons .primary-btn{
+    position:absolute;
+    left:50%;
+    bottom:clamp(28px,4vw,58px);
+    min-width:300px;
+    transform:translateX(-50%);
+  }
+
+  .hero-buttons .primary-btn:hover{
+    transform:translateX(-50%) translateY(-4px);
+  }
+
+  .scroll-indicator{
+    display:none;
+  }
+}
+
+/* The opened mobile navigation is a single, full-width panel. */
+@media (max-width:992px){
+
+  body.menu-open{
+    overflow:hidden;
+  }
+
+  .navbar.menu-open .menu-btn{
+    display:none;
+  }
+
+  nav.active{
+    position:fixed;
+    inset:0 0 auto 0;
+    display:flex;
+    flex-direction:column;
+    width:100vw;
+    height:33.333dvh;
+    min-height:0;
+    max-height:33.333dvh;
+    padding:max(8px,env(safe-area-inset-top)) 7% 16px;
+    background:linear-gradient(145deg,#172514 0%,var(--primary-dark) 52%,#111827 100%);
+    box-shadow:none;
+    z-index:1001;
+    overflow-y:auto;
+  }
+
+  nav.active .menu-close{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    align-self:flex-end;
+    flex:0 0 auto;
+  }
+
+  nav.active ul{
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    gap:6px;
+    width:100%;
+    padding:10px 0 0;
+  }
+
+  nav.active a{
+    display:inline-block;
+    color:var(--white);
+    font-size:clamp(16px,4.3vw,19px);
+    padding:3px 0;
+  }
+}
+
+@media (max-width:1200px){
+  .journey-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+
+@media (max-width:768px){
+  .destination-page-hero{
+    min-height:540px;
+  }
+
+  .destination-page-hero-content{
+    padding:100px 0 44px;
+  }
+
+  .destination-page-hero-content h1{
+    font-size:clamp(40px,9vw,62px);
+  }
+
+  .destination-page-hero-content > p:not(.eyebrow){
+    font-size:15px;
+  }
+
+  .journeys .section-title{
+    margin-bottom:38px;
+  }
+
+  .journey-filter{
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    padding:2px 4px 12px;
+    margin:0 -4px 14px;
+    scrollbar-width:thin;
+  }
+
+  .journey-filter button{
+    flex:0 0 auto;
+  }
+
+  .journey-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .journey-card > img{ height:230px; }
+}
+
+@media (max-width:480px){
+  .destination-page-hero{
+    min-height:465px;
+  }
+
+  .destination-page-hero-content{
+    width:calc(100% - 36px);
+    padding:86px 0 30px;
+  }
+
+  .destination-page-hero-content h1{
+    font-size:34px;
+  }
+
+  .destination-page-hero-content > p:not(.eyebrow){
+    font-size:13px;
+    margin-bottom:23px;
+  }
+
+  .journey-card-body{ padding:20px; }
+  .journey-card > img{ height:205px; }
+  .journey-card p{ min-height:0; }
+  .journey-meta{ font-size:10.5px; }
+  .destinations-cta{ margin-top:34px; }
+}
+
+@media (max-width:1200px){
+  .package-catalog-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+
+@media (max-width:768px){
+  .packages-page-hero{ min-height:530px; }
+  .packages-page-hero-content{ padding:104px 0 46px; }
+  .packages-page-hero-content h1{ font-size:clamp(40px,9vw,62px); }
+  .packages-page-hero-content > p:not(.eyebrow){ font-size:14px; }
+  .package-catalogue .section-title{ margin-bottom:38px; }
+  .package-filter{ justify-content:flex-start; flex-wrap:nowrap; overflow-x:auto; padding:2px 4px 12px; margin:0 -4px 14px; scrollbar-width:thin; }
+  .package-filter button{ flex:0 0 auto; }
+  .package-catalog-grid{ grid-template-columns:1fr; gap:18px; }
+  .package-catalog-card{ padding:22px; }
+  .package-guidance{ grid-template-columns:1fr; gap:20px; margin-top:44px; padding:25px 22px; }
+}
+
+@media (max-width:480px){
+  .packages-page-hero{ min-height:470px; }
+  .packages-page-hero-content{ width:calc(100% - 36px); padding:90px 0 32px; }
+  .packages-page-hero-content h1{ font-size:34px; }
+  .packages-page-hero-content > p:not(.eyebrow){ font-size:13px; margin-bottom:24px; }
+  .package-catalog-card h2{ min-height:0; font-size:23px; }
+  .package-guidance h2{ font-size:25px; }
+}
+
+/* Compact pin popups before the single-column phone layout takes over. */
+@media (max-width:600px){
+
+  .map-popup{
+    width:min(350px,calc(100% - 22px));
+    padding:13px;
+  }
+
+  .map-popup.has-image .map-popup-layout{
+    grid-template-columns:98px minmax(0,1fr);
+    gap:11px;
+  }
+
+  .map-popup-image{
+    height:102px;
+  }
+
+  .map-popup h4{
+    font-size:17px;
+  }
+
+  .map-popup-meta{
+    font-size:10.5px;
+  }
+
+  .map-popup p{
+    font-size:11.5px;
+  }
+
+  .map-popup-highlights li{
+    font-size:10px;
+  }
+}
+
+/* ==========================
+   SMALL PHONES
+   ========================== */
+@media (max-width:480px){
+
+  :root{
+    --section-padding:54px;
+  }
+
+  .navbar{
+    padding:13px 0;
+  }
+
+  nav.active{
+    top:64px;
+    padding:20px;
+  }
+
+  nav.active ul{
+    gap:16px;
+  }
+
+  .hero{
+    height:auto;
+    min-height:0;
+  }
+
+  .hero-content{
+    width:calc(100% - 28px);
+  }
+
+  .hero h1{
+    font-size:clamp(22px,6.8vw,30px);
+    line-height:1.1;
+  }
+
+  .hero p{
+    font-size:clamp(10px,3vw,14px);
+    line-height:1.6;
+  }
+
+  .subtitle{
+    font-size:clamp(8px,2.5vw,11px);
+    letter-spacing:2.2px;
+    margin-bottom:12px;
+  }
+
+  .logo{
+    font-size:22px;
+  }
+
+  .logo--image img{
+    height:38px;
+    border-radius:6px;
+  }
+
+  .menu-btn{
+    font-size:20px;
+  }
+
+  .hero-buttons{
+    flex-direction:row;
+    gap:8px;
+    width:100%;
+  }
+
+  .hero-buttons .primary-btn,
+  .hero-buttons .secondary-btn{
+    flex:1;
+    width:auto;
+    padding:10px 8px;
+    font-size:11px;
+  }
+
+  .gallery-grid{
+    columns:1;
+  }
+
+  .contact-form{
+    padding:22px;
+  }
+
+  .map-popup-image{
+    display:none;
+  }
+
+  .map-popup.has-image .map-popup-layout{
+    display:block;
+  }
+
+  .map-popup{
+    width:calc(100% - 22px);
+    padding:13px;
+  }
+
+  .map-popup h4{
+    font-size:16px;
+  }
+
+  .map-popup p{
+    font-size:11.5px;
+  }
+
+  .section-title h2,
+  .planner-text h2{
+    font-size:28px;
+  }
+
+  .testimonial-card{
+    padding:24px 20px;
+  }
+
+  .footer-bottom .legal-links{
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px 18px;
+  }
+
+  .newsletter-form{
+    flex-direction:column;
+  }
+
+  .newsletter-form button{
+    width:100%;
+  }
+}
+
+@media (max-width:360px){
+
+  .hero h1{
+    font-size:21px;
+    margin-bottom:6px;
+  }
+
+  .hero p{
+    font-size:10px;
+    margin-bottom:8px;
+  }
+
+  .subtitle{
+    margin-bottom:6px;
+  }
+
+  .hero-buttons .primary-btn,
+  .hero-buttons .secondary-btn{
+    padding:8px 6px;
+    font-size:10px;
+  }
+}
+
+/* Keep the primary mobile CTA attached to the bottom of the hero image. */
+@media (max-width:768px){
+
+  .hero-content{
+    position:absolute;
+    inset:0;
+    width:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:18px 18px 62px;
+  }
+
+  .hero-buttons{
+    position:static;
+    display:block;
+    width:auto;
+  }
+
+  .hero-buttons .primary-btn{
+    position:absolute;
+    left:50%;
+    bottom:max(12px,env(safe-area-inset-bottom));
+    width:min(250px,calc(100% - 36px));
+    padding:11px 16px;
+    transform:translateX(-50%);
+  }
+
+  .hero-buttons .primary-btn:hover{
+    transform:translateX(-50%) translateY(-3px);
+  }
+
+  .hero-buttons .secondary-btn{
+    width:auto;
+    padding:10px 18px;
+    font-size:12px;
+  }
+}
+
+/* Phones show the travel intro before the complete interactive map. */
+@media (max-width:768px){
+
+  html,
+  body{
+    width:100%;
+    max-width:100%;
+    overflow-x:clip;
+  }
+
+  .hero{
+    /* Include the viewport scrollbar area so no strip remains on the right. */
+    width:100vw;
+    min-width:100vw;
+    max-width:100vw;
+    min-height:0;
+    height:auto;
+    aspect-ratio:auto;
+    margin:0;
+    border-radius:0;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    overflow:hidden;
+  }
+
+  .hero-content{
+    position:relative;
+    inset:auto;
+    order:1;
+    width:100%;
+    margin:0;
+    padding:82px 18px 26px;
+    display:block;
+    text-align:center;
+  }
+
+  .hero-map-bg{
+    position:relative;
+    inset:auto;
+    order:2;
+    width:100%;
+    height:auto;
+    /* Same native ratio as map.png, so the image and its panel are identical in size. */
+    aspect-ratio:25 / 16;
+    background:var(--primary-dark);
+  }
+
+  .hero-map-img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center;
+  }
+
+  .hero .overlay{
+    display:none;
+  }
+
+  .hero-buttons{
+    position:relative;
+    display:flex;
+    width:100%;
+    justify-content:center;
+  }
+
+  .hero-buttons .primary-btn,
+  .hero-buttons .secondary-btn{
+    position:relative;
+    left:auto;
+    bottom:auto;
+    min-width:0;
+    transform:none;
+  }
+
+  .hero-buttons .primary-btn:hover{
+    transform:translateY(-3px);
+  }
+
+  .scroll-indicator{
+    display:none;
+  }
+}
+
+/* Final mobile-menu override: one control at a time, with close inside the panel. */
+@media (max-width:992px){
+  .navbar.menu-open .menu-btn{ display:none; }
+
+  /* Move the visible page with the drawer, rather than merely covering it. */
+  body > main,
+  body > .hero,
+  body > section,
+  body > footer,
+  .navbar .logo{
+    transition:transform .45s cubic-bezier(.22,1,.36,1);
+    will-change:transform;
+  }
+
+  body.menu-open > main,
+  body.menu-open > .hero,
+  body.menu-open > section,
+  body.menu-open > footer,
+  body.menu-open .navbar .logo{
+    transform:translateX(-33.333vw);
+  }
+
+  /* It stays mounted while closed so the drawer can slide in and out smoothly. */
+  nav{
+    position:fixed;
+    inset:0 0 0 auto;
+    display:flex;
+    flex-direction:column;
+    width:34vw;
+    height:100dvh;
+    padding:max(13px,env(safe-area-inset-top)) 10px max(20px,env(safe-area-inset-bottom));
+    background:linear-gradient(145deg,#172514 0%,var(--primary-dark) 52%,#111827 100%);
+    box-shadow:-18px 0 46px rgba(0,0,0,.3);
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translateX(100%);
+    transition:transform .45s cubic-bezier(.22,1,.36,1), opacity .3s ease, visibility 0s linear .45s;
+    animation:none;
+    z-index:1001;
+  }
+
+  nav.active{
+    position:fixed;
+    inset:0 0 0 auto;
+    display:flex;
+    flex-direction:column;
+    width:34vw;
+    height:100dvh;
+    min-height:100dvh;
+    max-height:none;
+    padding:max(13px,env(safe-area-inset-top)) 10px max(20px,env(safe-area-inset-bottom));
+    background:linear-gradient(145deg,#172514 0%,var(--primary-dark) 52%,#111827 100%);
+    box-shadow:-18px 0 46px rgba(0,0,0,.3);
+    z-index:1001;
+    overflow-y:auto;
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:translateX(0);
+    transition:transform .45s cubic-bezier(.22,1,.36,1), opacity .3s ease, visibility 0s;
+    animation:none;
+  }
+
+  nav.active .menu-close{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    align-self:flex-end;
+    flex:0 0 auto;
+  }
+
+  nav.active ul{
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    gap:12px;
+    width:100%;
+    /* padding:24px 0 0; */
+  }
+
+  nav.active a{
+    display:inline-block;
+    color:var(--white);
+    max-width:100%;
+    font-size:clamp(11px,3vw,14px);
+    padding:4px 0;
+    line-height:1.35;
+    overflow-wrap:anywhere;
+  }
+}

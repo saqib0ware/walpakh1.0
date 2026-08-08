@@ -1,0 +1,113 @@
+/* ==================================================
+   WAL PAKH — ANIMATIONS
+   Keyframes + reusable motion utilities.
+   Scroll-triggered reveals are toggled by js/animations.js
+   adding/removing the .is-visible class (see style.css
+   for the [data-reveal] base states).
+   ================================================== */
+
+/* ---------- Fade / scale keyframes (kept for elements
+   that animate on load rather than on scroll) ---------- */
+@keyframes fadeUp{
+  from{ opacity:0; transform:translateY(36px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+@keyframes fadeLeft{
+  from{ opacity:0; transform:translateX(-40px); }
+  to{ opacity:1; transform:translateX(0); }
+}
+
+@keyframes fadeRight{
+  from{ opacity:0; transform:translateX(40px); }
+  to{ opacity:1; transform:translateX(0); }
+}
+
+@keyframes scaleIn{
+  from{ opacity:0; transform:scale(.9); }
+  to{ opacity:1; transform:scale(1); }
+}
+
+.fade-up{ animation:fadeUp .8s cubic-bezier(.19,1,.22,1) both; }
+.fade-left{ animation:fadeLeft .8s cubic-bezier(.19,1,.22,1) both; }
+.fade-right{ animation:fadeRight .8s cubic-bezier(.19,1,.22,1) both; }
+.scale-in{ animation:scaleIn .8s cubic-bezier(.19,1,.22,1) both; }
+
+/* Stagger helper — pair with inline style delay or nth-child */
+.stagger > *:nth-child(1){ transition-delay:.05s; }
+.stagger > *:nth-child(2){ transition-delay:.15s; }
+.stagger > *:nth-child(3){ transition-delay:.25s; }
+.stagger > *:nth-child(4){ transition-delay:.35s; }
+.stagger > *:nth-child(5){ transition-delay:.45s; }
+.stagger > *:nth-child(6){ transition-delay:.55s; }
+
+/* ---------- Hover lift (generic) ---------- */
+.hover-lift{
+  transition:transform .45s cubic-bezier(.19,1,.22,1), box-shadow .45s;
+}
+
+.hover-lift:hover{
+  transform:translateY(-10px);
+  box-shadow:var(--shadow-lg);
+}
+
+/* ---------- Image zoom (generic, pairs with an
+   overflow:hidden wrapper) ---------- */
+.zoom-wrap{ overflow:hidden; }
+
+.zoom-wrap img{
+  transition:transform .7s cubic-bezier(.19,1,.22,1);
+}
+
+.zoom-wrap:hover img{
+  transform:scale(1.08);
+}
+
+/* ---------- Button ripple ---------- */
+.primary-btn,
+.secondary-btn,
+.book-btn,
+.package-info button,
+.hotel-btn,
+.search-card button,
+.contact-form button,
+.newsletter-form button{
+  position:relative;
+  overflow:hidden;
+}
+
+.ripple{
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,.55);
+  transform:scale(0);
+  animation:rippleAnim .6s ease-out;
+  pointer-events:none;
+}
+
+@keyframes rippleAnim{
+  to{
+    transform:scale(3.5);
+    opacity:0;
+  }
+}
+
+/* ---------- Parallax hero background ---------- */
+.hero{
+  will-change:background-position;
+}
+
+/* ---------- Floating cards (subtle idle motion for
+   the planner visual + search card) ---------- */
+@keyframes floatY{
+  0%,100%{ transform:translateY(0); }
+  50%{ transform:translateY(-10px); }
+}
+
+.planner-visual{
+  animation:floatY 6s ease-in-out infinite;
+}
+
+/* ---------- Smooth scroll handled via html{scroll-behavior}
+   in style.css; nav underline / scroll indicator keyframes
+   live alongside their components in style.css. ---------- */

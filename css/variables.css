@@ -1,0 +1,86 @@
+/* ==================================================
+   WAL PAKH — DESIGN SYSTEM
+   Dark Slate · Olive & Gold
+   ================================================== */
+
+:root{
+
+/* ---------- BRAND COLORS ---------- */
+--primary:        #556B2F;   /* Primary Olive   */
+--primary-dark:    #3E4E24;   /* Dark Olive      */
+--forest:          #4C5B33;   /* Forest Green    */
+--sage:            #DDE5CF;   /* Sage Green (muted text on dark) */
+--beige:           #E8DFC8;   /* Warm Beige (legacy accent) */
+--gold:            #D4AF37;   /* Accent Gold     */
+--gold-light:      #E3C368;
+--lake:            #3E7C8C;   /* Alpine Lake accent */
+--lake-light:      #6FA8B5;
+--pass:            #5C6B73;   /* Mountain Pass accent */
+--pass-light:      #8DA2A8;
+--heritage:        #B5651D;   /* Heritage / Religious accent */
+--heritage-light:  #D98B4A;
+--airport:         #6C5B8C;   /* Airport / Adventure accent */
+--airport-light:   #9C8CC0;
+--ink:             #20231F;   /* True dark — for text on light/gold surfaces */
+--white:           #F9FAFB;   /* Text (near-white) */
+
+/* ---------- SURFACES (Dark Slate) ---------- */
+--bg:              #111827;   /* Background — Dark Slate */
+--bg-alt:          #16202E;   /* Slightly lighter, for section rhythm */
+--card:            #1F2937;   /* Card / panel surface */
+--card-alt:        #29374A;   /* Hover / raised card surface */
+--cream:           var(--bg);       /* legacy alias — now maps to dark bg */
+--snow-white:      var(--white);
+
+/* ---------- SEMANTIC ALIASES (keep old names working) ---------- */
+--secondary:       var(--gold);
+--secondary-light: var(--gold-light);
+--primary-light:   var(--forest);
+--dark:            var(--ink);
+--dark-2:          var(--primary-dark);
+--snow:            var(--bg);
+--gray:            var(--sage);
+--gray-2:          #C9D2B9;
+--text:            var(--white);        /* default body/heading text — light */
+--text-light:      #9CA3AF;             /* Secondary Text */
+
+/* ---------- GLASS ---------- */
+--glass:        rgba(249,250,251,.06);
+--glass-2:      rgba(249,250,251,.10);
+--glass-dark:   rgba(17,24,39,.65);
+--glass-border: rgba(249,250,251,.12);
+--blur:         18px;
+
+/* ---------- SHADOWS (dark-mode: real black, higher opacity) ---------- */
+--shadow-sm: 0 6px 20px rgba(0,0,0,.35);
+--shadow-md: 0 18px 40px rgba(0,0,0,.45);
+--shadow-lg: 0 30px 60px rgba(0,0,0,.55);
+--shadow-xl: 0 45px 80px rgba(0,0,0,.6);
+--shadow-gold: 0 18px 40px rgba(212,175,55,.30);
+
+/* ---------- RADIUS ---------- */
+--radius-sm: 10px;
+--radius:    18px;
+--radius-lg: 30px;
+--radius-xl: 44px;
+--radius-pill: 100px;
+
+/* ---------- TRANSITIONS ---------- */
+--transition:  .35s cubic-bezier(.4,0,.2,1);
+--transition2: .6s cubic-bezier(.19,1,.22,1);
+
+/* ---------- TYPOGRAPHY ---------- */
+--heading: 'Playfair Display', serif;
+--body:    'Poppins', sans-serif;
+
+/* ---------- SPACING ---------- */
+--section-padding: 130px;
+--section-padding-mobile: 70px;
+--container: 1320px;
+
+/* ---------- Hero theme (shifts per selected pin category) ---------- */
+--hero-accent:       var(--gold);
+--hero-accent-light: var(--gold-light);
+--hero-tint:         rgba(212,175,55,.32);
+
+}
