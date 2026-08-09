@@ -564,13 +564,10 @@
 }
 
 @media (max-width:480px){
-  .destinations{ padding:48px 0; }
-  .destinations .section-title{ margin-bottom:30px; }
   .destination-carousel{ padding:0 42px; }
-  .destination-carousel__card{ flex-basis:calc((100% - 14px) / 2); height:255px; }
+  .destination-carousel__card{ flex-basis:100%; height:310px; }
   .destination-carousel__arrow{ width:31px; height:31px; font-size:19px; }
   .destination-carousel__copy strong{ font-size:24px; }
-  .destinations .destinations-cta{ margin-top:28px; }
 
   .destination-page-hero{
     min-height:465px;
