@@ -99,6 +99,109 @@
 
 }
 
+/* Adventure cards: six in one desktop row, then scale down without crowding. */
+@media (max-width:1200px) and (min-width:993px){
+  .adventure-grid{ grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; }
+  .adventure-card{ height:360px; }
+}
+
+@media (max-width:992px) and (min-width:769px){
+  .adventure-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+  .adventure-card{ height:350px; }
+}
+
+@media (max-width:768px) and (min-width:481px){
+  .adventure-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+  .adventure-card{ height:320px; }
+}
+
+@media (max-width:480px){
+  .adventure-grid{ grid-template-columns:1fr; gap:16px; }
+  .adventure-card{ height:300px; }
+}
+
+@media (max-width:600px){
+  .package-tier-carousel{ padding:0 38px; }
+  .package-tier-carousel__viewport{ overflow:hidden; padding:2px; }
+  .package-tier-grid{
+    display:flex;
+    gap:12px;
+    transition:transform .5s cubic-bezier(.22,1,.36,1);
+    will-change:transform;
+  }
+  .package-tier{
+    flex:0 0 100%;
+    min-width:0;
+  }
+  .package-tier-carousel__arrow{
+    position:absolute;
+    top:50%;
+    z-index:2;
+    display:grid;
+    width:30px;
+    height:30px;
+    place-items:center;
+    box-shadow:var(--shadow-sm);
+    transform:translateY(-50%);
+  }
+  .package-tier-carousel__arrow--prev{ left:0; }
+  .package-tier-carousel__arrow--next{ right:0; }
+}
+
+
+@media (max-width:768px){
+  .destinations,
+  .adventure{ padding:48px 0; }
+
+  .destinations .section-title,
+  .adventure .section-title{ margin-bottom:30px; }
+}
+
+@media (max-width:992px){
+  .package-tier-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .package-tier--luxury{ grid-column:1 / -1; }
+  .package-service-grid{ grid-template-columns:1fr; }
+}
+
+@media (max-width:600px){
+  .package-tier-grid{ grid-template-columns:1fr; gap:16px; }
+  .package-tier--luxury{ grid-column:auto; }
+  .package-tier__body{ grid-template-columns:minmax(0,1fr) minmax(145px,1fr); padding:14px; }
+  .package-tier__body img{ height:138px; }
+  .package-service-grid{ gap:12px; margin-top:14px; }
+  .package-service{ padding:15px; }
+}
+
+@media (max-width:400px){
+  .package-tier__body{ grid-template-columns:1fr; }
+  .package-tier__body img{ height:170px; }
+  .package-service ul{ grid-template-columns:1fr; }
+}
+
+@media (max-width:992px){
+  .why-choose__heading{ grid-template-columns:1fr; gap:18px; }
+  .why-choose__services{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .why-service--featured{ grid-column:1 / -1; grid-row:auto; min-height:390px; }
+  .why-service--marketplace{ grid-column:span 2; }
+  .why-choose__promises{ flex-wrap:wrap; }
+}
+
+@media (max-width:600px){
+  .why-choose{ padding:58px 0; }
+  .why-choose__heading{ margin-bottom:32px; }
+  .why-choose__heading h2{ font-size:42px; }
+  .why-choose__services{ grid-template-columns:1fr; grid-auto-rows:auto; gap:13px; }
+  .why-service{ min-height:210px; }
+  .why-service--featured{ grid-column:auto; min-height:320px; }
+  .why-service--marketplace{ grid-column:auto; min-height:158px; }
+  .why-service--featured .why-service__content{ right:21px; bottom:21px; left:21px; }
+  .why-service--featured .why-service__content strong{ font-size:34px; }
+  .why-service__content strong{ font-size:26px; }
+  .why-service__content em{ font-size:10.5px; }
+  .why-service__content b{ font-size:10.5px; }
+  .why-choose__promises{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:11px 8px; margin-top:25px; font-size:11px; }
+}
+
 /* ==========================
    MOBILES
    ========================== */
@@ -407,7 +510,18 @@
   .journey-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 
+@media (max-width:992px) and (min-width:769px){
+  .destination-carousel__card{ flex-basis:calc((100% - 36px) / 3); }
+}
+
 @media (max-width:768px){
+  .destination-carousel{ padding:0 46px; }
+  .destination-carousel__track{ gap:14px; }
+  .destination-carousel__card{ flex-basis:calc((100% - 14px) / 2); height:300px; }
+  .destination-carousel__arrow{ width:34px; height:34px; font-size:21px; }
+  .destination-carousel__copy{ right:14px; bottom:14px; left:14px; }
+  .destination-carousel__copy strong{ font-size:22px; }
+
   .destination-page-hero{
     min-height:540px;
   }
@@ -450,6 +564,14 @@
 }
 
 @media (max-width:480px){
+  .destinations{ padding:48px 0; }
+  .destinations .section-title{ margin-bottom:30px; }
+  .destination-carousel{ padding:0 42px; }
+  .destination-carousel__card{ flex-basis:calc((100% - 14px) / 2); height:255px; }
+  .destination-carousel__arrow{ width:31px; height:31px; font-size:19px; }
+  .destination-carousel__copy strong{ font-size:24px; }
+  .destinations .destinations-cta{ margin-top:28px; }
+
   .destination-page-hero{
     min-height:465px;
   }
@@ -473,6 +595,17 @@
   .journey-card p{ min-height:0; }
   .journey-meta{ font-size:10.5px; }
   .destinations-cta{ margin-top:34px; }
+}
+
+@media (max-width:480px){
+  .quick-contact{
+    right:max(11px,env(safe-area-inset-right));
+    bottom:max(14px,env(safe-area-inset-bottom));
+    gap:8px;
+  }
+
+  .quick-contact__item{ width:42px; height:42px; }
+  .quick-contact__item svg{ width:20px; height:20px; }
 }
 
 @media (max-width:1200px){
@@ -902,4 +1035,25 @@
     line-height:1.35;
     overflow-wrap:anywhere;
   }
+}
+
+/* Final adventure grid breakpoints. */
+@media (max-width:1200px) and (min-width:993px){
+  .adventure-grid{ grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; }
+  .adventure-card{ height:360px; }
+}
+
+@media (max-width:992px) and (min-width:769px){
+  .adventure-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+  .adventure-card{ height:350px; }
+}
+
+@media (max-width:768px) and (min-width:481px){
+  .adventure-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+  .adventure-card{ height:320px; }
+}
+
+@media (max-width:480px){
+  .adventure-grid{ grid-template-columns:1fr; gap:16px; }
+  .adventure-card{ height:300px; }
 }
