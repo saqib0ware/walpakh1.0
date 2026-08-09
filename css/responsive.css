@@ -515,6 +515,7 @@
   .scroll-indicator{
     display:none;
   }
+
 }
 
 /* The opened mobile navigation is a single, full-width panel. */
@@ -1120,4 +1121,21 @@
 @media (max-width:480px){
   .adventure-grid{ grid-template-columns:1fr; gap:16px; }
   .adventure-card{ height:300px; }
+}
+
+@media (max-width:768px){
+  /* Compact visual pins with a larger invisible hit area for touch. */
+  .pin-marker{
+    width:21px;
+    height:21px;
+    border-width:1.5px;
+  }
+
+  .pin-marker span{ font-size:9px; }
+
+  .map-pin::before{
+    content:"";
+    position:absolute;
+    inset:-7px;
+  }
 }

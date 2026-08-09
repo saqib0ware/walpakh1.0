@@ -27,6 +27,20 @@
     adventure: "\u{1F9ED}",
   };
 
+  const LOCATION_ICON = {
+    gulmarg: "\u{1F6A0}",
+    sonamarg: "\u{1F3D4}\uFE0F",
+    "dal-lake": "\u{1F6F6}",
+    pahalgam: "\u{1F332}",
+    muzaffarabad: "\u{1F3DE}\uFE0F",
+    "mata-vaishno-devi": "\u{1F6D5}",
+    "bahu-fort": "\u{1F3F0}",
+    akhnoor: "\u{1F3DB}\uFE0F",
+    leh: "\u{1F3EF}",
+    "pangong-lake": "\u{1F30A}",
+    "hemis-monastery": "\u{1F6D5}",
+  };
+
   const CATEGORY_THEME = {
     destination: { accent: "var(--gold)", light: "var(--gold-light)", tint: "rgba(212,175,55,.32)" },
     lake: { accent: "var(--lake)", light: "var(--lake-light)", tint: "rgba(62,124,140,.38)" },
@@ -130,13 +144,21 @@
       pin.setAttribute("aria-controls", "mapPopup");
       pin.setAttribute("aria-expanded", "false");
       pin.setAttribute("aria-label", `${place.name}. ${CATEGORY_LABEL[place.category]}.`);
-      pin.innerHTML = `<span class="pin-label">${place.name}</span><span class="pin-marker"><span>${CATEGORY_ICON[place.category]}</span></span>`;
+      const icon = LOCATION_ICON[place.id] || CATEGORY_ICON[place.category];
+      pin.innerHTML = `<span class="pin-label">${place.name}</span><span class="pin-marker"><span>${icon}</span></span>`;
 
-      pin.addEventListener("mouseenter", () => openPopup(place, pin));
-      pin.addEventListener("mouseleave", () => closePopup(pin));
+      pin.addEventListener("pointerenter", (event) => {
+        if (event.pointerType !== "touch") openPopup(place, pin);
+      });
+      pin.addEventListener("pointerleave", (event) => {
+        if (event.pointerType !== "touch") closePopup(pin);
+      });
       pin.addEventListener("focus", () => openPopup(place, pin));
       pin.addEventListener("blur", () => closePopup(pin));
-      pin.addEventListener("click", () => openPopup(place, pin));
+      pin.addEventListener("click", (event) => {
+        event.stopPropagation();
+        openPopup(place, pin);
+      });
       pinLayer.appendChild(pin);
     });
 
