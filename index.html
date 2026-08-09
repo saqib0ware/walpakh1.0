@@ -72,13 +72,10 @@
 <section class="hero">
 
     <!-- Illustrated Kashmir map — the real interactive backdrop.
-         Pins are rendered on top by js/explore-map.js, and the
-         overlay tint retunes itself to match whichever pin is open. -->
+         Pins are rendered on top by js/explore-map.js. -->
     <div class="hero-map-bg" aria-hidden="true">
         <img src="assets/images/map.png" alt="" class="hero-map-img">
     </div>
-
-    <div class="overlay"></div>
 
     <!-- pins are rendered here by js/explore-map.js -->
     <div class="map-pins" id="mapPins"></div>
@@ -131,6 +128,41 @@
 
 </section>
 
+<section class="why-choose" id="why-walpakh">
+    <div class="container">
+        <div class="why-choose__heading" data-reveal="up">
+            <div>
+                <p>Why Choose WALPAKH?</p>
+                <h2>Everything <em>Kashmir.</em></h2>
+            </div>
+            <p class="why-choose__intro">From carefully planned journeys to trusted stays and local experiences, every detail is shaped by people who know Kashmir.</p>
+        </div>
+
+        <div class="why-choose__services" data-reveal="up">
+            <a class="why-service why-service--featured" href="#packages">
+                <img class="why-service__image" src="assets/images/pahalgam.jpg" alt="Kashmir valley for guided journeys" loading="lazy">
+                <span class="why-service__shade"></span>
+                <span class="why-service__content"><small>Popular</small><strong>Guided Tours &amp; Treks</strong><em>Curated journeys for families, friends, couples and explorers.</em><b>Browse tour packages &rarr;</b></span>
+            </a>
+
+            <a class="why-service why-service--cab" href="#contact"><img class="why-service__image" src="assets/images/gondola.png" alt="Snow vehicle in Kashmir" loading="lazy"><span class="why-service__shade"></span><span class="why-service__content"><small>Transport</small><strong>Private Snow Cabs</strong><em>Airport transfers and local travel support.</em><b>Plan transport &rarr;</b></span></a>
+            <a class="why-service why-service--hotel" href="#contact"><img class="why-service__image" src="assets/images/hotel3.png" alt="Kashmir houseboat stay" loading="lazy"><span class="why-service__shade"></span><span class="why-service__content"><small>Stay</small><strong>Hotels &amp; Houseboats</strong><em>Verified stays for every travel style.</em><b>Enquire about stays &rarr;</b></span></a>
+            <a class="why-service why-service--shikara" href="#destinations"><img class="why-service__image" src="assets/images/hotel3.png" alt="Houseboats on Dal Lake for shikara rides" loading="lazy"><span class="why-service__shade"></span><span class="why-service__content"><small>Dal Lake</small><strong>Shikara Rides</strong><em>Quiet lake moments and local colour.</em><b>Explore Srinagar &rarr;</b></span></a>
+            <a class="why-service why-service--excursion" href="#destinations"><img class="why-service__image" src="assets/images/sonamarg.jpg" alt="Sonamarg landscape for day excursions" loading="lazy"><span class="why-service__shade"></span><span class="why-service__content"><small>Explore</small><strong>Day Excursions</strong><em>Valleys, meadows, gardens and mountain views.</em><b>View destinations &rarr;</b></span></a>
+            <a class="why-service why-service--marketplace" href="#marketplace"><img class="why-service__image" src="assets/images/marketplace.png" alt="Authentic Kashmiri goods at the marketplace" loading="lazy"><span class="why-service__shade"></span><span class="why-service__content"><small>Adventure</small><strong>Authentic Kashmiri Goods</strong><em>Saffron, Sozni needlework shawls, organic walnuts, and papier-mâché.</em><b>Shop Now &rarr;</b></span></a>
+        </div>
+
+        <ul class="why-choose__promises" data-reveal="up" aria-label="Why choose Wal Pakh">
+            <li><span aria-hidden="true">✦</span>Local expert team</li>
+            <li><span aria-hidden="true">◷</span>24×7 travel assistance</li>
+            <li><span aria-hidden="true">⌘</span>Customizable itineraries</li>
+            <li><span aria-hidden="true">✓</span>Verified hotels</li>
+            <li><span aria-hidden="true">✧</span>Experienced drivers</li>
+            <li><span aria-hidden="true">◈</span>Transparent pricing</li>
+            <li><span aria-hidden="true">★</span>Best value for money</li>
+        </ul>
+    </div>
+</section>
 
 <section id="destinations" class="destinations">
 
@@ -142,85 +174,26 @@
             <div class="contour-divider"></div>
         </div>
 
-        <div class="destination-grid">
 
-            <div class="destination-card" data-reveal="up">
-
-                <div class="image-box">
-
-                    <img src="assets/images/gulmarg.jpg" alt="Gulmarg" loading="lazy">
-
-                    <div class="badge">
-                        ⭐ 4.9
-                    </div>
-
-                </div>
-
-                <div class="destination-content">
-
-                    <h3>Gulmarg</h3>
-
-                    <p>
-                        Experience snow-covered mountains,
-                        skiing adventures and breathtaking views.
-                    </p>
-
-                    <div class="card-footer">
-
-                        <span>📍 Kashmir</span>
-
-                        <a href="destinations.html">Explore →</a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="destination-card" data-reveal="up" style="transition-delay:.1s">
-
-                <div class="image-box">
-
-                    <img src="assets/images/pahalgam.jpg" alt="Pahalgam" loading="lazy">
-
-                    <div class="badge">
-                        ⭐ 4.8
-                    </div>
-
-                </div>
-
-                <div class="destination-content">
-                    <h3>Pahalgam</h3>
-                    <p>Known for lush valleys, rivers, trekking trails, and peaceful surroundings.</p>
-                    <div class="card-footer">
-                        <span>📍 Kashmir</span>
-                        <a href="destinations.html">Explore →</a>
-                    </div>
+        <div class="destination-carousel" data-destination-carousel data-reveal="up" aria-label="Top destinations carousel">
+            <button class="destination-carousel__arrow destination-carousel__arrow--prev" type="button" aria-label="Show previous destinations" disabled>&larr;</button>
+            <div class="destination-carousel__viewport">
+                <div class="destination-carousel__track">
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Srinagar"><img src="assets/images/hotel3.png" alt="Houseboats on Dal Lake in Srinagar" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Kashmir</small><strong>Srinagar</strong><em>Lake of houseboats</em></span></a>
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Gulmarg"><img src="assets/images/gulmarg.jpg" alt="Gulmarg mountain landscape" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Kashmir</small><strong>Gulmarg</strong><em>Meadows of heaven</em></span></a>
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Pahalgam"><img src="assets/images/pahalgam.jpg" alt="Pahalgam valley" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Kashmir</small><strong>Pahalgam</strong><em>Valley of shepherds</em></span></a>
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Sonamarg"><img src="assets/images/sonamarg.jpg" alt="Sonamarg mountain meadow" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Kashmir</small><strong>Sonamarg</strong><em>The meadow of gold</em></span></a>
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Gurez Valley"><img src="assets/images/camping.png" alt="Camping landscape in Gurez Valley" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>North Kashmir</small><strong>Gurez Valley</strong><em>Hidden Himalayan gem</em></span></a>
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Yusmarg"><img src="assets/images/adventure.png" alt="Forest landscape around Yusmarg" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Kashmir</small><strong>Yusmarg</strong><em>The meadow retreat</em></span></a>
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Doodhpathri"><img src="assets/images/trekking.png" alt="Himalayan trail near Doodhpathri" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Kashmir</small><strong>Doodhpathri</strong><em>Green meadows &amp; streams</em></span></a>
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Verinag"><img src="assets/images/hero.png" alt="Garden landscape near Verinag" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>South Kashmir</small><strong>Verinag</strong><em>Spring of the Jhelum</em></span></a>
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Katra and Vaishno Devi"><img src="assets/images/honeymoon.png" alt="Katra hillside journey" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Jammu</small><strong>Katra</strong><em>Vaishno Devi gateway</em></span></a>
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Patnitop"><img src="assets/images/gondola.png" alt="Patnitop mountain scenery" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Jammu</small><strong>Patnitop</strong><em>Cedar-clad hill resort</em></span></a>
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Leh"><img src="assets/images/hero-map-real.png" alt="High desert landscape of Leh" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Ladakh</small><strong>Leh</strong><em>High desert culture</em></span></a>
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Pangong Lake"><img src="assets/images/river-rafting.png" alt="Blue mountain water representing Pangong Lake" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Ladakh</small><strong>Pangong Lake</strong><em>Changing shades of blue</em></span></a>
                 </div>
             </div>
-
-            <div class="destination-card" data-reveal="up" style="transition-delay:.2s">
-
-                <div class="image-box">
-
-                    <img src="assets/images/sonamarg.jpg" alt="Sonamarg" loading="lazy">
-
-                    <div class="badge">
-                        ⭐ 4.9
-                    </div>
-
-                </div>
-
-                <div class="destination-content">
-                    <h3>Sonamarg</h3>
-                    <p>The Meadow of Gold surrounded by glaciers and majestic Himalayan peaks.</p>
-                    <div class="card-footer">
-                        <span>📍 Kashmir</span>
-                        <a href="destinations.html">Explore →</a>
-                    </div>
-                </div>
-            </div>
-
+            <button class="destination-carousel__arrow destination-carousel__arrow--next" type="button" aria-label="Show next destinations">&rarr;</button>
         </div>
 
         <div class="destinations-cta" data-reveal="up">
@@ -241,146 +214,36 @@
             <div class="contour-divider"></div>
         </div>
 
-        <div class="package-grid">
+        <div class="package-tier-carousel" data-package-tier-carousel data-reveal="up" aria-label="Package category carousel">
+            <button class="package-tier-carousel__arrow package-tier-carousel__arrow--prev" type="button" aria-label="Show previous package category" disabled>&larr;</button>
+            <div class="package-tier-carousel__viewport">
+                <div class="package-tier-grid">
+            <article class="package-tier package-tier--economy">
+                <header class="package-tier__header"><h3>Economy Class</h3><p>Comfortable &bull; Affordable &bull; Value for money</p></header>
+                <div class="package-tier__ideal"><strong>Ideal for</strong><span>Families</span><span>Friends</span><span>Students</span><span>Budget travellers</span></div>
+                <div class="package-tier__body"><div><strong class="package-tier__label">Features</strong><ul><li>3-star hotels</li><li>Breakfast &amp; dinner</li><li>Private transport</li><li>All major sightseeing</li></ul></div><img src="assets/images/pahalgam.jpg" alt="Green valley included in Economy Class journeys" loading="lazy"></div>
+            </article>
 
-            <div class="package-card" data-reveal="up">
+            <article class="package-tier package-tier--premium">
+                <header class="package-tier__header"><h3>Premium Class</h3><p>Premium &bull; Comfortable &bull; Curated experiences</p></header>
+                <div class="package-tier__ideal"><strong>Ideal for</strong><span>Couples</span><span>Families</span><span>Professionals</span><span>Corporate groups</span></div>
+                <div class="package-tier__body"><div><strong class="package-tier__label">Features</strong><ul><li>4-star hotels</li><li>Breakfast &amp; dinner</li><li>Private transport</li><li>Shikara ride</li><li>Optional Gondola</li><li>Experience add-ons</li></ul></div><img src="assets/images/gondola.png" alt="Gulmarg gondola included in Premium Class journeys" loading="lazy"></div>
+            </article>
 
-                <div class="image-wrap">
-                    <span class="discount-badge">Kashmir</span>
-                    <img src="assets/images/honeymoon.png" alt="Honeymoon" loading="lazy">
+            <article class="package-tier package-tier--luxury">
+                <header class="package-tier__header"><h3>Luxury Class</h3><p>Luxury &bull; Exclusive &bull; Personalised</p></header>
+                <div class="package-tier__ideal"><strong>Ideal for</strong><span>Luxury travellers</span><span>Honeymooners</span><span>VIP guests</span></div>
+                <div class="package-tier__body"><div><strong class="package-tier__label">Features</strong><ul><li>5-star hotels &amp; luxury houseboats</li><li>Premium meals</li><li>Private chauffeur</li><li>Exclusive experiences</li><li>Personalised services</li></ul></div><img src="assets/images/hotel3.png" alt="Luxury houseboat experience in Kashmir" loading="lazy"></div>
+            </article>
                 </div>
-
-                <div class="package-info">
-
-                    <span class="price">Kashmir Collection</span>
-
-                    <h3>Kashmir Journeys</h3>
-
-                    <p>
-                        Honeymoon, premium and family journeys.
-                    </p>
-
-                    <a class="package-details-link" href="packages.html?collection=Kashmir%20Collection">See Details <span aria-hidden="true">&rarr;</span></a>
-
-                </div>
-
             </div>
+            <button class="package-tier-carousel__arrow package-tier-carousel__arrow--next" type="button" aria-label="Show next package category">&rarr;</button>
+        </div>
 
-            <div class="package-card" data-reveal="up" style="transition-delay:.1s">
-
-                <div class="image-wrap">
-                    <span class="discount-badge">Offbeat</span>
-                    <img src="assets/images/adventure.png" alt="Adventure" loading="lazy">
-                </div>
-
-                <div class="package-info">
-
-                    <span class="price">Offbeat Collection</span>
-
-                    <h3>Offbeat &amp; Camping</h3>
-
-                    <p>
-                        Seasonal camps, remote valleys and carefully checked access.
-                    </p>
-
-                    <a class="package-details-link" href="packages.html?collection=Offbeat%20%26%20Camping">See Details <span aria-hidden="true">&rarr;</span></a>
-
-                </div>
-
-            </div>
-
-            <div class="package-card" data-reveal="up" style="transition-delay:.2s">
-
-                <div class="image-wrap">
-                    <span class="discount-badge">Groups</span>
-                    <img src="assets/images/family-tour.png" alt="Family Tour" loading="lazy">
-                </div>
-
-                <div class="package-info">
-
-                    <span class="price">Group Collection</span>
-
-                    <h3>Graduation Trips</h3>
-
-                    <p>
-                        Campus, student and celebration-led group travel.
-                    </p>
-
-                    <a class="package-details-link" href="packages.html?collection=Graduation%20Trips">See Details <span aria-hidden="true">&rarr;</span></a>
-
-                </div>
-
-            </div>
-
-            <div class="package-card" data-reveal="up">
-
-                <div class="image-wrap">
-                    <span class="discount-badge">Culture</span>
-                    <img src="assets/images/hero.png" alt="Kashmir cultural landscape" loading="lazy">
-                </div>
-
-                <div class="package-info">
-
-                    <span class="price">Culture &amp; Heritage</span>
-
-                    <h3>Living Kashmir</h3>
-
-                    <p>
-                        Traditional food, artisans, heritage walks and local encounters.
-                    </p>
-
-                    <a class="package-details-link" href="packages.html?collection=Culture%20%26%20Heritage">See Details <span aria-hidden="true">&rarr;</span></a>
-
-                </div>
-
-            </div>
-
-            <div class="package-card" data-reveal="up" style="transition-delay:.1s">
-
-                <div class="image-wrap">
-                    <span class="discount-badge">Winter</span>
-                    <img src="assets/images/skiing.png" alt="Winter skiing experience in Kashmir" loading="lazy">
-                </div>
-
-                <div class="package-info">
-
-                    <span class="price">Winter Special</span>
-
-                    <h3>Snow &amp; Soul</h3>
-
-                    <p>
-                        Winter journeys planned around real-time snow, weather and road conditions.
-                    </p>
-
-                    <a class="package-details-link" href="packages.html?collection=Winter%20Special">See Details <span aria-hidden="true">&rarr;</span></a>
-
-                </div>
-
-            </div>
-
-            <div class="package-card" data-reveal="up" style="transition-delay:.2s">
-
-                <div class="image-wrap">
-                    <span class="discount-badge">Experiences</span>
-                    <img src="assets/images/trekking.png" alt="Kashmir trekking experience" loading="lazy">
-                </div>
-
-                <div class="package-info">
-
-                    <span class="price">Experience Collection</span>
-
-                    <h3>Wild to Connected</h3>
-
-                    <p>
-                        Adventure, culture, winter and community-focused travel experiences.
-                    </p>
-
-                    <a class="package-details-link" href="packages.html?collection=Experience%20Collection">See Details <span aria-hidden="true">&rarr;</span></a>
-
-                </div>
-
-            </div>
-
+        <div class="package-service-grid" data-reveal="up">
+            <article class="package-service package-service--included"><h3>Inclusions</h3><ul><li>Hotel stay</li><li>Breakfast &amp; dinner</li><li>Transport</li><li>Sightseeing</li><li>Driver allowance</li><li>Tolls &amp; parking</li></ul></article>
+            <article class="package-service package-service--excluded"><h3>Exclusions</h3><ul><li>Airfare / train tickets</li><li>Lunch</li><li>Gondola tickets</li><li>Pony ride</li><li>Entry tickets</li><li>Personal expenses</li></ul></article>
+            <article class="package-service package-service--addons"><h3>Add-on experiences</h3><ul><li>Shikara ride</li><li>Wazwan dinner</li><li>Skiing / snowboarding</li><li>Candlelight dinner</li><li>Private dinner</li><li>ATV ride</li><li>Camping</li></ul></article>
         </div>
 
         <div class="packages-cta" data-reveal="up">
@@ -391,7 +254,7 @@
 
 </section>
 
-<section class="hotels" id="hotels">
+<!-- <section class="hotels" id="hotels">
 
     <div class="container">
 
@@ -515,7 +378,7 @@
 
     </div>
 
-</section>
+</section> -->
 
 <section class="adventure" id="adventure">
 
@@ -685,40 +548,6 @@
 
 </section>
 
-<!-- <section id="planner" class="planner-teaser">
-
-    <div class="container">
-
-        <div class="planner-inner" data-reveal="up">
-
-            <div class="planner-text">
-                <p class="eyebrow">AI Travel Planner</p>
-                <h2>Your Kashmir itinerary, planned in minutes — not weeks.</h2>
-                <p class="desc">Tell us your dates, budget and interests. Our AI planner builds a ridge-line, day-by-day itinerary with stay suggestions and live cost estimates, refined through a simple chat.</p>
-
-                <ul class="planner-features">
-                    <li>Personalised day-by-day itinerary</li>
-                    <li>Real-time cost estimates per day</li>
-                    <li>Refine your plan through natural conversation</li>
-                    <li>Convert your finished plan straight into a booking</li>
-                </ul>
-
-                <a href="#" class="primary-btn">Plan My Trip</a>
-            </div>
-
-            <div class="planner-visual" aria-hidden="true">
-                <div class="day-row"><strong>Day 1 · Srinagar</strong><span class="cost">₹4,200</span></div>
-                <div class="day-row"><strong>Day 2 · Gulmarg</strong><span class="cost">₹6,800</span></div>
-                <div class="day-row"><strong>Day 3 · Pahalgam</strong><span class="cost">₹5,500</span></div>
-                <div class="day-row"><strong>Day 4 · Sonamarg</strong><span class="cost">₹5,100</span></div>
-                <div class="day-row"><strong>Day 5 · Dal Lake</strong><span class="cost">₹7,300</span></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section> -->
 
 <section id="contact" class="contact">
 
@@ -844,8 +673,22 @@
 
 </footer>
 
+<aside class="quick-contact" aria-label="Quick contact options">
+    <a class="quick-contact__item quick-contact__item--whatsapp" href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer" aria-label="Chat with Wal Pakh on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.2.3 11.7c0 2.1.6 4.1 1.7 5.9L.2 24l6.6-1.7a11.8 11.8 0 0 0 5.3 1.3h.1c6.5 0 11.8-5.2 11.8-11.7 0-3.1-1.2-6-3.5-8.4Zm-8.4 18.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.9 1 1-3.8-.3-.4a9.7 9.7 0 0 1-1.5-5.1c0-5.4 4.4-9.8 9.9-9.8 2.6 0 5.1 1 7 2.9a9.7 9.7 0 0 1 2.9 7c0 5.4-4.4 9.8-9.8 9.8Zm5.4-7.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2l-1 1.2c-.2.2-.4.2-.7.1-2-.9-3.3-1.6-4.6-3.7-.3-.5.3-.5.9-1.7.1-.2.1-.4 0-.6-.1-.1-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.5-.3.3-1.1 1.1-1.1 2.7s1.1 3.1 1.2 3.3c.2.2 2.2 3.4 5.4 4.8.8.3 1.4.5 1.9.6.8.2 1.5.2 2 .1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>
+    </a>
+    <a class="quick-contact__item quick-contact__item--email" href="mailto:info@walpakh.com" aria-label="Email Wal Pakh">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2 .3v.5l8 5.1 8-5.1v-.5c0-.4-.3-.8-.8-.8h-14c-.4 0-.8.4-.8.8Zm16 3-7.5 4.8a1 1 0 0 1-1.1 0L4 8.8v9.7c0 .4.3.8.8.8h14.4c.4 0 .8-.4.8-.8V8.8Z"/></svg>
+    </a>
+    <a class="quick-contact__item quick-contact__item--phone" href="tel:+910000000000" aria-label="Call Wal Pakh">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2c1.1.4 2.2.6 3.4.6a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.5 22 2 13.5 2 3.2a1 1 0 0 1 1-1H7a1 1 0 0 1 1 1c0 1.2.2 2.3.6 3.4a1 1 0 0 1-.2 1l-1.8 1.8Z"/></svg>
+    </a>
+</aside>
+
 <script src="js/navigation.js"></script>
 <script src="js/animations.js"></script>
 <script src="js/explore-map.js"></script>
+<script src="js/destinations-carousel.js"></script>
+<script src="js/package-tier-carousel.js"></script>
 </body>
 </html>
