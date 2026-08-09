@@ -184,9 +184,12 @@
     const roomAbove = pinTop - gap - padding;
     const roomBelow = hero.clientHeight - pinBottom - gap - padding;
     const showBelow = roomBelow >= cardHeight || roomBelow > roomAbove;
+    const top = showBelow
+      ? Math.min(pinBottom, hero.clientHeight - padding - cardHeight - gap)
+      : Math.max(pinTop, padding + cardHeight + gap);
 
     popup.style.setProperty("--popup-left", `${left}px`);
-    popup.style.setProperty("--popup-top", `${showBelow ? pinBottom : pinTop}px`);
+    popup.style.setProperty("--popup-top", `${top}px`);
     popup.classList.toggle("popup-below", showBelow);
   }
 

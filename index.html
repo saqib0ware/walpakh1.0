@@ -178,7 +178,7 @@
             <button class="destination-carousel__arrow destination-carousel__arrow--prev" type="button" aria-label="Show previous destinations" disabled>&larr;</button>
             <div class="destination-carousel__viewport">
                 <div class="destination-carousel__track">
-                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Srinagar"><img src="assets/images/hotel3.png" alt="Houseboats on Dal Lake in Srinagar" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Kashmir</small><strong>Srinagar</strong><em>Lake of houseboats</em></span></a>
+                    <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Srinagar"><img src="assets/images/hotel3.png" alt="Houseboats on Dal Lake in Srinagar" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Kashmir</small><strong>Dal</strong><em>Lake of houseboats</em></span></a>
                     <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Gulmarg"><img src="assets/images/gulmarg.jpg" alt="Gulmarg mountain landscape" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Kashmir</small><strong>Gulmarg</strong><em>Meadows of heaven</em></span></a>
                     <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Pahalgam"><img src="assets/images/pahalgam.jpg" alt="Pahalgam valley" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Kashmir</small><strong>Pahalgam</strong><em>Valley of shepherds</em></span></a>
                     <a class="destination-carousel__card" href="destinations.html" aria-label="Explore Sonamarg"><img src="assets/images/sonamarg.jpg" alt="Sonamarg mountain meadow" loading="lazy"><span class="destination-carousel__shade"></span><span class="destination-carousel__copy"><small>Kashmir</small><strong>Sonamarg</strong><em>The meadow of gold</em></span></a>
@@ -389,7 +389,10 @@
             <div class="contour-divider"></div>
         </div>
 
-        <div class="adventure-grid">
+        <div class="mobile-card-carousel mobile-card-carousel--adventure" data-mobile-card-carousel aria-label="Adventure carousel">
+            <button class="mobile-card-carousel__arrow mobile-card-carousel__arrow--prev" type="button" aria-label="Show previous adventure" disabled>&larr;</button>
+            <div class="mobile-card-carousel__viewport">
+                <div class="adventure-grid mobile-card-carousel__track">
 
             <div class="adventure-card" data-reveal="scale">
                 <img src="assets/images/skiing.png" alt="Skiing" loading="lazy">
@@ -450,6 +453,9 @@
                 </div>
             </div>
 
+                </div>
+            </div>
+            <button class="mobile-card-carousel__arrow mobile-card-carousel__arrow--next" type="button" aria-label="Show next adventure">&rarr;</button>
         </div>
 
     </div>
@@ -465,7 +471,10 @@
             <div class="contour-divider"></div>
         </div>
 
-        <div class="gallery-grid">
+        <div class="mobile-card-carousel mobile-card-carousel--gallery" data-mobile-card-carousel aria-label="Gallery carousel">
+            <button class="mobile-card-carousel__arrow mobile-card-carousel__arrow--prev" type="button" aria-label="Show previous gallery image" disabled>&larr;</button>
+            <div class="mobile-card-carousel__viewport">
+                <div class="gallery-grid mobile-card-carousel__track">
 
             <div class="gallery-item"><img src="assets/images/gulmarg.jpg" alt="Gulmarg landscape" loading="lazy"></div>
             <div class="gallery-item"><img src="assets/images/pahalgam.jpg" alt="Pahalgam valley" loading="lazy"></div>
@@ -476,6 +485,9 @@
             <div class="gallery-item"><img src="assets/images/hotel1.png" alt="Mountain resort" loading="lazy"></div>
             <div class="gallery-item"><img src="assets/images/trekking.png" alt="Himalayan trek" loading="lazy"></div>
 
+                </div>
+            </div>
+            <button class="mobile-card-carousel__arrow mobile-card-carousel__arrow--next" type="button" aria-label="Show next gallery image">&rarr;</button>
         </div>
 
     </div>
@@ -689,5 +701,7 @@
 <script src="js/explore-map.js"></script>
 <script src="js/destinations-carousel.js"></script>
 <script src="js/package-tier-carousel.js"></script>
+<script src="js/why-service-carousel.js"></script>
+<script src="js/mobile-card-carousel.js"></script>
 </body>
 </html>
