@@ -83,4 +83,33 @@
 --hero-accent-light: var(--gold-light);
 --hero-tint:         rgba(212,175,55,.32);
 
+/* Reference-inspired light editorial palette. */
+--primary:#0D5B45;
+--primary-dark:#063D31;
+--forest:#1C7659;
+--sage:#DCE9DF;
+--beige:#F1EAD9;
+--gold:#BB8A2A;
+--gold-light:#D7AD5D;
+--ink:#18382F;
+--white:#FFFFFF;
+--bg:#F8F6F0;
+--bg-alt:#F0F4ED;
+--card:#FFFFFF;
+--card-alt:#EAF1EA;
+--cream:var(--bg);
+--gray:#6C8378;
+--gray-2:#8DA196;
+--text:var(--ink);
+--text-light:#6A7B72;
+--glass:rgba(255,255,255,.68);
+--glass-2:rgba(255,255,255,.86);
+--glass-dark:rgba(6,61,49,.78);
+--glass-border:rgba(13,91,69,.12);
+--shadow-sm:0 6px 20px rgba(19,56,45,.08);
+--shadow-md:0 18px 40px rgba(19,56,45,.12);
+--shadow-lg:0 30px 60px rgba(19,56,45,.16);
+--shadow-xl:0 45px 80px rgba(19,56,45,.18);
+--shadow-gold:0 18px 40px rgba(187,138,42,.20);
+
 }

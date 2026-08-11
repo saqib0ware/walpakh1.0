@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shop authentic Kashmiri pashmina, pherans, carpets, papier mâché, walnut wood crafts, kahwa, saffron and dry fruits from Walpakh." />
+  <meta name="theme-color" content="#0a281f" />
+  <title>Shop in Kashmir | Walpakh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Italianno&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/v2-styles.css" />
+</head>
+<body class="shop-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="shop-utility">
+    <div class="container shop-utility__inner">
+      <span><i class="fa-solid fa-certificate"></i> 100% Authentic</span>
+      <span><i class="fa-solid fa-shield-halved"></i> Secure Payment</span>
+      <span><i class="fa-solid fa-truck-fast"></i> Pan-India Delivery</span>
+    </div>
+  </div>
+
+  <header class="site-header site-header--shop" id="top">
+    <div class="container nav-wrap nav-wrap--shop">
+      <a class="brand brand--image" href="index.html" aria-label="Walpakh home">
+        <img class="brand-logo" src="assets/images/walpakh-logo.jpg" alt="Walpakh" />
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#experiences">Experiences</a>
+        <a href="index.html#groups">Group Travel</a>
+        <a class="active" href="shop.html">Shop in Kashmir</a>
+        <a href="index.html#why-us">About Us</a>
+        <a href="index.html#footer">Contact</a>
+      </nav>
+      <div class="shop-header-actions">
+        <label class="shop-search"><span class="sr-only">Search products</span><i class="fa-solid fa-magnifying-glass"></i><input id="shop-search" type="search" placeholder="Search products..." /></label>
+        <button class="icon-btn" id="wishlist-toggle" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+        <button class="icon-btn cart-button" id="cart-button" aria-label="Shopping cart"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="shop-hero-section">
+      <div class="container shop-hero-section__grid">
+        <div class="shop-hero-copy reveal">
+          <p class="kicker">Shop Authentic Kashmir</p>
+          <h1>Take Home The <span>Soul of Kashmir</span></h1>
+          <p>Discover handcrafted treasures made by local artisans. Shop authentic. Support local.</p>
+          <div class="shop-hero-points">
+            <span><i class="fa-solid fa-certificate"></i> 100% Authentic<br><small>Kashmiri Products</small></span>
+            <span><i class="fa-solid fa-hands-holding-circle"></i> Direct from<br><small>Local Artisans</small></span>
+            <span><i class="fa-solid fa-earth-asia"></i> Pan-India &<br><small>Worldwide Shipping</small></span>
+          </div>
+          <a class="btn btn--primary" href="#shop-products">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="shop-hero-art reveal" aria-hidden="true">
+          <img src="assets/images/shop-hero.jpg" alt="" />
+          <div class="shop-trust-cards">
+            <span><i class="fa-solid fa-user-check"></i> Verified Artisans</span>
+            <span><i class="fa-solid fa-shield-halved"></i> Secure Payments</span>
+            <span><i class="fa-solid fa-rotate-left"></i> Easy Returns</span>
+            <span><i class="fa-solid fa-truck-fast"></i> Fast Delivery</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-categories-wrap">
+      <div class="container">
+        <div class="shop-categories" id="shop-categories" aria-label="Product categories">
+          <button class="shop-category active" data-category="all"><i class="fa-solid fa-border-all"></i><span>All</span></button>
+          <button class="shop-category" data-category="pashmina"><i class="fa-solid fa-shirt"></i><span>Pashmina Shawls</span></button>
+          <button class="shop-category" data-category="pheran"><i class="fa-solid fa-shirt"></i><span>Pherans</span></button>
+          <button class="shop-category" data-category="carpet"><i class="fa-solid fa-border-all"></i><span>Carpets</span></button>
+          <button class="shop-category" data-category="papier"><i class="fa-solid fa-jar"></i><span>Papier Mâché</span></button>
+          <button class="shop-category" data-category="walnut"><i class="fa-solid fa-tree"></i><span>Walnut Wood</span></button>
+          <button class="shop-category" data-category="kahwa"><i class="fa-solid fa-mug-hot"></i><span>Kahwa & Teas</span></button>
+          <button class="shop-category" data-category="saffron"><i class="fa-solid fa-seedling"></i><span>Saffron</span></button>
+          <button class="shop-category" data-category="dry-fruits"><i class="fa-solid fa-bowl-food"></i><span>Dry Fruits</span></button>
+          <button class="shop-category" data-category="jewellery"><i class="fa-regular fa-gem"></i><span>Jewellery</span></button>
+          <button class="shop-category" data-category="wicker"><i class="fa-solid fa-basket-shopping"></i><span>Willow Wicker</span></button>
+          <button class="shop-category" data-category="gifts"><i class="fa-solid fa-gift"></i><span>Gift Hampers</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-products section section--compact" id="shop-products">
+      <div class="container">
+        <div class="shop-products__heading">
+          <div><p class="kicker">Curated by local experts</p><h2>Top Picks from Kashmir</h2></div>
+          <button class="shop-view-all" id="clear-shop-filter">View All Products <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="product-shell">
+          <button class="product-nav product-nav--prev" aria-label="Previous products"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="product-track" id="product-track">
+            <article class="product-card" data-category="pashmina" data-name="Pashmina Shawl">
+              <div class="product-card__image"><img src="assets/images/pashmina.jpg" alt="Pashmina shawl" /><button class="wish-btn" aria-label="Add Pashmina Shawl to wishlist"><i class="fa-regular fa-heart"></i></button></div>
+              <div class="product-card__body"><h3>Pashmina Shawl</h3><strong>₹4,999</strong><div class="rating">★★★★★ <span>(128)</span></div><button class="add-cart">Add to Cart</button></div>
+            </article>
+            <article class="product-card" data-category="pheran" data-name="Traditional Pheran">
+              <div class="product-card__image"><img src="assets/images/pheran.jpg" alt="Traditional Kashmiri pheran" /><button class="wish-btn" aria-label="Add Traditional Pheran to wishlist"><i class="fa-regular fa-heart"></i></button></div>
+              <div class="product-card__body"><h3>Traditional Pheran</h3><strong>₹2,499</strong><div class="rating">★★★★★ <span>(96)</span></div><button class="add-cart">Add to Cart</button></div>
+            </article>
+            <article class="product-card" data-category="carpet" data-name="Hand Knotted Carpet">
+              <div class="product-card__image"><img src="assets/images/carpet.jpg" alt="Hand knotted carpet" /><button class="wish-btn" aria-label="Add Hand Knotted Carpet to wishlist"><i class="fa-regular fa-heart"></i></button></div>
+              <div class="product-card__body"><h3>Hand Knotted Carpet</h3><strong>₹18,999</strong><div class="rating">★★★★★ <span>(74)</span></div><button class="add-cart">Add to Cart</button></div>
+            </article>
+            <article class="product-card" data-category="papier" data-name="Papier Mâché Vase">
+              <div class="product-card__image"><img src="assets/images/papier-mache.jpg" alt="Papier mâché vase" /><button class="wish-btn" aria-label="Add Papier Mâché Vase to wishlist"><i class="fa-regular fa-heart"></i></button></div>
+              <div class="product-card__body"><h3>Papier Mâché Vase</h3><strong>₹1,299</strong><div class="rating">★★★★★ <span>(55)</span></div><button class="add-cart">Add to Cart</button></div>
+            </article>
+            <article class="product-card" data-category="walnut" data-name="Walnut Wood Box">
+              <div class="product-card__image"><img src="assets/images/walnut-box.jpg" alt="Walnut wood box" /><button class="wish-btn" aria-label="Add Walnut Wood Box to wishlist"><i class="fa-regular fa-heart"></i></button></div>
+              <div class="product-card__body"><h3>Walnut Wood Box</h3><strong>₹1,799</strong><div class="rating">★★★★★ <span>(43)</span></div><button class="add-cart">Add to Cart</button></div>
+            </article>
+            <article class="product-card" data-category="kahwa" data-name="Kashmiri Kahwa">
+              <div class="product-card__image"><img src="assets/images/kahwa.jpg" alt="Kashmiri kahwa" /><button class="wish-btn" aria-label="Add Kashmiri Kahwa to wishlist"><i class="fa-regular fa-heart"></i></button></div>
+              <div class="product-card__body"><h3>Kashmiri Kahwa</h3><strong>₹499</strong><div class="rating">★★★★★ <span>(89)</span></div><button class="add-cart">Add to Cart</button></div>
+            </article>
+            <article class="product-card" data-category="saffron" data-name="Original Kashmiri Saffron">
+              <div class="product-card__image"><img src="assets/images/saffron.jpg" alt="Original Kashmiri saffron" /><button class="wish-btn" aria-label="Add Original Kashmiri Saffron to wishlist"><i class="fa-regular fa-heart"></i></button></div>
+              <div class="product-card__body"><h3>Original Kashmiri Saffron</h3><strong>₹1,999</strong><div class="rating">★★★★★ <span>(64)</span></div><button class="add-cart">Add to Cart</button></div>
+            </article>
+            <article class="product-card" data-category="dry-fruits" data-name="Dry Fruits Combo">
+              <div class="product-card__image"><img src="assets/images/dry-fruits.jpg" alt="Dry fruits combo" /><button class="wish-btn" aria-label="Add Dry Fruits Combo to wishlist"><i class="fa-regular fa-heart"></i></button></div>
+              <div class="product-card__body"><h3>Dry Fruits Combo</h3><strong>₹899</strong><div class="rating">★★★★★ <span>(102)</span></div><button class="add-cart">Add to Cart</button></div>
+            </article>
+          </div>
+          <button class="product-nav product-nav--next" aria-label="Next products"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <div class="shop-benefits reveal">
+          <article><i class="fa-solid fa-certificate"></i><div><strong>Authentic & Verified</strong><span>100% genuine products from trusted sources</span></div></article>
+          <article><i class="fa-solid fa-wallet"></i><div><strong>Secure Payments</strong><span>Multiple secure payment options</span></div></article>
+          <article><i class="fa-solid fa-earth-asia"></i><div><strong>Worldwide Shipping</strong><span>Delivery across India & worldwide</span></div></article>
+          <article><i class="fa-solid fa-box-open"></i><div><strong>Easy Returns</strong><span>Hassle-free returns within 7 days</span></div></article>
+          <article><i class="fa-solid fa-gift"></i><div><strong>Member Discounts</strong><span>Exclusive offers for WALPAKH members</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter newsletter--shop">
+      <div class="container newsletter__grid">
+        <div><h2><i class="fa-regular fa-envelope-open"></i> Get Exclusive Offers & New Arrivals</h2><p>Subscribe to our newsletter and never miss an update.</p></div>
+        <form id="newsletter-form"><label class="sr-only" for="newsletter-email">Email address</label><input id="newsletter-email" type="email" placeholder="Enter your email" required /><button class="btn btn--primary" type="submit">Subscribe</button></form>
+        <div class="socials"><span>Follow WALPAKH</span><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--footer brand--image" href="index.html"><img class="brand-logo brand-logo--footer" src="assets/images/walpakh-logo.jpg" alt="Walpakh" /></a>
+        <p>Travel Kashmir. Take a piece of its craft, culture and warmth home with you.</p>
+      </div>
+      <div><h3>Quick Links</h3><a href="index.html">Home</a><a href="packages.html">Packages</a><a href="index.html#destinations">Destinations</a><a href="shop.html">Shop in Kashmir</a></div>
+      <div><h3>Shop</h3><a href="#shop-products">Pashmina</a><a href="#shop-products">Kashmiri Crafts</a><a href="#shop-products">Saffron & Kahwa</a><a href="#shop-products">Dry Fruits</a></div>
+      <div><h3>Support</h3><a href="tel:+917006512345"><i class="fa-solid fa-phone"></i> +91 70065 12345</a><a href="mailto:info@walpakh.com"><i class="fa-regular fa-envelope"></i> info@walpakh.com</a><span><i class="fa-regular fa-clock"></i> Mon–Sun (24×7)</span><span><i class="fa-solid fa-location-dot"></i> Srinagar, J&K, India</span></div>
+    </div>
+    <div class="container footer__bottom"><span>© 2026 Walpakh Tour Packages. All rights reserved.</span><div><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">Returns Policy</a></div></div>
+  </footer>
+
+  <div class="mini-cart" id="mini-cart" aria-hidden="true">
+    <div class="mini-cart__head"><strong>Your Cart</strong><button id="mini-cart-close" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="mini-cart__body" id="mini-cart-items"><p>Your cart is empty.</p></div>
+    <div class="mini-cart__foot"><span>Front-end demo cart — checkout will be connected to the backend later.</span><button class="btn btn--primary btn--block" type="button">Proceed to Checkout</button></div>
+  </div>
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="js/v2-script.js"></script>
+</body>
+</html>

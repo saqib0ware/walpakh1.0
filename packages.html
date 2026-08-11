@@ -1,102 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Packages | Wal Pakh</title>
-  <meta name="description" content="Browse WALPAKH collections for Kashmir, graduation travel, offbeat camping, culture and winter experiences.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compare Walpakh Economy, Premium and Luxury Kashmir tour package classes, inclusions, exclusions and add-on experiences." />
+  <meta name="theme-color" content="#0a281f" />
+  <title>Kashmir Packages | Walpakh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Italianno&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/v2-styles.css" />
 </head>
-<body class="packages-page">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="navbar">
-  <div class="container">
-    <a href="index.html" class="logo logo--image" aria-label="Wal Pakh home"><img src="assets/images/walpakh-logo.jpeg" alt="Wal Pakh"></a>
-    <nav>
-      <button class="menu-close" type="button" aria-label="Close menu"></button>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="destinations.html">Destinations</a></li>
-        <li><a class="active" href="packages.html" aria-current="page">Packages</a></li>
-        <li><a href="index.html#hotels">Hotels</a></li>
-        <li><a href="index.html#adventure">Adventures</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <a class="book-btn" href="#package-list">Explore packages</a>
-    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false"></button>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>Explore Kashmir, Your Way.</span>
+      <div class="topbar__contact">
+        <a href="tel:+917006512345"><i class="fa-solid fa-phone"></i> 24/7 Travel Support</a>
+        <a href="tel:+917006512345"><i class="fa-solid fa-phone-volume"></i> +91 70065 12345</a>
+        <a class="topbar__whatsapp" href="https://wa.me/917006512345" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
   </div>
-</header>
 
-<main>
-  <!-- <section class="packages-page-hero">
-    <img src="assets/images/hero-map-real.png" alt="Illustrated terrain of Jammu, Kashmir and Ladakh">
-    <div class="packages-page-hero-overlay"></div>
-    <div class="packages-page-hero-content">
-      <p class="eyebrow">WALPAKH Collections</p>
-      <h1>Travel, <em>thoughtfully</em> assembled.</h1>
-      <p>Explore Kashmir, group celebrations, offbeat camps, cultural encounters, winter journeys and standalone experiences.</p>
-      <a href="#package-list" class="primary-btn">Browse collections</a>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand brand--image" href="index.html" aria-label="Walpakh home">
+        <img class="brand-logo" src="assets/images/walpakh-logo.jpg" alt="Walpakh" />
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="packages.html">Packages</a>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#experiences">Experiences</a>
+        <a href="index.html#groups">Group Travel</a>
+        <a href="shop.html">Shop in Kashmir</a>
+        <a href="index.html#why-us">About Us</a>
+        <a href="index.html#footer">Contact</a>
+      </nav>
+      <a class="btn btn--small btn--primary nav-cta" href="index.html#planner">Enquire Now</a>
     </div>
-  </section> -->
+  </header>
 
-  <section class="package-catalogue" id="package-list">
-    <div class="container">
-      <div class="section-title" data-reveal="up">
-        <p>WalPakh Collections</p>
-        <h2>Travel, <em>thoughtfully</em> assembled.</em></h2>
-        <div class="contour-divider"></div>
-      </div>
-
-      <div class="package-filter" role="toolbar" aria-label="Filter package collections">
-        <button class="active" type="button" data-package-filter="all" aria-pressed="true">All collections</button>
-        <button type="button" data-package-filter="Kashmir Collection" aria-pressed="false">Kashmir</button>
-        <button type="button" data-package-filter="Graduation Trips" aria-pressed="false">Graduation trips</button>
-        <button type="button" data-package-filter="Offbeat &amp; Camping" aria-pressed="false">Offbeat &amp; camping</button>
-        <button type="button" data-package-filter="Culture &amp; Heritage" aria-pressed="false">Culture &amp; heritage</button>
-        <button type="button" data-package-filter="Winter Special" aria-pressed="false">Winter</button>
-        <button type="button" data-package-filter="Experience Collection" aria-pressed="false">Experiences</button>
-      </div>
-
-      <p class="package-count" aria-live="polite"><span id="packageCount">0</span> package options</p>
-      <div class="package-catalog-grid" id="packageGrid"></div>
-      <p class="package-empty" id="packageEmpty" hidden>No packages match that collection.</p>
-
-      <aside class="package-guidance" aria-label="Package planning notes">
-        <div>
-          <p class="package-guidance-label">Before you plan</p>
-          <h2>Details that depend on your journey</h2>
-          <p>Hotel names depend on group size, dates and availability. Adventure activities, camping, access and attraction operation remain subject to season, weather, permissions, safety conditions and local requirements.</p>
+  <main id="main">
+    <section class="packages-hero">
+      <div class="packages-hero__overlay"></div>
+      <div class="container packages-hero__grid">
+        <div class="packages-hero__brand reveal">
+          <img src="assets/images/walpakh-logo.jpg" alt="Walpakh Kashmir Tour Packages" />
+          <p>Explore Kashmir. Your Way.</p>
         </div>
-        <ul>
-          <li>Gurez, Keran, Bangus and other sensitive or border destinations require current access, road-condition and permission confirmation.</li>
-          <li>Camping is only at authorised or permitted campsites and follows local environmental and waste-management rules.</li>
-          <li>Visa and entry requirements vary by nationality for international journeys.</li>
-        </ul>
-      </aside>
+        <div class="segment-panel reveal">
+          <span class="segment-panel__pill"><i class="fa-regular fa-heart"></i> Memories that last forever</span>
+          <h1>3 Segments</h1>
+          <div class="segment-panel__row segment-panel__row--economy"><i class="fa-solid fa-people-group"></i><div><strong>Middle Class</strong><span>Best Value & Comfortable</span></div></div>
+          <div class="segment-panel__row segment-panel__row--premium"><i class="fa-solid fa-suitcase-rolling"></i><div><strong>High Class</strong><span>Premium Stays & Experiences</span></div></div>
+          <div class="segment-panel__row segment-panel__row--luxury"><i class="fa-solid fa-gem"></i><div><strong>Luxury Class</strong><span>Luxury & Personalized Experiences</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="package-compare section section--compact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker">Choose the travel style that fits you</p>
+          <h2>Compare Our Package Classes</h2>
+        </div>
+
+        <div class="class-grid">
+          <article class="class-card class-card--economy reveal">
+            <header class="class-card__header">
+              <h2>Middle Class <span>(Economy)</span></h2>
+              <p>Comfortable · Affordable · Value for Money</p>
+            </header>
+            <div class="class-card__body">
+              <p class="class-label">Ideal For</p>
+              <div class="class-audience">
+                <span><i class="fa-solid fa-people-roof"></i> Families</span>
+                <span><i class="fa-solid fa-user-group"></i> Friends</span>
+                <span><i class="fa-solid fa-graduation-cap"></i> Students</span>
+                <span><i class="fa-solid fa-person-walking-luggage"></i> Budget Travelers</span>
+              </div>
+              <div class="class-feature-split">
+                <div>
+                  <p class="class-label">Features</p>
+                  <ul>
+                    <li>3★ hotels</li>
+                    <li>Breakfast & dinner</li>
+                    <li>Private transport</li>
+                    <li>All major sightseeing</li>
+                  </ul>
+                </div>
+                <img src="assets/images/package-economy.jpg" alt="Scenic Kashmir valley for economy package" />
+              </div>
+            </div>
+            <footer class="class-card__price"><span>Starting from</span><strong>₹12,999/-</strong><small>Per Person</small></footer>
+            <a class="class-card__cta" href="index.html?budget=economy#planner">Plan Economy Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="class-card class-card--premium reveal">
+            <header class="class-card__header">
+              <h2>High Class <span>(Premium)</span></h2>
+              <p>Premium · Comfortable · Curated Experiences</p>
+            </header>
+            <div class="class-card__body">
+              <p class="class-label">Ideal For</p>
+              <div class="class-audience">
+                <span><i class="fa-solid fa-heart"></i> Couples</span>
+                <span><i class="fa-solid fa-people-roof"></i> Families</span>
+                <span><i class="fa-solid fa-user-tie"></i> Professionals</span>
+                <span><i class="fa-solid fa-building"></i> Corporate</span>
+              </div>
+              <div class="class-feature-split">
+                <div>
+                  <p class="class-label">Features</p>
+                  <ul>
+                    <li>4★ hotels</li>
+                    <li>Breakfast & dinner</li>
+                    <li>Private transport</li>
+                    <li>Shikara ride</li>
+                    <li>Gondola optional</li>
+                    <li>Experience add-ons</li>
+                  </ul>
+                </div>
+                <img src="assets/images/package-premium.jpg" alt="Gondola ride in snow for premium package" />
+              </div>
+            </div>
+            <footer class="class-card__price"><span>Starting from</span><strong>₹19,999/-</strong><small>Per Person</small></footer>
+            <a class="class-card__cta" href="index.html?budget=premium#planner">Plan Premium Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="class-card class-card--luxury reveal">
+            <header class="class-card__header">
+              <h2>Luxury Class</h2>
+              <p>Luxury · Exclusive · Personalized</p>
+            </header>
+            <div class="class-card__body">
+              <p class="class-label">Ideal For</p>
+              <div class="class-audience">
+                <span><i class="fa-solid fa-crown"></i> Luxury Travelers</span>
+                <span><i class="fa-regular fa-heart"></i> Honeymooners</span>
+                <span><i class="fa-solid fa-chess-knight"></i> VIP Guests</span>
+              </div>
+              <div class="class-feature-split">
+                <div>
+                  <p class="class-label">Features</p>
+                  <ul>
+                    <li>5★ hotels & luxury houseboats</li>
+                    <li>Premium meals</li>
+                    <li>Private chauffeur</li>
+                    <li>Exclusive experiences</li>
+                    <li>Personalized services</li>
+                  </ul>
+                </div>
+                <img src="assets/images/package-luxury.jpg" alt="Luxury houseboat dinner in Kashmir" />
+              </div>
+            </div>
+            <footer class="class-card__price"><span>Starting from</span><strong>₹34,999/-</strong><small>Per Person</small></footer>
+            <a class="class-card__cta" href="index.html?budget=luxury#planner">Plan Luxury Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+
+        <div class="package-details-grid reveal">
+          <article class="package-detail-box package-detail-box--wide">
+            <h3>Inclusions</h3>
+            <div class="detail-icon-grid">
+              <span><i class="fa-solid fa-hotel"></i> Hotel Stay</span>
+              <span><i class="fa-solid fa-utensils"></i> Breakfast & Dinner</span>
+              <span><i class="fa-solid fa-car-side"></i> Transport</span>
+              <span><i class="fa-solid fa-landmark"></i> Sightseeing</span>
+              <span><i class="fa-solid fa-user-tie"></i> Driver Allowance</span>
+              <span><i class="fa-solid fa-square-parking"></i> Tolls & Parking</span>
+            </div>
+          </article>
+          <article class="package-detail-box package-detail-box--wide">
+            <h3>Exclusions</h3>
+            <div class="detail-icon-grid">
+              <span><i class="fa-solid fa-plane"></i> Airfare / Train Tickets</span>
+              <span><i class="fa-solid fa-bowl-food"></i> Lunch</span>
+              <span><i class="fa-solid fa-cable-car"></i> Gondola Tickets</span>
+              <span><i class="fa-solid fa-horse"></i> Pony Ride</span>
+              <span><i class="fa-solid fa-ticket"></i> Entry Tickets</span>
+              <span><i class="fa-solid fa-wallet"></i> Personal Expenses</span>
+            </div>
+          </article>
+          <article class="package-detail-box package-detail-box--addons">
+            <h3>Add-on Experiences</h3>
+            <div class="detail-icon-grid detail-icon-grid--addons">
+              <span><i class="fa-solid fa-sailboat"></i> Shikara Ride</span>
+              <span><i class="fa-solid fa-bowl-rice"></i> Wazwan Dinner</span>
+              <span><i class="fa-solid fa-person-skiing"></i> Skiing / Snowboarding</span>
+              <span><i class="fa-solid fa-champagne-glasses"></i> Candlelight Dinner</span>
+              <span><i class="fa-solid fa-motorcycle"></i> ATV Ride</span>
+              <span><i class="fa-solid fa-campground"></i> Camping</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="package-cta-band">
+      <div class="container package-cta-band__grid">
+        <div>
+          <p class="kicker kicker--light">Why choose Walpakh?</p>
+          <ul><li>Local expert team</li><li>Verified hotels</li><li>24×7 travel assistance</li><li>Experienced drivers</li><li>Customized itineraries</li><li>Transparent pricing</li></ul>
+        </div>
+        <div class="package-cta-band__center"><h2>Let’s Plan Your Kashmir Escape!</h2><p>Book your dream package today.</p><a class="btn btn--gold" href="index.html#planner">Customize My Trip</a></div>
+        <div class="package-cta-band__contact">
+          <a href="tel:+917006512345"><i class="fa-solid fa-phone"></i> +91 70065 12345</a>
+          <a href="mailto:info@walpakh.com"><i class="fa-regular fa-envelope"></i> info@walpakh.com</a>
+          <span><i class="fa-solid fa-globe"></i> www.walpakh.com</span>
+          <span><i class="fa-solid fa-location-dot"></i> Srinagar, Jammu & Kashmir</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--footer brand--image" href="index.html"><img class="brand-logo brand-logo--footer" src="assets/images/walpakh-logo.jpg" alt="Walpakh" /></a>
+        <p>We create journeys that are safe, comfortable and full of unforgettable memories.</p>
+      </div>
+      <div><h3>Quick Links</h3><a href="index.html">Home</a><a href="packages.html">Packages</a><a href="index.html#destinations">Destinations</a><a href="shop.html">Shop in Kashmir</a></div>
+      <div><h3>Group Travel</h3><a href="index.html#groups">School Excursions</a><a href="index.html#groups">Graduation Trips</a><a href="index.html#groups">Corporate Retreats</a><a href="index.html#groups">Group Tours</a></div>
+      <div><h3>Support</h3><a href="tel:+917006512345"><i class="fa-solid fa-phone"></i> +91 70065 12345</a><a href="mailto:info@walpakh.com"><i class="fa-regular fa-envelope"></i> info@walpakh.com</a><span><i class="fa-regular fa-clock"></i> Mon–Sun (24×7)</span><span><i class="fa-solid fa-location-dot"></i> Srinagar, J&K, India</span></div>
     </div>
-  </section>
-</main>
+    <div class="container footer__bottom"><span>© 2026 Walpakh Tour Packages. All rights reserved.</span><div><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">Cancellation Policy</a></div></div>
+  </footer>
 
-<footer>
-  <div class="container"><div class="footer-bottom"><p>&copy; 2026 Wal Pakh. All rights reserved.</p><div class="legal-links"><a href="index.html#contact">Contact</a><a href="index.html">Back to home</a></div></div></div>
-</footer>
-
-<aside class="quick-contact" aria-label="Quick contact options">
-  <a class="quick-contact__item quick-contact__item--whatsapp" href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer" aria-label="Chat with Wal Pakh on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.2.3 11.7c0 2.1.6 4.1 1.7 5.9L.2 24l6.6-1.7a11.8 11.8 0 0 0 5.3 1.3h.1c6.5 0 11.8-5.2 11.8-11.7 0-3.1-1.2-6-3.5-8.4Zm-8.4 18.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.9 1 1-3.8-.3-.4a9.7 9.7 0 0 1-1.5-5.1c0-5.4 4.4-9.8 9.9-9.8 2.6 0 5.1 1 7 2.9a9.7 9.7 0 0 1 2.9 7c0 5.4-4.4 9.8-9.8 9.8Zm5.4-7.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2l-1 1.2c-.2.2-.4.2-.7.1-2-.9-3.3-1.6-4.6-3.7-.3-.5.3-.5.9-1.7.1-.2.1-.4 0-.6-.1-.1-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.5-.3.3-1.1 1.1-1.1 2.7s1.1 3.1 1.2 3.3c.2.2 2.2 3.4 5.4 4.8.8.3 1.4.5 1.9.6.8.2 1.5.2 2 .1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.3Z"/></svg></a>
-  <a class="quick-contact__item quick-contact__item--email" href="mailto:info@walpakh.com" aria-label="Email Wal Pakh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2 .3v.5l8 5.1 8-5.1v-.5c0-.4-.3-.8-.8-.8h-14c-.4 0-.8.4-.8.8Zm16 3-7.5 4.8a1 1 0 0 1-1.1 0L4 8.8v9.7c0 .4.3.8.8.8h14.4c.4 0 .8-.4.8-.8V8.8Z"/></svg></a>
-  <a class="quick-contact__item quick-contact__item--phone" href="tel:+910000000000" aria-label="Call Wal Pakh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2c1.1.4 2.2.6 3.4.6a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.5 22 2 13.5 2 3.2a1 1 0 0 1 1-1H7a1 1 0 0 1 1 1c0 1.2.2 2.3.6 3.4a1 1 0 0 1-.2 1l-1.8 1.8Z"/></svg></a>
-</aside>
-
-<script src="js/navigation.js"></script>
-<script src="js/animations.js"></script>
-<script src="js/packages-data.js"></script>
-<script src="js/packages.js"></script>
+  <button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="js/v2-script.js"></script>
 </body>
 </html>
