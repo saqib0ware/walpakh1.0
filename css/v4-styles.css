@@ -1826,7 +1826,7 @@ button { cursor: pointer; }
   color: #fff;
   background:
     linear-gradient(to top, rgba(5,42,31,.82), rgba(5,42,31,.05)),
-    url('assets/images/package-economy.jpg') center / cover no-repeat;
+    url('../assets/images/package-economy.jpg') center / cover no-repeat;
 }
 .custom-summary__art span,
 .custom-summary__art strong { display: block; }
