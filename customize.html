@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Customize your Kashmir trip with Walpakh — choose your dates, destinations, experiences, stay, transport and food preferences." />
+  <meta name="theme-color" content="#0a281f" />
+  <title>Customize Your Kashmir Trip — Walpakh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Italianno&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/v4-styles.css" />
+</head>
+<body class="customize-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>Explore Kashmir, Your Way.</span>
+      <div class="topbar__contact">
+        <a href="tel:+917006512345"><i class="fa-solid fa-phone"></i> 24/7 Travel Support</a>
+        <a href="tel:+917006512345"><i class="fa-solid fa-phone-volume"></i> +91 70065 12345</a>
+        <a class="topbar__whatsapp" href="https://wa.me/917006512345" target="_blank" rel="noopener" aria-label="Walpakh WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand brand--image" href="index.html" aria-label="Walpakh home">
+        <img class="brand-logo" src="assets/images/walpakh-logo.jpg" alt="Walpakh" />
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#experiences">Experiences</a>
+        <a href="index.html#car-collection">Transport</a>
+        <a href="shop.html">Shop in Kashmir</a>
+        <a href="index.html#why-us">About Us</a>
+        <a href="#footer">Contact</a>
+      </nav>
+      <a class="btn btn--small btn--primary nav-cta active" href="#custom-trip-form"><i class="fa-solid fa-wand-magic-sparkles"></i> Customize Trip</a>
+    </div>
+  </header>
+
+  <aside class="support-rail" aria-label="Quick contact shortcuts">
+    <a class="support-rail__item support-rail__item--wa" href="https://wa.me/917006512345" target="_blank" rel="noopener" aria-label="Chat with Walpakh on WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
+    <a class="support-rail__item support-rail__item--call" href="tel:+917006512345" aria-label="Call Walpakh"><i class="fa-solid fa-phone"></i><span>Call</span></a>
+    <a class="support-rail__item support-rail__item--gold" href="mailto:info@walpakh.com" aria-label="Email Walpakh"><i class="fa-regular fa-envelope"></i><span>Email</span></a>
+  </aside>
+
+  <main id="main">
+    <section class="customize-hero" aria-labelledby="customize-title">
+      <div class="customize-hero__overlay"></div>
+      <div class="container customize-hero__content reveal">
+        <p class="eyebrow">Your Kashmir. Your Way.</p>
+        <h1 id="customize-title">Customize Your Kashmir Trip</h1>
+        <p>Choose what matters to you and we’ll shape the journey around your travel style.</p>
+        <a class="btn btn--primary" href="#custom-trip-form">Start Customizing <i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+    </section>
+
+    <nav class="custom-steps" aria-label="Trip customization steps">
+      <div class="container custom-steps__track">
+        <a class="active" href="#trip-details"><span>1</span> Trip Details</a>
+        <a href="#places"><span>2</span> Places</a>
+        <a href="#activities"><span>3</span> Experiences</a>
+        <a href="#stay"><span>4</span> Stay</a>
+        <a href="#transport"><span>5</span> Transport</a>
+        <a href="#food"><span>6</span> Food</a>
+        <a href="#book"><span>7</span> Book</a>
+      </div>
+    </nav>
+
+    <section class="custom-builder" id="custom-trip-form">
+      <div class="container custom-builder__layout">
+        <form class="custom-form" id="custom-trip-builder" novalidate>
+          <section class="builder-section reveal" id="trip-details" data-step-section="1">
+            <div class="builder-section__heading"><span class="step-badge">1</span><div><h2>Trip Details</h2><p>Tell us when you want to travel and who is coming along.</p></div></div>
+            <div class="detail-grid">
+              <label class="builder-field"><span><i class="fa-regular fa-calendar"></i> Arrival Date</span><input id="custom-arrival" name="arrival_date" type="date" required /></label>
+              <label class="builder-field"><span><i class="fa-regular fa-calendar-check"></i> Departure Date</span><input id="custom-departure" name="departure_date" type="date" required /></label>
+              <label class="builder-field"><span><i class="fa-solid fa-user-group"></i> Adults</span><select id="custom-adults" name="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option></select></label>
+              <label class="builder-field"><span><i class="fa-solid fa-child-reaching"></i> Children</span><select id="custom-children" name="children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></label>
+              <label class="builder-field"><span><i class="fa-solid fa-people-roof"></i> Traveller Type</span><select id="custom-traveller-type" name="traveller_type"><option>Couple</option><option>Family</option><option>Friends</option><option>Solo Traveller</option><option>Corporate / Team</option><option>Student Group</option><option>Other</option></select></label>
+              <label class="builder-field"><span><i class="fa-solid fa-location-dot"></i> Arrival / Departure Point</span><select id="custom-arrival-point" name="arrival_point"><option>Srinagar Airport</option><option>Srinagar City</option><option>Jammu</option><option>Other / To be decided</option></select></label>
+            </div>
+          </section>
+
+          <section class="builder-section reveal" id="places" data-step-section="2">
+            <div class="builder-section__heading"><span class="step-badge">2</span><div><h2>Choose Your Places</h2><p>Select as many destinations as you would like to explore.</p></div><span class="selection-hint">Select multiple</span></div>
+            <div class="choice-grid choice-grid--images" data-choice-group="places">
+              <button class="image-choice is-selected" type="button" data-choice="Srinagar" aria-pressed="true" style="--choice-image:url('assets/images/hotel3.png')"><span>Srinagar</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice is-selected" type="button" data-choice="Gulmarg" aria-pressed="true" style="--choice-image:url('assets/images/gulmarg.jpg')"><span>Gulmarg</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice" type="button" data-choice="Pahalgam" aria-pressed="false" style="--choice-image:url('assets/images/pahalgam.jpg')"><span>Pahalgam</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice" type="button" data-choice="Sonamarg" aria-pressed="false" style="--choice-image:url('assets/images/sonamarg.jpg')"><span>Sonamarg</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice" type="button" data-choice="Gurez Valley" aria-pressed="false" style="--choice-image:url('assets/images/experiences/gurez-sunrise.jpg')"><span>Gurez Valley</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice" type="button" data-choice="Doodhpathri" aria-pressed="false" style="--choice-image:url('assets/images/package-economy.jpg')"><span>Doodhpathri</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice" type="button" data-choice="Yusmarg" aria-pressed="false" style="--choice-image:url('assets/images/adventure.png')"><span>Yusmarg</span><i class="fa-solid fa-check"></i></button>
+            </div>
+          </section>
+
+          <section class="builder-section reveal" id="activities" data-step-section="3">
+            <div class="builder-section__heading"><span class="step-badge">3</span><div><h2>Activities & Signature Experiences</h2><p>Mix classic Kashmir highlights with local and memorable experiences.</p></div><span class="selection-hint">Select multiple</span></div>
+            <div class="choice-grid choice-grid--images" data-choice-group="activities">
+              <button class="image-choice" type="button" data-choice="Gondola Ride" aria-pressed="false" style="--choice-image:url('assets/images/package-premium.jpg')"><span>Gondola Ride</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice is-selected" type="button" data-choice="Shikara Ride" aria-pressed="true" style="--choice-image:url('assets/images/experiences/sunset-shikara.jpg')"><span>Shikara Ride</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice" type="button" data-choice="Kashmiri Wazwan" aria-pressed="false" style="--choice-image:url('assets/images/experiences/royal-wazwan.jpg')"><span>Kashmiri Wazwan</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice" type="button" data-choice="Village Experience" aria-pressed="false" style="--choice-image:url('assets/images/experiences/village-homestay.jpg')"><span>Village Experience</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice" type="button" data-choice="Apple Orchard" aria-pressed="false" style="--choice-image:url('assets/images/experiences/apple-picking.jpg')"><span>Apple Orchard</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice" type="button" data-choice="Stargazing" aria-pressed="false" style="--choice-image:url('assets/images/experiences/stargazing-camp.jpg')"><span>Stargazing</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice" type="button" data-choice="Luxury Glamping" aria-pressed="false" style="--choice-image:url('assets/images/experiences/luxury-glamping.jpg')"><span>Luxury Glamping</span><i class="fa-solid fa-check"></i></button>
+              <button class="image-choice" type="button" data-choice="Local Shopping" aria-pressed="false" style="--choice-image:url('assets/images/pashmina.jpg')"><span>Local Shopping</span><i class="fa-solid fa-check"></i></button>
+            </div>
+            <label class="builder-field builder-field--full custom-notes-inline"><span><i class="fa-solid fa-wand-magic-sparkles"></i> Something else in mind?</span><input id="custom-extra-experience" name="extra_experience" type="text" placeholder="Tell us any activity or experience you want us to include" /></label>
+          </section>
+
+          <section class="builder-section reveal" id="stay" data-step-section="4">
+            <div class="builder-section__heading"><span class="step-badge">4</span><div><h2>Select Your Stay</h2><p>Choose the style of accommodation that suits your trip.</p></div></div>
+            <div class="sub-choice-block"><h3>Comfort Preference</h3><div class="pill-choice-group" data-radio-group="comfort"><button type="button" class="pill-choice" data-choice="Simple & Comfortable">Simple & Comfortable</button><button type="button" class="pill-choice is-selected" data-choice="Premium Comfort">Premium Comfort</button><button type="button" class="pill-choice" data-choice="Luxury Stay">Luxury Stay</button><button type="button" class="pill-choice" data-choice="Surprise Me">Surprise Me</button></div></div>
+            <div class="icon-choice-grid" data-radio-group="stay"><button class="icon-choice is-selected" type="button" data-choice="Hotel"><i class="fa-solid fa-hotel"></i><span>Hotel</span></button><button class="icon-choice" type="button" data-choice="Houseboat"><i class="fa-solid fa-ship"></i><span>Houseboat</span></button><button class="icon-choice" type="button" data-choice="Resort"><i class="fa-solid fa-house-chimney"></i><span>Resort</span></button><button class="icon-choice" type="button" data-choice="Homestay"><i class="fa-solid fa-house-user"></i><span>Homestay</span></button><button class="icon-choice" type="button" data-choice="Camp / Glamping"><i class="fa-solid fa-campground"></i><span>Camp / Glamping</span></button></div>
+          </section>
+
+          <section class="builder-section reveal" id="transport" data-step-section="5">
+            <div class="builder-section__heading"><span class="step-badge">5</span><div><h2>Transportation</h2><p>Pick the vehicle category that fits your group and comfort preference.</p></div></div>
+            <div class="icon-choice-grid icon-choice-grid--transport" data-radio-group="transport"><button class="icon-choice is-selected" type="button" data-choice="Sedan"><i class="fa-solid fa-car-side"></i><span>Sedan</span><small>2–4 Pax</small></button><button class="icon-choice" type="button" data-choice="SUV"><i class="fa-solid fa-car-rear"></i><span>SUV</span><small>4–6 Pax</small></button><button class="icon-choice" type="button" data-choice="Tempo Traveller"><i class="fa-solid fa-van-shuttle"></i><span>Tempo Traveller</span><small>7–12 Pax</small></button><button class="icon-choice" type="button" data-choice="Mini Coach"><i class="fa-solid fa-bus-simple"></i><span>Mini Coach</span><small>13–25 Pax</small></button><button class="icon-choice" type="button" data-choice="Luxury Coach"><i class="fa-solid fa-bus"></i><span>Luxury Coach</span><small>26+ Pax</small></button></div>
+          </section>
+
+          <section class="builder-section reveal" id="food" data-step-section="6">
+            <div class="builder-section__heading"><span class="step-badge">6</span><div><h2>Food Preferences</h2><p>Tell us how you would like meals to be planned during your stay.</p></div></div>
+            <div class="pill-choice-group pill-choice-group--wrap" data-choice-group="food"><button type="button" class="pill-choice is-selected" data-choice="Breakfast">Breakfast</button><button type="button" class="pill-choice" data-choice="Breakfast + Dinner">Breakfast + Dinner</button><button type="button" class="pill-choice" data-choice="All Meals">All Meals</button><button type="button" class="pill-choice" data-choice="Vegetarian">Vegetarian</button><button type="button" class="pill-choice" data-choice="Non-Vegetarian">Non-Vegetarian</button><button type="button" class="pill-choice" data-choice="Kashmiri Wazwan">Kashmiri Wazwan</button><button type="button" class="pill-choice" data-choice="Local Food Experience">Local Food Experience</button></div>
+          </section>
+
+          <section class="builder-section reveal" id="book" data-step-section="7">
+            <div class="builder-section__heading"><span class="step-badge">7</span><div><h2>Your Details & Booking Request</h2><p>Share your contact information and our team will confirm the custom itinerary with you.</p></div></div>
+            <div class="detail-grid detail-grid--booking">
+              <label class="builder-field"><span><i class="fa-regular fa-user"></i> Full Name</span><input id="custom-name" name="name" type="text" placeholder="Your full name" autocomplete="name" required /></label>
+              <label class="builder-field"><span><i class="fa-solid fa-phone"></i> Phone / WhatsApp</span><input id="custom-phone" name="phone" type="tel" placeholder="Your contact number" autocomplete="tel" required /></label>
+              <label class="builder-field"><span><i class="fa-regular fa-envelope"></i> Email</span><input id="custom-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required /></label>
+              <label class="builder-field"><span><i class="fa-regular fa-comments"></i> Preferred Contact</span><select id="custom-contact-method" name="contact_method"><option>WhatsApp</option><option>Phone Call</option><option>Email</option></select></label>
+              <label class="builder-field builder-field--full"><span><i class="fa-regular fa-pen-to-square"></i> Anything else we should know?</span><textarea id="custom-notes" name="notes" rows="4" placeholder="Special occasions, accessibility needs, preferred pace, hotel requests, interests or anything else that will help us plan better."></textarea></label>
+            </div>
+            <label class="consent-check"><input id="custom-consent" type="checkbox" required /><span>I agree to be contacted by Walpakh regarding this custom trip request.</span></label>
+            <button class="btn btn--primary btn--block custom-submit" type="submit"><i class="fa-solid fa-wand-magic-sparkles"></i> Build & Request My Trip</button>
+            <p class="custom-submit-note">No payment is collected on this page. Your preferences are sent as a trip request for confirmation.</p>
+          </section>
+        </form>
+
+        <aside class="custom-summary-wrap" aria-label="Your custom trip summary">
+          <div class="custom-summary" id="custom-summary">
+            <div class="custom-summary__art"><div><span>Your Kashmir</span><strong>Trip Summary</strong></div></div>
+            <div class="custom-summary__body">
+              <div class="summary-row"><i class="fa-regular fa-calendar"></i><div><small>Travel dates</small><strong id="summary-dates">Choose your dates</strong></div></div>
+              <div class="summary-row"><i class="fa-solid fa-user-group"></i><div><small>Travellers</small><strong id="summary-travellers">2 Adults</strong></div></div>
+              <div class="summary-row"><i class="fa-solid fa-people-roof"></i><div><small>Travel style</small><strong id="summary-type">Couple</strong></div></div>
+              <div class="summary-list"><small>Places</small><p id="summary-places">Srinagar, Gulmarg</p></div>
+              <div class="summary-list"><small>Experiences</small><p id="summary-activities">Shikara Ride</p></div>
+              <div class="summary-list"><small>Stay</small><p id="summary-stay">Hotel · Premium Comfort</p></div>
+              <div class="summary-list"><small>Transport</small><p id="summary-transport">Sedan</p></div>
+              <div class="summary-list"><small>Food</small><p id="summary-food">Breakfast</p></div>
+              <a class="btn btn--outline btn--block" href="#book">Complete Booking Request</a>
+            </div>
+          </div>
+          <div class="planner-assurance">
+            <span class="planner-assurance__icon"><i class="fa-solid fa-route"></i></span>
+            <div><strong>Smart Trip Planner</strong><p>We use your selections to create a personalized itinerary instead of forcing you into a fixed package.</p></div>
+          </div>
+          <div class="planner-assurance planner-assurance--dark">
+            <span class="planner-assurance__icon"><i class="fa-solid fa-shield-heart"></i></span>
+            <div><strong>Why customize with Walpakh?</strong><p>Local planning, flexible choices, verified stays, reliable transport and support throughout your journey.</p></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="custom-trust-strip" aria-label="Walpakh customization benefits">
+      <div class="container custom-trust-strip__grid"><article><i class="fa-solid fa-sliders"></i><div><strong>Fully Customizable</strong><span>Built around your preferences</span></div></article><article><i class="fa-solid fa-map-location-dot"></i><div><strong>Local Planning</strong><span>Designed by Kashmir experts</span></div></article><article><i class="fa-solid fa-headset"></i><div><strong>24×7 Support</strong><span>Help throughout your journey</span></div></article><article><i class="fa-solid fa-lock"></i><div><strong>Secure & Trusted</strong><span>Your details are handled carefully</span></div></article></div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand"><a class="brand brand--footer brand--image" href="index.html"><img class="brand-logo brand-logo--footer" src="assets/images/walpakh-logo.jpg" alt="Walpakh" /></a><p>We create journeys that are safe, comfortable and full of unforgettable memories.</p></div>
+      <div><h3>Quick Links</h3><a href="index.html">Home</a><a href="packages.html">Packages</a><a href="index.html#destinations">Destinations</a><a href="index.html#experiences">Experiences</a><a href="shop.html">Shop in Kashmir</a></div>
+      <div><h3>Plan Your Trip</h3><a href="customize.html">Customize Trip</a><a href="index.html#car-collection">Transport</a><a href="index.html#groups">Group Travel</a><a href="index.html#membership">VIP Membership</a></div>
+      <div><h3>Support</h3><a href="tel:+917006512345"><i class="fa-solid fa-phone"></i> +91 70065 12345</a><a href="mailto:info@walpakh.com"><i class="fa-regular fa-envelope"></i> info@walpakh.com</a><span><i class="fa-regular fa-clock"></i> Mon–Sun (24×7)</span><span><i class="fa-solid fa-location-dot"></i> Srinagar, J&K, India</span></div>
+    </div>
+    <div class="container footer__bottom"><span>© 2026 Walpakh Tour Packages. All rights reserved.</span><div><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">Cancellation Policy</a></div></div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="js/v4-script.js"></script>
+</body>
+</html>
