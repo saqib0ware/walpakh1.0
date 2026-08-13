@@ -180,6 +180,20 @@ button { cursor: pointer; }
 .slider-btn--prev { left: -17px; }
 .slider-btn--next { right: -17px; }
 .destinations .center { margin-top: 8px; }
+.offbeat-strip { position: relative; display: grid; grid-template-columns: 190px minmax(0,1fr); gap: 17px; margin-top: 28px; padding: 15px 15px 40px; overflow: hidden; border: 1px solid rgba(206,185,116,.22); border-radius: 15px; color: #fff; background: radial-gradient(circle at 20% 100%, rgba(52,107,72,.35), transparent 33%), linear-gradient(116deg, #062b22, #0d3f32 62%, #08291f); box-shadow: 0 14px 26px rgba(10,52,37,.14); }
+.offbeat-strip::after { content: ""; position: absolute; width: 200px; height: 200px; right: -76px; bottom: -126px; border: 1px solid rgba(222,191,103,.28); border-radius: 50%; box-shadow: 0 0 0 16px rgba(222,191,103,.07), 0 0 0 32px rgba(222,191,103,.04); pointer-events: none; }
+.offbeat-strip__intro { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.offbeat-strip__intro > p { margin: 0 0 5px; color: #e6c36e; font-size: 8px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.offbeat-strip__intro h3 { margin: 0 0 9px; font-family: "Cormorant Garamond", serif; font-size: 25px; line-height: .95; }
+.offbeat-strip__intro > span { max-width: 165px; margin-bottom: 13px; color: #d2ded8; font-size: 9px; line-height: 1.5; }
+.offbeat-strip__intro a { display: inline-flex; align-items: center; gap: 7px; padding: 9px 10px; border-radius: 5px; background: #519746; color: #fff; font-size: 8px; font-weight: 800; }
+.offbeat-strip__cards { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 9px; }
+.offbeat-card { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 151px; overflow: hidden; padding: 10px; border: 1px solid rgba(255,255,255,.16); border-radius: 8px; background-size: cover; background-position: center; color: #fff; box-shadow: inset 0 -62px 35px rgba(2,22,15,.66); transition: transform .22s ease, border-color .22s ease; }
+.offbeat-card:hover { transform: translateY(-4px); border-color: rgba(231,198,105,.7); }
+.offbeat-card strong { position: relative; z-index: 1; font-family: "Cormorant Garamond", serif; font-size: 17px; line-height: 1; }
+.offbeat-card span { position: relative; z-index: 1; margin-top: 3px; color: #e6eee8; font-size: 7px; line-height: 1.2; }
+.offbeat-card--bangus { background-image: url('../assets/images/experiences/gurez-sunrise.jpg'); }.offbeat-card--tosamaidan { background-image: url('../assets/images/sonamarg.jpg'); }.offbeat-card--doodh { background-image: url('../assets/images/pahalgam.jpg'); }.offbeat-card--yusmarg { background-image: url('../assets/images/package-economy.jpg'); }.offbeat-card--gurez { background-image: url('../assets/images/gulmarg.jpg'); }
+.offbeat-strip__all { position: absolute; z-index: 2; right: 18px; bottom: 13px; display: inline-flex; align-items: center; gap: 8px; color: #f2d989; font-size: 9px; font-weight: 800; }
 
 .experiences { padding-top: 52px; }
 .experience-grid { display: grid; grid-template-columns: repeat(10, 1fr); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
@@ -306,6 +320,9 @@ button { cursor: pointer; }
   .group-grid { grid-template-columns: 1fr; }
   .group-card__image { height: 190px; }
   .destination-track { grid-auto-columns: 70%; }
+  .offbeat-strip { grid-template-columns: 160px minmax(0,1fr); }
+  .offbeat-strip__cards { grid-auto-flow: column; grid-auto-columns: 125px; grid-template-columns: none; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+  .offbeat-strip__cards::-webkit-scrollbar { display: none; }
   .slider-btn { display: none; }
   .experience-grid { grid-template-columns: repeat(2, 1fr); }
   .experience-grid article { border-bottom: 1px solid var(--line); }
@@ -630,6 +647,43 @@ button { cursor: pointer; }
 .package-cta-band__center p { margin: 5px 0 13px; color: #e2ece9; font-size: 14px; }
 .package-cta-band__contact { display: grid; gap: 7px; font-size: 10px; }
 .package-cta-band__contact i { width: 18px; color: #e7d68c; }
+
+/* Economy collection */
+.economy-page { background: #f6f8f4; }
+.economy-hero { position: relative; overflow: hidden; color: #fff; background: url('../assets/images/mapp.png') center 44% / cover no-repeat; }
+.economy-hero__overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4,48,29,.92), rgba(5,75,43,.62) 52%, rgba(5,44,29,.26)); }
+.economy-hero__content { position: relative; min-height: 320px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-block: 48px; }
+.economy-hero__eyebrow { display: inline-flex; align-items: center; gap: 8px; color: #f3d879; font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.economy-hero h1 { max-width: 760px; margin: 5px 0; color: #fff; font-family: "Cormorant Garamond", serif; font-size: clamp(48px, 8vw, 88px); line-height: .84; text-transform: uppercase; letter-spacing: .03em; }
+.economy-hero p { display: flex; align-items: center; gap: 10px; margin: 10px 0 15px; color: #edf4ec; font-size: 14px; font-weight: 700; }
+.economy-hero p i { width: 5px; height: 5px; border-radius: 50%; background: #e8c666; }
+.economy-hero strong { color: #f3db92; font-size: 16px; letter-spacing: .1em; text-transform: uppercase; }
+.economy-hero__ribbon { position: absolute; top: 0; right: 8%; display: grid; place-items: center; min-width: 112px; min-height: 125px; padding: 15px; border-inline: 1px solid rgba(255,255,255,.45); background: #1b5a32; color: #fff; text-align: center; font-size: 14px; font-weight: 800; line-height: 1.1; text-transform: uppercase; }
+.economy-itineraries { padding-block: 58px; }
+.economy-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 15px; }
+.economy-trip { display: grid; align-content: start; overflow: hidden; border: 1px solid #cbd6cf; border-radius: 13px; background: #fffefa; box-shadow: 0 10px 22px rgba(17,64,39,.08); transition: transform .2s ease, box-shadow .2s ease; }
+.economy-trip:hover { transform: translateY(-5px); box-shadow: 0 16px 28px rgba(17,64,39,.15); }
+.economy-trip header { position: relative; height: 250px; padding: 48px 13px 12px; text-align: center; }
+.economy-trip header > span { position: absolute; top: 12px; left: 12px; display: grid; width: 35px; height: 35px; place-items: center; border-radius: 50%; background: #1c6236; color: #fff; font-size: 12px; font-weight: 800; }
+.economy-trip header > i { position: absolute; top: 17px; right: 13px; color: #397444; font-size: 23px; }
+.economy-trip h2 { min-height: 86px; margin: 0; padding: 6px; color: #16462b; font-family: "Cormorant Garamond", serif; font-size: 22px; line-height: .94; text-transform: uppercase; }
+.economy-trip header p { min-height: 18px; margin: 9px 0 4px; color: #243d30; font-size: 12px; font-weight: 800; }
+.economy-trip header small { display: block; min-height: 24px; color: #53685b; font-size: 10px; font-weight: 700; line-height: 1.35; }
+.economy-trip img { width: 100%; height: 132px; object-fit: cover; }
+.economy-trip ul { min-height: 174px; margin: 0; padding: 15px 14px 10px 29px; border-bottom: 1px solid #dce4dc; color: #2c3d33; font-size: 11px; font-weight: 600; line-height: 1.62; }
+.economy-trip footer { min-height: 60px; padding: 12px 14px; color: #32583a; font-size: 10px; line-height: 1.4; }
+.economy-trip footer i { margin-right: 6px; color: #4e8943; font-size: 17px; vertical-align: middle; }
+.economy-trip footer b { margin-right: 3px; text-transform: uppercase; }
+.economy-trip--featured { border-color: #c6a451; background: #fffdf5; }.economy-trip--featured header > span { background: #9b701d; }.economy-trip--featured header > i { color: #9b701d; }.economy-trip--featured h2 { color: #715015; }
+.economy-inclusions { padding: 38px 0; color: #fff; background: linear-gradient(110deg, #082d1e, #135633); }
+.economy-inclusions__grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 36px; align-items: center; }.economy-inclusions h2 { margin: 0 0 18px; font-family: "Cormorant Garamond", serif; font-size: 36px; }
+.economy-inclusion-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }.economy-inclusion-list span { display: grid; gap: 7px; color: #e5efe7; font-size: 10px; font-weight: 700; }.economy-inclusion-list i { color: #e5c35b; font-size: 21px; }
+.economy-inclusions__why { padding-left: 30px; border-left: 1px solid rgba(255,255,255,.2); }.economy-inclusions__why p { margin: 0; color: #edcf70; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }.economy-inclusions__why ul { margin: 10px 0 14px; padding: 0; list-style: none; font-size: 10px; line-height: 1.75; }.economy-inclusions__why li::before { content: "✓"; margin-right: 7px; color: #e5c35b; font-weight: 800; }
+
+/* Premium collection */
+.premium-page { background: #f6f6f3; }.premium-hero { position: relative; overflow: hidden; color: #fff; background: url('../assets/images/hotel3.png') center 48% / cover no-repeat; }.premium-hero__overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(2,17,27,.9), rgba(5,47,66,.55) 53%, rgba(6,34,46,.35)); }.premium-hero__content { position: relative; min-height: 315px; padding: 42px 0; text-align: center; }.premium-hero__eyebrow { display: block; margin-bottom: 4px; color: #ecd28c; font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }.premium-hero h1 { margin: 0; color: #fff; font-family: "Cormorant Garamond", serif; font-size: clamp(47px, 7.4vw, 84px); line-height: .9; text-transform: uppercase; letter-spacing: .045em; }.premium-hero p { display: flex; justify-content: center; align-items: center; gap: 10px; margin: 7px 0; color: #f5ebd0; font-size: 14px; font-weight: 700; }.premium-hero p i { width: 5px; height: 5px; border-radius: 50%; background: #e9c768; }.premium-hero strong { color: #eed88f; font-family: Italianno, cursive; font-size: clamp(27px, 3.7vw, 45px); font-weight: 400; }.premium-hero__perks { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px 25px; margin-top: 22px; color: #fff; font-size: 9px; font-weight: 800; text-transform: uppercase; }.premium-hero__perks i { display: block; margin-bottom: 5px; color: #efcd78; font-size: 20px; }
+.premium-itineraries { padding-block: 55px; }.premium-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }.premium-trip { display: grid; align-content: start; overflow: hidden; border: 1px solid #c8b782; border-radius: 12px; background: #fffaf0; box-shadow: 0 9px 18px rgba(8,35,42,.11); transition: transform .22s ease, box-shadow .22s ease; }.premium-trip:hover { transform: translateY(-5px); box-shadow: 0 16px 27px rgba(8,35,42,.18); }.premium-trip header { position: relative; height: 118px; padding: 16px 10px 8px 47px; color: #fff; background: linear-gradient(115deg, #062d3b, #105b65); }.premium-trip header > span { position: absolute; top: 13px; left: 10px; display: grid; width: 30px; height: 30px; place-items: center; border: 2px solid #f3d078; border-radius: 50%; background: #b47d24; color: #fff; font-size: 10px; font-weight: 800; }.premium-trip h2 { min-height: 42px; margin: 0; font-family: "Cormorant Garamond", serif; font-size: 20px; line-height: .94; }.premium-trip em { display: block; min-height: 17px; color: #eed188; font-family: Italianno, cursive; font-size: 17px; line-height: 1; }.premium-trip header p { display: inline-block; margin: 7px 0 0; padding: 4px 8px; border-radius: 999px; background: #f2ca68; color: #17333b; font-size: 8px; font-style: normal; font-weight: 800; }.premium-trip img { width: 100%; height: 128px; object-fit: cover; }.premium-trip > b { min-height: 35px; padding: 9px 10px; color: #fff; background: #0c503f; font-size: 9px; line-height: 1.3; text-align: center; }.premium-trip ul { min-height: 130px; margin: 0; padding: 13px 11px 10px 25px; color: #283f3b; font-size: 11px; font-weight: 600; line-height: 1.58; }.premium-trip footer { min-height: 61px; padding: 11px 12px; border-top: 1px solid #e1d9c3; color: #79571c; font-size: 10px; font-weight: 700; line-height: 1.42; }.premium-trip footer i { margin-right: 5px; color: #d7a630; }.premium-trip--signature { border-color: #b48228; }.premium-trip--signature header { background: linear-gradient(115deg, #4b3510, #89631d); }
+.premium-assurance { padding: 25px 0; color: #fff; background: linear-gradient(105deg, #052c32, #0a654e); }.premium-assurance .container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 12px 25px; }.premium-assurance strong { color: #f1d281; font-family: "Cormorant Garamond", serif; font-size: 25px; }.premium-assurance span { font-size: 9px; font-weight: 700; }.premium-assurance i { margin-right: 4px; color: #eccf77; }.premium-assurance a { padding: 9px 12px; border-radius: 6px; background: #f0ce77; color: #193c37; font-size: 9px; font-weight: 800; }
 
 /* Shop page */
 .shop-page { background: #fff; }
@@ -1005,6 +1059,10 @@ button { cursor: pointer; }
 }
 
 @media (max-width: 1050px) {
+  .premium-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .economy-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .economy-inclusions__grid { grid-template-columns: 1fr; gap: 25px; }
+  .economy-inclusions__why { padding: 22px 0 0; border-top: 1px solid rgba(255,255,255,.2); border-left: 0; }
   .packages-hero__grid { grid-template-columns: 1fr .85fr; }
   .class-grid { grid-template-columns: 1fr; max-width: 720px; margin-inline: auto; }
   .class-feature-split { grid-template-columns: 1fr 1.15fr; }
@@ -1024,6 +1082,9 @@ button { cursor: pointer; }
 }
 
 @media (max-width: 900px) {
+  .premium-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .economy-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .economy-hero__ribbon { right: 4%; }
   .nav-wrap,
   .nav-wrap--shop { grid-template-columns: 1fr auto auto; }
   .brand-logo { height: 53px; }
@@ -1040,6 +1101,21 @@ button { cursor: pointer; }
 }
 
 @media (max-width: 640px) {
+  .premium-hero__content { min-height: 280px; padding-block: 35px; }.premium-hero h1 { font-size: 50px; }.premium-hero p { flex-wrap: wrap; gap: 7px; font-size: 10px; }.premium-hero strong { font-size: 31px; }.premium-hero__perks { gap: 11px 15px; margin-top: 16px; font-size: 7px; }.premium-hero__perks i { font-size: 15px; }.premium-itineraries { padding-block: 38px; }.premium-grid { grid-template-columns: 1fr; gap: 13px; }.premium-trip { grid-template-columns: 1fr 1fr; }.premium-trip header { height: 142px; padding-top: 22px; }.premium-trip img { height: 142px; align-self: stretch; }.premium-trip > b, .premium-trip ul, .premium-trip footer { grid-column: 1 / -1; }.premium-trip ul { min-height: 0; font-size: 10px; }.premium-assurance .container { justify-content: flex-start; }.premium-assurance strong { width: 100%; }
+  .economy-hero__content { min-height: 270px; padding-block: 38px; }
+  .economy-hero h1 { max-width: 280px; font-size: 50px; }
+  .economy-hero p { max-width: 240px; flex-wrap: wrap; gap: 7px; font-size: 11px; }
+  .economy-hero strong { max-width: 225px; font-size: 10px; line-height: 1.5; }
+  .economy-hero__ribbon { min-width: 73px; min-height: 88px; font-size: 10px; }
+  .economy-itineraries { padding-block: 40px; }
+  .economy-grid { grid-template-columns: 1fr; gap: 13px; }
+  .economy-trip { grid-template-columns: 1fr 1fr; }.economy-trip header { height: 150px; min-height: 150px; padding: 45px 11px 8px; }.economy-trip h2 { min-height: 0; font-size: 18px; }.economy-trip header p { min-height: 0; margin-top: 6px; font-size: 10px; }.economy-trip header small { min-height: 0; font-size: 8px; }.economy-trip header, .economy-trip img { grid-column: auto; }.economy-trip ul, .economy-trip footer { grid-column: 1 / -1; }.economy-trip img { height: 150px; align-self: stretch; }.economy-trip ul { min-height: 0; }.economy-trip footer { min-height: 48px; }
+  .economy-inclusion-list { grid-template-columns: repeat(2, 1fr); }.economy-inclusions h2 { font-size: 31px; }
+  .offbeat-strip { grid-template-columns: 1fr; gap: 15px; padding: 19px 14px 38px; }
+  .offbeat-strip__intro > span { max-width: 240px; }
+  .offbeat-strip__cards { grid-auto-columns: 116px; }
+  .offbeat-card { min-height: 135px; }
+  .offbeat-strip__all { right: 14px; bottom: 13px; }
   .brand-logo { height: 48px; }
   .brand-logo--footer { height: 92px; }
   .section--compact { padding-block: 45px; }
@@ -1154,7 +1230,7 @@ button { cursor: pointer; }
 .kashmir-shop__copy .kicker i { font-size: 21px; }
 .kashmir-shop__copy h2 { margin: 0 0 10px; color: #e4bd62; font-family: "Cormorant Garamond", serif; font-size: clamp(36px, 4vw, 53px); line-height: .94; text-transform: uppercase; letter-spacing: .035em; }
 .kashmir-shop__copy > p:not(.kicker) { margin: 0 0 20px; color: #f4f7ed; font-size: 14px; font-weight: 600; line-height: 1.5; }
-.kashmir-shop__button { display: inline-flex; align-items: center; gap: 13px; padding: 12px 15px 12px 19px; border-radius: 999px; background: #f5e8bd; color: #1b3526; font-size: 12px; font-weight: 800; box-shadow: 0 5px 12px rgba(0,0,0,.18); transition: transform .2s ease, background .2s ease; }
+.kashmir-shop__button { display: inline-flex; align-items: center; gap: 8px; padding: 8px 15px 8px 19px; border-radius: 999px; background: #f5e8bd; color: #1b3526; font-size: 12px; font-weight: 800; box-shadow: 0 5px 12px rgba(0,0,0,.18); transition: transform .2s ease, background .2s ease; }
 .kashmir-shop__button i { display: grid; width: 22px; height: 22px; place-items: center; border-radius: 50%; background: #315e3b; color: #fff; font-size: 10px; }
 .kashmir-shop__button:hover { background: #fff4d2; transform: translateY(-2px); }
 .kashmir-shop__products { position: relative; z-index: 1; align-self: stretch; min-height: 158px; }
@@ -1175,7 +1251,7 @@ button { cursor: pointer; }
 }
 .vehicle-track {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 14px;
 }
 .vehicle-card {
@@ -1194,7 +1270,8 @@ button { cursor: pointer; }
 }
 .vehicle-card__visual {
   position: relative;
-  height: 138px;
+  height: auto;
+  aspect-ratio: 3 / 2;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -1229,10 +1306,25 @@ button { cursor: pointer; }
   font-size: 66px;
   filter: drop-shadow(0 8px 6px rgba(0,0,0,.09));
 }
-.vehicle-card__visual--suv { background: linear-gradient(145deg, #edf4f0, #d7e6de); }
-.vehicle-card__visual--tempo { background: linear-gradient(145deg, #f7f5ee, #ece3ce); }
-.vehicle-card__visual--mini { background: linear-gradient(145deg, #eef3f6, #dce7ee); }
-.vehicle-card__visual--coach { background: linear-gradient(145deg, #f6f1e7, #e7dcc5); }
+
+.vehicle-card__visual img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: fill;
+  filter: none;
+  transition: transform .25s ease;
+}
+.vehicle-card:hover .vehicle-card__visual img { transform: scale(1.045); }
+.vehicle-card__visual--urbania { background: linear-gradient(145deg, #f7f5ee, #ece3ce); }
+.vehicle-card__visual--innova { background: linear-gradient(145deg, #edf4f0, #d7e6de); }
+.vehicle-card__visual--amaze { background: linear-gradient(145deg, #eef3f6, #dce7ee); }
+.vehicle-card__visual--swift { background: linear-gradient(145deg, #f6f1e7, #e7dcc5); }
+.vehicle-card__visual--fortuner { background: linear-gradient(145deg, #e8f0ed, #c8ddd3); }
+.vehicle-card__visual--ertiga { background: linear-gradient(145deg, #f3edf6, #e1d6e7); }
 .vehicle-card__body { padding: 14px 14px 16px; }
 .vehicle-card__type {
   display: inline-flex;
@@ -1575,17 +1667,18 @@ button { cursor: pointer; }
   .kashmir-shop { padding-block: 20px; }
   .kashmir-shop__heading { margin-bottom: 12px; }
   .kashmir-shop__heading h2 { font-size: 34px; }
-  .kashmir-shop__layout { min-height: 0; grid-template-columns: 1fr; gap: 13px; padding: 25px 21px 0; border-radius: 15px; }
+  .kashmir-shop__layout { min-height: 0; grid-template-columns: 1fr; gap: 13px; padding: 22px 18px 0; border-radius: 15px; background-size: auto 62%, auto 100%; background-position: right bottom, center; }
   .kashmir-shop__copy h2 { font-size: 36px; }
   .kashmir-shop__copy > p:not(.kicker) { margin-bottom: 14px; font-size: 11px; }
-  .kashmir-shop__button { padding: 10px 13px 10px 16px; font-size: 10px; }
-  .kashmir-shop__products { min-height: 133px; margin: 0 -21px; }
+  .kashmir-shop__button { gap: 9px; padding: 8px 10px 8px 13px; font-size: 9px; }
+  .kashmir-shop__button i { width: 18px; height: 18px; font-size: 8px; }
+  .kashmir-shop__products { min-height: 118px; margin: 0 -18px; }
   .shop-preview-card { border-radius: 9px; }
   .shop-preview-card--dryfruit { left: 23%; width: 46%; }
   .shop-preview-card--saffron { right: 5%; width: 37%; }
   .shop-preview-card--pashmina { right: 1%; width: 31%; }
   .vehicle-track { grid-auto-columns: 78%; }
-  .vehicle-card__visual { height: 150px; }
+  .vehicle-card__visual { height: auto; }
   .signature-experiences { padding: 50px 0 56px; }
   .signature-heading > p:first-child { letter-spacing: .12em; font-size: 9px; }
   .signature-heading > p:first-child span { width: 20px; }
