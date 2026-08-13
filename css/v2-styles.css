@@ -1126,6 +1126,45 @@ button { cursor: pointer; }
 .support-rail__item--call { background: #0a404b; }
 .support-rail__item--gold { background: #b68936; }
 
+/* Compact Kashmir marketplace preview */
+.kashmir-shop {
+  padding-block: 25px 28px;
+  background: #f8f9f7;
+}
+.kashmir-shop__heading { margin-bottom: 16px; }
+.kashmir-shop__heading h2 { font-size: clamp(32px, 4vw, 43px); }
+.kashmir-shop__layout {
+  position: relative;
+  min-height: 220px;
+  display: grid;
+  grid-template-columns: minmax(290px, .78fr) minmax(430px, 1.22fr);
+  align-items: center;
+  gap: clamp(12px, 3vw, 48px);
+  overflow: hidden;
+  padding: 29px clamp(28px, 4vw, 55px);
+  border: 1px solid rgba(199,163,91,.32);
+  border-radius: 22px;
+  background:
+    linear-gradient(92deg, rgba(4,24,16,.92) 0%, rgba(7,35,23,.77) 49%, rgba(6,29,19,.32) 100%),
+    url('../assets/images/shop home.png') center / cover no-repeat;
+  box-shadow: 0 16px 34px rgba(9,38,26,.16);
+}
+.kashmir-shop__copy { position: relative; z-index: 2; max-width: 455px; }
+.kashmir-shop__copy .kicker { display: flex; align-items: center; gap: 9px; margin-bottom: 4px; color: #e2bd61; font-size: 11px; letter-spacing: .13em; }
+.kashmir-shop__copy .kicker i { font-size: 21px; }
+.kashmir-shop__copy h2 { margin: 0 0 10px; color: #e4bd62; font-family: "Cormorant Garamond", serif; font-size: clamp(36px, 4vw, 53px); line-height: .94; text-transform: uppercase; letter-spacing: .035em; }
+.kashmir-shop__copy > p:not(.kicker) { margin: 0 0 20px; color: #f4f7ed; font-size: 14px; font-weight: 600; line-height: 1.5; }
+.kashmir-shop__button { display: inline-flex; align-items: center; gap: 13px; padding: 12px 15px 12px 19px; border-radius: 999px; background: #f5e8bd; color: #1b3526; font-size: 12px; font-weight: 800; box-shadow: 0 5px 12px rgba(0,0,0,.18); transition: transform .2s ease, background .2s ease; }
+.kashmir-shop__button i { display: grid; width: 22px; height: 22px; place-items: center; border-radius: 50%; background: #315e3b; color: #fff; font-size: 10px; }
+.kashmir-shop__button:hover { background: #fff4d2; transform: translateY(-2px); }
+.kashmir-shop__products { position: relative; z-index: 1; align-self: stretch; min-height: 158px; }
+.shop-preview-card { position: absolute; display: block; overflow: hidden; border: 1px solid rgba(233,213,158,.28); border-radius: 12px; box-shadow: 0 14px 27px rgba(0,0,0,.25); transition: transform .3s ease; }
+.shop-preview-card img { width: 100%; height: 100%; object-fit: cover; }
+.shop-preview-card:hover { z-index: 5; transform: translateY(-5px) scale(1.025); }
+.shop-preview-card--dryfruit { z-index: 3; top: 5px; left: 20%; width: 47%; height: calc(100% - 5px); }
+.shop-preview-card--saffron { z-index: 4; right: 2%; bottom: -2px; width: 39%; height: 63%; }
+.shop-preview-card--pashmina { z-index: 2; top: -27px; right: -1%; width: 32%; height: 121%; opacity: .93; }
+
 /* Car collection */
 .car-collection {
   background:
@@ -1515,6 +1554,8 @@ button { cursor: pointer; }
   .support-rail__item:hover { width: 62px; transform: translateY(-2px); }
   .support-rail__item i { font-size: 17px; }
   .support-rail__item span { font-size: 7px; }
+  .kashmir-shop__layout { grid-template-columns: .82fr 1.18fr; gap: 16px; padding-inline: 28px; }
+  .kashmir-shop__copy { max-width: 600px; }
   .back-to-top { bottom: 80px; }
   .signature-grid { grid-template-columns: repeat(2, 1fr); }
   .membership-grid { grid-template-columns: 1fr; }
@@ -1531,6 +1572,18 @@ button { cursor: pointer; }
 }
 
 @media (max-width: 640px) {
+  .kashmir-shop { padding-block: 20px; }
+  .kashmir-shop__heading { margin-bottom: 12px; }
+  .kashmir-shop__heading h2 { font-size: 34px; }
+  .kashmir-shop__layout { min-height: 0; grid-template-columns: 1fr; gap: 13px; padding: 25px 21px 0; border-radius: 15px; }
+  .kashmir-shop__copy h2 { font-size: 36px; }
+  .kashmir-shop__copy > p:not(.kicker) { margin-bottom: 14px; font-size: 11px; }
+  .kashmir-shop__button { padding: 10px 13px 10px 16px; font-size: 10px; }
+  .kashmir-shop__products { min-height: 133px; margin: 0 -21px; }
+  .shop-preview-card { border-radius: 9px; }
+  .shop-preview-card--dryfruit { left: 23%; width: 46%; }
+  .shop-preview-card--saffron { right: 5%; width: 37%; }
+  .shop-preview-card--pashmina { right: 1%; width: 31%; }
   .vehicle-track { grid-auto-columns: 78%; }
   .vehicle-card__visual { height: 150px; }
   .signature-experiences { padding: 50px 0 56px; }
