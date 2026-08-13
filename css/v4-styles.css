@@ -1501,7 +1501,9 @@ button { cursor: pointer; }
     right: 50%;
     bottom: 14px;
     transform: translateX(50%);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 62px;
     border-radius: 999px;
   }
   .support-rail__item {
