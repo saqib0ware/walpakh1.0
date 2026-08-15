@@ -1,145 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Destinations | Wal Pakh</title>
-  <meta name="description" content="Explore curated journeys across Jammu, Kashmir and Ladakh with Wal Pakh.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore 30 unforgettable destinations across Kashmir with Walpakh." />
+  <meta name="theme-color" content="#073e29" />
+  <title>Top Destinations in Kashmir | Walpakh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Italianno&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/v2-styles.css" />
 </head>
-<body class="destinations-page">
+<body class="destination-directory-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar"><div class="container topbar__inner"><span>Explore Kashmir, Your Way.</span><div class="topbar__contact"><a href="tel:+917006512345"><i class="fa-solid fa-phone"></i> 24/7 Travel Support</a><a href="tel:+917006512345"><i class="fa-solid fa-phone-volume"></i> +91 70065 12345</a></div></div></div>
+  <header class="site-header" id="top"><div class="container nav-wrap"><a class="brand brand--image" href="index.html" aria-label="Walpakh home"><img class="brand-logo" src="assets/images/walpakh-logo.jpg" alt="Walpakh" /></a><button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation"><span></span><span></span><span></span></button><nav id="primary-nav" class="primary-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="packages.html">Packages</a><a class="active" href="destinations.html">Destinations</a><a href="index.html#experiences">Experiences</a><a href="index.html#car-collection">Transport</a><a href="shop.html">Shop in Kashmir</a><a href="index.html#why-us">About Us</a><a href="index.html#footer">Contact</a></nav><a class="btn btn--small btn--primary nav-cta" href="customize.html">Customize Trip</a></div></header>
 
-<header class="navbar">
-  <div class="container">
-    <a href="index.html" class="logo logo--image" aria-label="Wal Pakh home">
-      <img src="assets/images/walpakh-logo.jpeg" alt="Wal Pakh">
-    </a>
-    <nav>
-      <button class="menu-close" type="button" aria-label="Close menu"></button>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="destinations.html" aria-current="page">Destinations</a></li>
-        <li><a href="packages.html">Packages</a></li>
-        <li><a href="index.html#hotels">Hotels</a></li>
-        <li><a href="index.html#adventure">Adventures</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <a class="book-btn" href="index.html#packages">Book Now</a>
-    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false"></button>
-  </div>
-</header>
-
-<main>
-  <section class="journeys" id="journey-list">
-    <div class="container">
-      <div class="section-title" data-reveal="up">
-        <p>Wal Pakh Destinations</p>
-        <h2>Journeys <em>carefully</em> put together.</h2>
-        <div class="contour-divider"></div>
+  <main id="main">
+    <section class="destination-directory-hero">
+      <div class="destination-directory-hero__overlay"></div>
+      <div class="container destination-directory-hero__content reveal"><span>Walpakh presents</span>
+        <h1>Top Destinations <b>in Kashmir</b></h1>
+        <p>Explore the beauty beyond imagination.</p>
+        <div><i class="fa-solid fa-mountain-sun"></i><i class="fa-solid fa-tree"></i><i class="fa-solid fa-sailboat"></i>
+        </div>
       </div>
-
-      <div class="journey-filter" role="toolbar" aria-label="Filter destinations">
-        <button class="active" type="button" data-filter="all" aria-pressed="true">All journeys</button>
-        <button type="button" data-filter="valleys" aria-pressed="false">Valleys &amp; meadows</button>
-        <button type="button" data-filter="lakes" aria-pressed="false">Lakes &amp; waterways</button>
-        <button type="button" data-filter="heritage" aria-pressed="false">Heritage &amp; pilgrimage</button>
-        <button type="button" data-filter="mountains" aria-pressed="false">Mountain &amp; adventure</button>
+    </section>
+    <section class="section destination-directory">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker">Curated Kashmir guide</p>
+          <h2>Find your perfect escape</h2>
+          <p class="section-subtitle">From iconic lakes and mountain meadows to sacred heritage and hidden valleys, discover
+            Kashmir one unforgettable place at a time.</p>
+        </div>
+        <div class="destination-directory-grid">
+          <article class="destination-directory-card reveal"><span>01</span><img src="assets/images/hotel3.png"
+              alt="Srinagar and Dal Lake" />
+            <h2>Srinagar</h2>
+            <p>Lakes, gardens & culture</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>02</span><img src="assets/images/package-premium.jpg"
+              alt="Gulmarg gondola" />
+            <h2>Gulmarg</h2>
+            <p>Snow, skiing & gondola</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>03</span><img src="assets/images/pahalgam.jpg"
+              alt="Pahalgam valley" />
+            <h2>Pahalgam</h2>
+            <p>Valleys & nature</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>04</span><img src="assets/images/sonamarg.jpg"
+              alt="Sonamarg mountains" />
+            <h2>Sonamarg</h2>
+            <p>Mountains & glaciers</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>05</span><img
+              src="assets/images/experiences/gurez-sunrise.png" alt="Gurez Valley" />
+            <h2>Gurez Valley</h2>
+            <p>Offbeat adventure</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>06</span><img src="assets/images/horse-riding.png"
+              alt="Aru Valley" />
+            <h2>Aru Valley</h2>
+            <p>Trekking & camping</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>07</span><img src="assets/images/trekking.png"
+              alt="Doodhpathri meadow" />
+            <h2>Doodhpathri</h2>
+            <p>Meadows & nature</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>08</span><img src="assets/images/adventure.png"
+              alt="Yusmarg forest" />
+            <h2>Yusmarg</h2>
+            <p>Peace & forests</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>09</span><img src="assets/images/river-rafting.png"
+              alt="Aharbal waterfall region" />
+            <h2>Aharbal</h2>
+            <p>Waterfall & trekking</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>10</span><img src="assets/images/camping.png"
+              alt="Daksum forest valley" />
+            <h2>Daksum</h2>
+            <p>Forests & camping</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>11</span><img
+              src="assets/images/experiences/gurez-sunrise.png" alt="Bangus Valley" />
+            <h2>Bangus Valley</h2>
+            <p>Offbeat Kashmir</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>12</span><img src="assets/images/gulmarg.jpg"
+              alt="Keran valley" />
+            <h2>Keran</h2>
+            <p>Border-side scenic valley</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>13</span><img src="assets/images/package-economy.jpg"
+              alt="Lolab Valley" />
+            <h2>Lolab Valley</h2>
+            <p>Hidden villages & meadows</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>14</span><img
+              src="assets/images/experiences/gurez-sunrise.png" alt="Tulail Valley" />
+            <h2>Tulail Valley</h2>
+            <p>Remote mountain experience</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>15</span><img src="assets/images/pahalgam.jpg"
+              alt="Tosamaidan meadow" />
+            <h2>Tosamaidan</h2>
+            <p>Camping & vast meadows</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>16</span><img src="assets/images/pahalgam.jpg"
+              alt="Betaab Valley" />
+            <h2>Betaab Valley</h2>
+            <p>Scenic sightseeing</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>17</span><img src="assets/images/horse-riding.png"
+              alt="Baisaran meadow" />
+            <h2>Baisaran</h2>
+            <p>Mini Switzerland</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>18</span><img src="assets/images/skiing.png"
+              alt="Chandanwari mountains" />
+            <h2>Chandanwari</h2>
+            <p>Mountains & trekking</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>19</span><img src="assets/images/sonamarg.jpg"
+              alt="Thajiwas Glacier" />
+            <h2>Thajiwas Glacier</h2>
+            <p>Glacier experience</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>20</span><img src="assets/images/river-rafting.png"
+              alt="Drung waterfall" />
+            <h2>Drung Waterfall</h2>
+            <p>Waterfall & winter</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>21</span><img src="assets/images/adventure.png"
+              alt="Dachigam forest" />
+            <h2>Dachigam</h2>
+            <p>Wildlife & nature</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>22</span><img src="assets/images/trekking.png"
+              alt="Kokernag spring" />
+            <h2>Kokernag</h2>
+            <p>Springs & gardens</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>23</span><img src="assets/images/hotel2.png"
+              alt="Martand Sun Temple" />
+            <h2>Martand Sun Temple</h2>
+            <p>Heritage</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>24</span><img src="assets/images/hotel1.png"
+              alt="Aishmuqam shrine" />
+            <h2>Aishmuqam</h2>
+            <p>Heritage & spirituality</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>25</span><img src="assets/images/hotel2.png"
+              alt="Charar-e-Sharief shrine" />
+            <h2>Charar-e-Sharief</h2>
+            <p>Heritage & culture</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>26</span><img src="assets/images/hotel2.png"
+              alt="Awantipora ruins" />
+            <h2>Awantipora</h2>
+            <p>Ancient ruins</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>27</span><img src="assets/images/gulmarg.jpg"
+              alt="Sinthan Top" />
+            <h2>Sinthan Top</h2>
+            <p>High-altitude views</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>28</span><img src="assets/images/package-economy.jpg"
+              alt="Margan Top" />
+            <h2>Margan Top</h2>
+            <p>Offbeat mountain drive</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>29</span><img src="assets/images/sonamarg.jpg"
+              alt="Kausarnag lake" />
+            <h2>Kausarnag</h2>
+            <p>Trekking & alpine lake</p>
+          </article>
+          <article class="destination-directory-card reveal"><span>30</span><img src="assets/images/skiing.png"
+              alt="Zojila Pass" />
+            <h2>Zojila</h2>
+            <p>High-mountain adventure</p>
+          </article>
+        </div>
       </div>
-
-      <p class="journey-count" aria-live="polite"><span id="journeyCount">16</span> journeys to explore</p>
-
-      <div class="journey-grid">
-        <article class="journey-card" data-category="valleys mountains" data-reveal="up">
-          <img src="assets/images/gulmarg.jpg" alt="Snowy Gulmarg mountain landscape" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">Kashmir</span><span class="journey-rating">&starf; 4.9</span></div><h2>Gulmarg</h2><p>Powder slopes, gondola views and summer meadows beneath Apharwat Peak.</p><div class="journey-meta"><span>Best: Dec-Aug</span><span>2-3 days</span></div></div>
-        </article>
-        <article class="journey-card" data-category="valleys mountains" data-reveal="up">
-          <img src="assets/images/pahalgam.jpg" alt="Green Pahalgam valley" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">Kashmir</span><span class="journey-rating">&starf; 4.8</span></div><h2>Pahalgam</h2><p>A gentle escape of pine forests, river walks and the wide Lidder Valley.</p><div class="journey-meta"><span>Best: Mar-Sep</span><span>2-3 days</span></div></div>
-        </article>
-        <article class="journey-card" data-category="valleys mountains" data-reveal="up">
-          <img src="assets/images/sonamarg.jpg" alt="Sonamarg mountain meadow" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">Kashmir</span><span class="journey-rating">&starf; 4.9</span></div><h2>Sonamarg</h2><p>The Meadow of Gold, where glacier trails and the Sindh River begin.</p><div class="journey-meta"><span>Best: May-Sep</span><span>1-2 days</span></div></div>
-        </article>
-        <article class="journey-card" data-category="lakes heritage" data-reveal="up">
-          <img src="assets/images/hotel3.png" alt="Houseboat on Dal Lake in Srinagar" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">Kashmir</span><span class="journey-rating">&starf; 4.9</span></div><h2>Srinagar &amp; Dal Lake</h2><p>Houseboats, shikara rides, gardens and the living rhythm of the old city.</p><div class="journey-meta"><span>Best: Apr-Oct</span><span>2-4 days</span></div></div>
-        </article>
-        <article class="journey-card" data-category="valleys mountains" data-reveal="up">
-          <img src="assets/images/trekking.png" alt="Himalayan trail near Doodhpathri" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">Kashmir</span><span class="journey-rating">&starf; 4.7</span></div><h2>Doodhpathri</h2><p>Emerald grazing slopes, forest paths and the clear Doodh Ganga stream.</p><div class="journey-meta"><span>Best: May-Sep</span><span>Day trip</span></div></div>
-        </article>
-        <article class="journey-card" data-category="valleys mountains" data-reveal="up">
-          <img src="assets/images/camping.png" alt="Camping landscape in Gurez Valley" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">North Kashmir</span><span class="journey-rating">&starf; 4.8</span></div><h2>Gurez Valley</h2><p>A quiet high valley of river villages, wooden homes and vast mountain views.</p><div class="journey-meta"><span>Best: May-Oct</span><span>2-3 days</span></div></div>
-        </article>
-        <article class="journey-card" data-category="valleys" data-reveal="up">
-          <img src="assets/images/adventure.png" alt="Forest landscape around Yusmarg" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">Kashmir</span><span class="journey-rating">&starf; 4.7</span></div><h2>Yusmarg</h2><p>A slow, pine-scented retreat with meadows, streams and open skies.</p><div class="journey-meta"><span>Best: Apr-Oct</span><span>Day trip</span></div></div>
-        </article>
-        <article class="journey-card" data-category="lakes" data-reveal="up">
-          <img src="assets/images/hero-map-real.png" alt="Mountain lake landscape representing Wular Lake" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">North Kashmir</span><span class="journey-rating">&starf; 4.6</span></div><h2>Wular Lake</h2><p>Wide freshwater horizons, birdlife and a calmer side of the Kashmir valley.</p><div class="journey-meta"><span>Best: Mar-Oct</span><span>Day trip</span></div></div>
-        </article>
-        <article class="journey-card" data-category="heritage" data-reveal="up">
-          <img src="assets/images/hero.png" alt="Garden landscape representing Verinag" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">South Kashmir</span><span class="journey-rating">&starf; 4.7</span></div><h2>Verinag</h2><p>A Mughal garden gathered around the clear spring regarded as the Jhelum's source.</p><div class="journey-meta"><span>Best: Apr-Oct</span><span>Day trip</span></div></div>
-        </article>
-        <article class="journey-card" data-category="heritage mountains" data-reveal="up">
-          <img src="assets/images/honeymoon.png" alt="Katra hillside journey" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">Jammu</span><span class="journey-rating">&starf; 4.8</span></div><h2>Katra &amp; Vaishno Devi</h2><p>A thoughtful pilgrimage journey through the foothills of the Trikuta Mountains.</p><div class="journey-meta"><span>Best: Mar-Nov</span><span>1-2 days</span></div></div>
-        </article>
-        <article class="journey-card" data-category="valleys mountains" data-reveal="up">
-          <img src="assets/images/gondola.png" alt="Patnitop mountain scenery" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">Jammu</span><span class="journey-rating">&starf; 4.7</span></div><h2>Patnitop</h2><p>Cedar forests, cool mountain air and a gentle pause along Jammu's hill routes.</p><div class="journey-meta"><span>Best: Apr-Nov</span><span>1-2 days</span></div></div>
-        </article>
-        <article class="journey-card" data-category="valleys mountains" data-reveal="up">
-          <img src="assets/images/horse-riding.png" alt="Bhaderwah mountain valley" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">Jammu</span><span class="journey-rating">&starf; 4.6</span></div><h2>Bhaderwah</h2><p>A green valley made for mountain drives, village stays and meadow walks.</p><div class="journey-meta"><span>Best: Apr-Oct</span><span>2-3 days</span></div></div>
-        </article>
-        <article class="journey-card" data-category="heritage" data-reveal="up">
-          <img src="assets/images/hotel2.png" alt="Jammu city and heritage stay" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">Jammu</span><span class="journey-rating">&starf; 4.6</span></div><h2>Jammu City</h2><p>The City of Temples, regional cuisine and an easy gateway into the hills.</p><div class="journey-meta"><span>Best: Oct-Mar</span><span>1-2 days</span></div></div>
-        </article>
-        <article class="journey-card" data-category="heritage mountains" data-reveal="up">
-          <img src="assets/images/hero-map-real.png" alt="High desert mountain landscape of Leh" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">Ladakh</span><span class="journey-rating">&starf; 4.9</span></div><h2>Leh</h2><p>Monasteries, high-desert light and a base for some of the Himalaya's great roads.</p><div class="journey-meta"><span>Best: May-Sep</span><span>3-4 days</span></div></div>
-        </article>
-        <article class="journey-card" data-category="lakes mountains" data-reveal="up">
-          <img src="assets/images/river-rafting.png" alt="Blue mountain water representing Pangong Tso" loading="lazy">
-          <div class="journey-card-body"><div class="journey-card-top"><span class="journey-region">Ladakh</span><span class="journey-rating">&starf; 4.9</span></div><h2>Pangong Tso</h2><p>A high-altitude blue lake whose colour and scale stay with you long after the drive.</p><div class="journey-meta"><span>Best: May-Sep</span><span>1-2 days</span></div></div>
-        </article>
-      </div>
-
-      <p class="journey-empty" id="journeyEmpty" hidden>No journeys match that filter yet.</p>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container">
-    <div class="footer-bottom">
-      <p>&copy; 2026 Wal Pakh. All rights reserved.</p>
-      <div class="legal-links"><a href="index.html#contact">Contact</a><a href="index.html">Back to home</a></div>
-    </div>
-  </div>
-</footer>
-
-<aside class="quick-contact" aria-label="Quick contact options">
-  <a class="quick-contact__item quick-contact__item--whatsapp" href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer" aria-label="Chat with Wal Pakh on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.2.3 11.7c0 2.1.6 4.1 1.7 5.9L.2 24l6.6-1.7a11.8 11.8 0 0 0 5.3 1.3h.1c6.5 0 11.8-5.2 11.8-11.7 0-3.1-1.2-6-3.5-8.4Zm-8.4 18.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.9 1 1-3.8-.3-.4a9.7 9.7 0 0 1-1.5-5.1c0-5.4 4.4-9.8 9.9-9.8 2.6 0 5.1 1 7 2.9a9.7 9.7 0 0 1 2.9 7c0 5.4-4.4 9.8-9.8 9.8Zm5.4-7.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2l-1 1.2c-.2.2-.4.2-.7.1-2-.9-3.3-1.6-4.6-3.7-.3-.5.3-.5.9-1.7.1-.2.1-.4 0-.6-.1-.1-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.5-.3.3-1.1 1.1-1.1 2.7s1.1 3.1 1.2 3.3c.2.2 2.2 3.4 5.4 4.8.8.3 1.4.5 1.9.6.8.2 1.5.2 2 .1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.3Z"/></svg></a>
-  <a class="quick-contact__item quick-contact__item--email" href="mailto:info@walpakh.com" aria-label="Email Wal Pakh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2 .3v.5l8 5.1 8-5.1v-.5c0-.4-.3-.8-.8-.8h-14c-.4 0-.8.4-.8.8Zm16 3-7.5 4.8a1 1 0 0 1-1.1 0L4 8.8v9.7c0 .4.3.8.8.8h14.4c.4 0 .8-.4.8-.8V8.8Z"/></svg></a>
-  <a class="quick-contact__item quick-contact__item--phone" href="tel:+910000000000" aria-label="Call Wal Pakh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2c1.1.4 2.2.6 3.4.6a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.5 22 2 13.5 2 3.2a1 1 0 0 1 1-1H7a1 1 0 0 1 1 1c0 1.2.2 2.3.6 3.4a1 1 0 0 1-.2 1l-1.8 1.8Z"/></svg></a>
-</aside>
-
-<script src="js/navigation.js"></script>
-<script src="js/animations.js"></script>
-<script src="js/destinations.js"></script>
+    </section>
+    <section class="destination-directory-benefits"><div class="container"><article><i class="fa-solid fa-mountain-sun"></i><span>Breathtaking<br />landscapes</span></article><article><i class="fa-solid fa-camera"></i><span>Unforgettable<br />experiences</span></article><article><i class="fa-solid fa-tents"></i><span>Adventure &<br />camping</span></article><article><i class="fa-solid fa-landmark"></i><span>Rich heritage<br />& culture</span></article><div><strong>Walpakh</strong><span>Your local friend in Kashmir</span></div></div></section>
+  </main>
+  <footer class="footer" id="footer"><div class="container footer__grid"><div class="footer__brand"><a class="brand brand--footer brand--image" href="index.html"><img class="brand-logo brand-logo--footer" src="assets/images/walpakh-logo.jpg" alt="Walpakh" /></a><p>We create journeys that are safe, comfortable and full of unforgettable memories.</p></div><div><h3>Quick Links</h3><a href="index.html">Home</a><a href="packages.html">Packages</a><a href="shop.html">Shop in Kashmir</a><a href="customize.html">Customize Trip</a></div><div><h3>Support</h3><a href="tel:+917006512345"><i class="fa-solid fa-phone"></i> +91 70065 12345</a><a href="mailto:info@walpakh.com"><i class="fa-regular fa-envelope"></i> info@walpakh.com</a><span><i class="fa-solid fa-location-dot"></i> Srinagar, J&amp;K, India</span></div></div><div class="container footer__bottom"><span>© 2026 Walpakh Tour Packages. All rights reserved.</span></div></footer>
+  <button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button><div class="toast" role="status" aria-live="polite"></div><script src="js/v2-script.js"></script>
 </body>
 </html>
