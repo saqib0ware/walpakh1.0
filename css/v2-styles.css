@@ -1820,3 +1820,114 @@ button { cursor: pointer; }
   .offbeat-package-notes article { min-height: 0; border-right: 0; border-bottom: 1px solid #d8ddcf; }
   .offbeat-package-notes article:last-child { border-bottom: 0; }
 }
+
+/* Honeymoon package catalogue */
+.honeymoon-packages-page { background: #fbf7f3; }
+.honeymoon-packages-hero { position: relative; overflow: hidden; color: #fff; background: linear-gradient(105deg, rgba(90,22,43,.91), rgba(157,80,88,.62), rgba(47,37,71,.86)), url('../assets/images/honeymoon.png') center / cover; }
+.honeymoon-packages-hero .container { display: grid; grid-template-columns: 1fr auto; align-items: center; min-height: 250px; padding-block: 31px; }
+.honeymoon-packages-hero__title { text-align: center; }
+.honeymoon-packages-hero__title > span { display: inline-flex; align-items: center; gap: 9px; color: #ffd8d1; font-size: 9px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+.honeymoon-packages-hero h1 { margin: 4px 0 0; color: #fff7ef; font-family: "Cormorant Garamond", serif; font-size: clamp(48px, 6.4vw, 78px); line-height: .83; letter-spacing: .045em; text-transform: uppercase; }
+.honeymoon-packages-hero p { margin: 5px 0 17px; color: #ffd9d5; font-family: "Cormorant Garamond", serif; font-size: clamp(25px, 3.2vw, 39px); font-style: italic; line-height: 1; }
+.honeymoon-packages-hero strong { display: inline-flex; align-items: center; gap: 9px; padding: 8px 17px; border-radius: 999px; background: #651d31; color: #fff9f5; font-size: 9px; letter-spacing: .09em; text-transform: uppercase; }
+.honeymoon-packages-hero strong i, .honeymoon-package-card__route i { width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
+.honeymoon-packages-hero__couple { display: grid; width: 116px; height: 116px; align-content: center; justify-items: center; border: 1px solid rgba(255,239,227,.55); border-radius: 50%; background: rgba(83,20,37,.37); color: #ffd4cc; text-align: center; transform: rotate(-7deg); }
+.honeymoon-packages-hero__couple i { font-size: 27px; }.honeymoon-packages-hero__couple span { margin-top: 7px; max-width: 70px; font-family: "Cormorant Garamond", serif; font-size: 17px; font-style: italic; line-height: .9; }
+.honeymoon-package-catalogue { padding-block: 49px; background: linear-gradient(180deg, #fdf9f3, #f7eee6); }
+.honeymoon-package-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+.honeymoon-package-card { display: grid; grid-template-rows: auto 165px auto auto auto; overflow: hidden; border: 1px solid #d8bcb7; border-radius: 12px; background: #fffaf5; box-shadow: 0 9px 22px rgba(88,23,42,.12); transition: transform .22s ease, box-shadow .22s ease; }
+.honeymoon-package-card:hover { transform: translateY(-5px); box-shadow: 0 15px 28px rgba(88,23,42,.2); }
+.honeymoon-package-card header { position: relative; display: grid; grid-template-columns: 51px 1fr; gap: 8px; align-items: start; padding: 12px 14px 7px; color: #681d32; background: #fffaf5; }
+.honeymoon-package-card header > span { display: grid; width: 39px; height: 39px; place-items: center; border: 2px solid #f5d4c5; border-radius: 50%; background: #751f39; color: #fff; font-family: "Cormorant Garamond", serif; font-size: 16px; font-weight: 700; }
+.honeymoon-package-card h2 { margin: 0; color: #681d32; font-family: "Cormorant Garamond", serif; font-size: 28px; line-height: .82; text-transform: uppercase; }
+.honeymoon-package-card header em { display: block; margin: 4px 0 3px; color: #a25060; font-family: "Cormorant Garamond", serif; font-size: 16px; font-weight: 600; line-height: 1; }
+.honeymoon-package-card header b { display: inline-block; padding: 3px 8px; border-radius: 3px; background: #681d32; color: #fff; font-size: 8px; letter-spacing: .04em; text-transform: uppercase; }
+.honeymoon-package-card > img { width: 100%; height: 100%; object-fit: cover; }
+.honeymoon-package-card__route { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 31px; padding: 6px 8px; color: #fff8f3; background: #701e36; font-size: 8px; font-weight: 800; letter-spacing: .04em; text-align: center; text-transform: uppercase; }
+.honeymoon-package-card__details { display: grid; grid-template-columns: 1.7fr 1fr; min-height: 143px; padding: 10px 12px 9px; }
+.honeymoon-package-card__details ul { margin: 0; padding-left: 15px; color: #493b3a; font-size: 8px; font-weight: 600; line-height: 1.63; }
+.honeymoon-package-card__details aside { display: grid; align-content: center; gap: 4px; margin-left: 10px; padding-left: 10px; border-left: 1px dashed #d7bcb4; color: #6d263b; font-size: 9px; line-height: 1.35; }
+.honeymoon-package-card__details aside b { color: #7d283f; font-size: 10px; text-transform: uppercase; }.honeymoon-package-card__details aside b i { color: #cc6d7c; }
+.honeymoon-package-card footer { display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px 5px; border-top: 1px solid #ecd9d1; color: #652035; }
+.honeymoon-package-card footer span { display: grid; gap: 4px; padding-inline: 4px; border-right: 1px solid #ead8d0; font-size: 7px; font-weight: 700; line-height: 1.15; text-align: center; }.honeymoon-package-card footer span:last-child { border-right: 0; }
+.honeymoon-package-card footer i { color: #8b2943; font-size: 14px; }.honeymoon-package-card--featured { border-color: #a66d32; }.honeymoon-package-card--featured header > span { background: #965719; }
+.honeymoon-package-promise { padding: 17px 0; color: #fff7ed; background: linear-gradient(100deg, #3c1427, #741f37, #3d1730); }
+.honeymoon-package-promise .container { display: grid; grid-template-columns: repeat(6, 1fr) auto; align-items: center; gap: 7px; }.honeymoon-package-promise span { display: grid; gap: 4px; padding: 2px 8px; border-right: 1px solid rgba(255,255,255,.2); color: #fff4ed; font-size: 8px; font-weight: 700; line-height: 1.25; text-align: center; }.honeymoon-package-promise i { color: #f2c078; font-size: 17px; }.honeymoon-package-promise a { display: inline-flex; align-items: center; gap: 7px; padding: 10px 13px; border: 1px solid #f0c67a; border-radius: 5px; color: #ffe5bc; font-size: 9px; font-weight: 800; text-transform: uppercase; }
+
+@media (max-width: 1050px) {
+  .honeymoon-package-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .honeymoon-package-promise .container { grid-template-columns: repeat(3, 1fr); }.honeymoon-package-promise a { grid-column: 1 / -1; justify-self: center; }
+}
+
+@media (max-width: 640px) {
+  .honeymoon-packages-hero .container { grid-template-columns: 1fr; min-height: 275px; padding-block: 27px; }.honeymoon-packages-hero__couple { display: none; }.honeymoon-packages-hero h1 { font-size: 50px; }.honeymoon-packages-hero p { font-size: 29px; }.honeymoon-packages-hero strong { flex-wrap: wrap; justify-content: center; max-width: 295px; padding-inline: 12px; font-size: 8px; line-height: 1.5; }
+  .honeymoon-package-catalogue { padding-block: 38px; }.honeymoon-package-grid { grid-template-columns: 1fr; gap: 14px; }.honeymoon-package-card { grid-template-columns: 1fr 1fr; grid-template-rows: auto 158px auto auto; }.honeymoon-package-card header { grid-column: 1 / -1; }.honeymoon-package-card > img { grid-column: 1; grid-row: 2; }.honeymoon-package-card__route { grid-column: 2; grid-row: 2; align-self: stretch; }.honeymoon-package-card__details { grid-column: 1 / -1; grid-row: 3; min-height: 0; }.honeymoon-package-card footer { grid-column: 1 / -1; grid-row: 4; }.honeymoon-package-card h2 { font-size: 26px; }.honeymoon-package-card__details ul { font-size: 9px; }.honeymoon-package-card footer span { font-size: 7px; }
+  .honeymoon-package-promise .container { grid-template-columns: repeat(2, 1fr); }.honeymoon-package-promise span { min-height: 44px; border-bottom: 1px solid rgba(255,255,255,.17); }.honeymoon-package-promise span:nth-child(2n) { border-right: 0; }.honeymoon-package-promise a { margin-top: 6px; }
+}
+
+/* Shared detailed plan-card structure */
+.collection-plan-grid { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 17px !important; }
+.collection-card { overflow: hidden; border: 1px solid #d7ddd5; border-radius: 12px; background: #fffefa; box-shadow: 0 8px 22px rgba(17,64,39,.09); transition: transform .22s ease, box-shadow .22s ease; }
+.collection-card:hover { transform: translateY(-5px); box-shadow: 0 15px 29px rgba(17,64,39,.18); }
+.collection-card__media { position: relative; height: 177px; overflow: hidden; background: #d9e1db; }.collection-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }.collection-card:hover .collection-card__media img { transform: scale(1.045); }
+.collection-card__number, .collection-card__duration { position: absolute; z-index: 1; display: inline-flex; align-items: center; justify-content: center; }.collection-card__number { top: 12px; left: 12px; width: 41px; height: 41px; border: 2px solid #fff; border-radius: 50%; background: #14714d; color: #fff; font-size: 12px; font-weight: 800; }.collection-card__duration { right: 11px; bottom: 11px; min-height: 30px; padding: 5px 10px; border-radius: 999px; background: rgba(255,255,255,.95); color: #174836; font-size: 9px; font-weight: 800; }
+.collection-card__content { padding: 18px 16px 0; }.collection-card__eyebrow { min-height: 19px; margin: 0; color: #6f9b81; font-family: "Cormorant Garamond", serif; font-size: 17px; font-style: italic; line-height: 1.05; }.collection-card h3 { min-height: 46px; margin: 4px 0 5px; color: #113d2e; font-family: "Cormorant Garamond", serif; font-size: 27px; line-height: .9; }.collection-card__dest { min-height: 19px; margin: 0 0 14px; color: #315d4b; font-size: 10px; font-weight: 800; }.collection-card__dest i { margin-right: 4px; color: #b78021; }
+.collection-card__twist { display: grid; grid-template-columns: 25px 1fr; gap: 8px; min-height: 69px; padding: 12px 10px; border-left: 2px solid #d5a339; border-radius: 7px; background: #f6f1e5; color: #2d5a45; }.collection-card__twist > i { padding-top: 2px; color: #bb8720; font-size: 17px; }.collection-card__twist strong, .collection-card__twist span { display: block; }.collection-card__twist strong { margin-bottom: 3px; color: #123d2e; font-size: 9px; letter-spacing: .04em; text-transform: uppercase; }.collection-card__twist span { font-size: 10px; line-height: 1.35; }
+.collection-card__amenities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin: 13px 0 0; padding: 12px 0; border-top: 1px solid #e6e1d4; }.collection-card__amenities span { display: grid; gap: 5px; align-content: start; color: #315a49; font-size: 8px; line-height: 1.25; text-align: center; }.collection-card__amenities i { color: #ac7916; font-size: 16px; }
+.collection-itinerary-toggle { display: flex; width: 100%; align-items: center; justify-content: space-between; padding: 12px 0; border: 0; border-top: 1px solid #e6e1d4; background: transparent; color: #0d4b37; font: inherit; font-size: 11px; font-weight: 800; text-align: left; cursor: pointer; }.collection-itinerary-toggle i { transition: transform .2s ease; }.collection-card.is-itinerary-open .collection-itinerary-toggle i { transform: rotate(180deg); }
+.collection-itinerary { max-height: 0; margin: 0; padding: 0 0 0 21px; overflow: hidden; color: #456154; font-size: 9px; font-weight: 600; line-height: 1.55; transition: max-height .28s ease, padding .28s ease; }.collection-card.is-itinerary-open .collection-itinerary { max-height: 240px; padding: 0 7px 16px 21px; }
+.collection-card--signature { border-color: #b9d0d2; }.collection-card--signature .collection-card__number { background: #0c6373; }.collection-card--signature .collection-card__eyebrow { color: #43899a; }.collection-card--signature h3, .collection-card--signature .collection-card__twist strong, .collection-card--signature .collection-itinerary-toggle { color: #0a4c5d; }.collection-card--signature .collection-card__twist { border-left-color: #3199aa; background: #edf7f6; }.collection-card--signature .collection-card__twist > i, .collection-card--signature .collection-card__amenities i { color: #177687; }
+.collection-card--royale { border-color: #cdb17a; }.collection-card--royale .collection-card__number { background: #71408b; }.collection-card--royale .collection-card__eyebrow { color: #9a6ba6; }.collection-card--royale h3, .collection-card--royale .collection-card__twist strong, .collection-card--royale .collection-itinerary-toggle { color: #653879; }.collection-card--royale .collection-card__twist { border-left-color: #a76bb7; background: #f7eef8; }.collection-card--royale .collection-card__twist > i, .collection-card--royale .collection-card__amenities i { color: #8b4a9e; }
+.royale-page { background: #fbf8f5; }.royale-hero { color: #fff; background: linear-gradient(100deg, rgba(45,19,62,.88), rgba(106,58,134,.58), rgba(37,18,50,.82)), url('../assets/images/package-luxury.jpg') center / cover; }.royale-hero .container { min-height: 265px; display: grid; align-content: center; text-align: center; }.royale-hero p { margin: 0; color: #f4d487; font-size: 10px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }.royale-hero h1 { margin: 7px 0; color: #fff9f2; font-family: "Cormorant Garamond", serif; font-size: clamp(50px, 7vw, 82px); line-height: .82; letter-spacing: .05em; }.royale-hero h1 span { color: #e8c35f; }.royale-hero strong { color: #f5e9ee; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }.royale-itineraries { padding-block: 50px; }
+
+@media (max-width: 1050px) { .collection-plan-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
+@media (max-width: 740px) { .collection-plan-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px !important; }.collection-card__content { padding: 15px 12px 0; }.collection-card__media { height: 153px; }.collection-card h3 { font-size: 24px; }.collection-card__eyebrow { font-size: 15px; }.collection-card__twist { grid-template-columns: 21px 1fr; padding: 10px 8px; }.collection-card__amenities span { font-size: 7px; }.collection-card__amenities i { font-size: 14px; } }
+@media (max-width: 480px) { .collection-plan-grid { grid-template-columns: 1fr !important; }.collection-card__media { height: 195px; }.collection-card__content { padding: 18px 15px 0; }.collection-card h3 { min-height: 0; font-size: 29px; }.collection-card__amenities span { font-size: 8px; }.collection-card__twist { min-height: 64px; }.collection-itinerary-toggle { font-size: 12px; } }
+
+/* Final responsive guardrails for all package catalogues */
+.collection-plan-page, .offbeat-packages-page, .honeymoon-packages-page { overflow-x: clip; }
+.collection-plan-page .container, .offbeat-packages-page .container, .honeymoon-packages-page .container { min-width: 0; }
+.collection-card, .collection-card__content, .collection-card__twist, .collection-card__dest, .collection-card__amenities span { min-width: 0; }
+.collection-card__dest, .collection-card__twist span, .collection-itinerary { overflow-wrap: anywhere; }
+
+@media (max-width: 900px) {
+  .collection-plan-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .collection-card__media { height: 190px; }
+  .economy-hero__content, .premium-hero__content { min-height: 285px; padding-block: 38px; }
+  .economy-inclusions__grid { grid-template-columns: 1fr; gap: 22px; }
+  .economy-inclusions__why { padding: 20px 0 0; border-top: 1px solid rgba(255,255,255,.2); border-left: 0; }
+  .premium-assurance .container { justify-content: flex-start; }
+}
+
+@media (max-width: 620px) {
+  .collection-plan-grid { grid-template-columns: 1fr !important; gap: 14px !important; }
+  .collection-card__media { height: clamp(180px, 56vw, 250px); }
+  .collection-card__content { padding: 17px 15px 0; }
+  .collection-card h3 { min-height: 0; font-size: clamp(27px, 8vw, 33px); }
+  .collection-card__eyebrow { min-height: 0; font-size: 18px; }
+  .collection-card__twist { min-height: 65px; }
+  .collection-card__amenities { gap: 2px; }
+  .collection-card__amenities span { font-size: 8px; }
+  .collection-itinerary { font-size: 10px; }
+  .economy-hero, .premium-hero, .royale-hero { background-position: 58% center; }
+  .economy-hero__content, .premium-hero__content { min-height: 254px; align-items: center; padding: 30px 38px; text-align: center; }
+  .economy-hero__eyebrow, .premium-hero__eyebrow { font-size: 8px; letter-spacing: .11em; }
+  .economy-hero h1, .premium-hero h1 { font-size: clamp(42px, 12.5vw, 55px); }
+  .economy-hero p, .premium-hero p { justify-content: center; flex-wrap: wrap; margin: 8px 0 12px; font-size: 10px; }
+  .economy-hero strong, .premium-hero strong { font-size: 11px; line-height: 1.3; }
+  .economy-hero__ribbon { top: 12px; right: 12px; min-width: 61px; min-height: 66px; padding: 7px; font-size: 8px; }
+  .premium-hero__perks { justify-content: center; gap: 8px 11px; margin-top: 12px; font-size: 7px; }
+  .economy-itineraries, .premium-itineraries, .royale-itineraries { padding-block: 36px; }
+  .economy-inclusions { padding-block: 29px; }.economy-inclusions h2 { font-size: 31px; }.economy-inclusion-list { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .premium-assurance { padding-block: 20px; }.premium-assurance .container { gap: 10px 14px; }.premium-assurance strong { width: 100%; font-size: 25px; }.premium-assurance span { font-size: 8px; }.premium-assurance a { margin-top: 4px; }
+  .royale-hero .container { min-height: 235px; padding-inline: 24px; }.royale-hero p { font-size: 8px; }.royale-hero h1 { font-size: clamp(44px, 13vw, 58px); }.royale-hero strong { font-size: 9px; line-height: 1.5; }
+  .offbeat-package-grid { grid-template-columns: 1fr; }.offbeat-package-card { grid-template-columns: 1fr; grid-template-rows: 180px auto auto; }.offbeat-package-card > img { grid-row: 1; grid-column: 1; }.offbeat-package-card > div { grid-row: 2; grid-column: 1; }.offbeat-package-card footer { grid-row: 3; grid-column: 1; }.offbeat-package-card h2 { min-height: 0; font-size: 25px; }.offbeat-package-card > div p { min-height: 0; font-size: 9px; }
+  .honeymoon-package-grid { grid-template-columns: 1fr; }.honeymoon-package-card { grid-template-columns: 1fr; grid-template-rows: auto 190px auto auto auto; }.honeymoon-package-card header, .honeymoon-package-card > img, .honeymoon-package-card__route, .honeymoon-package-card__details, .honeymoon-package-card footer { grid-column: 1; }.honeymoon-package-card header { grid-row: 1; }.honeymoon-package-card > img { grid-row: 2; }.honeymoon-package-card__route { grid-row: 3; }.honeymoon-package-card__details { grid-row: 4; }.honeymoon-package-card footer { grid-row: 5; }.honeymoon-package-card__details { min-height: 0; }.honeymoon-package-card__details ul { font-size: 9px; }
+}
+
+@media (max-width: 380px) {
+  .collection-card__amenities span { font-size: 7px; }.collection-card__amenities i { font-size: 13px; }
+  .collection-card__duration { font-size: 8px; }.collection-card__number { width: 37px; height: 37px; }
+  .economy-hero__content, .premium-hero__content { padding-inline: 22px; }.economy-hero h1, .premium-hero h1 { font-size: 43px; }
+  .honeymoon-package-card footer span, .offbeat-package-card footer span { font-size: 6px; }
+}
