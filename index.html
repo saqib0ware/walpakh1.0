@@ -127,7 +127,59 @@
 
     </section>
 
-    <section class="trust-strip" aria-label="Walpakh highlights">
+    <section class="hero-explorer" aria-label="Quick Kashmir trip search">
+      <div class="container hero-explorer__inner">
+        <form class="hero-explorer__form" id="hero-explorer-form">
+          <label class="hero-explorer__field">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Where to?</span>
+            <select id="hero-explorer-destination" name="destination" aria-label="Choose destination">
+              <option value="Kashmir">Anywhere in Kashmir</option>
+              <option value="Srinagar">Srinagar</option>
+              <option value="Gulmarg">Gulmarg</option>
+              <option value="Pahalgam">Pahalgam</option>
+              <option value="Sonamarg">Sonamarg</option>
+              <option value="Gurez">Gurez Valley</option>
+            </select>
+          </label>
+          <label class="hero-explorer__field">
+            <i class="fa-regular fa-calendar-days" aria-hidden="true"></i>
+            <span>Travel date</span>
+            <input type="date" name="travel-date" aria-label="Travel date" />
+          </label>
+          <label class="hero-explorer__field">
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
+            <span>Travellers</span>
+            <select name="travellers" aria-label="Number of travellers">
+              <option>2 Adults</option>
+              <option>1 Adult</option>
+              <option>Family / Group</option>
+            </select>
+          </label>
+          <label class="hero-explorer__field">
+            <i class="fa-solid fa-wallet" aria-hidden="true"></i>
+            <span>Budget</span>
+            <select name="budget" aria-label="Select budget">
+              <option>Any budget</option>
+              <option>Essence</option>
+              <option>Signature</option>
+              <option>Royale</option>
+            </select>
+          </label>
+          <button type="submit">Explore Kashmir <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+        </form>
+        <nav class="hero-explorer__services" aria-label="Explore Walpakh services">
+          <a href="packages.html"><i class="fa-solid fa-hotel" aria-hidden="true"></i><span>Hotels</span></a>
+          <a href="packages.html"><i class="fa-solid fa-suitcase-rolling" aria-hidden="true"></i><span>Packages</span></a>
+          <a href="experiences.html"><i class="fa-solid fa-compass" aria-hidden="true"></i><span>Experiences</span></a>
+          <a href="#car-collection"><i class="fa-solid fa-car-side" aria-hidden="true"></i><span>Transport</span></a>
+          <a href="shop.html"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i><span>Shop</span></a>
+          <a href="honeymoon-packages.html"><i class="fa-solid fa-heart" aria-hidden="true"></i><span>Honeymoon</span></a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Walpakh highlights" hidden>
       <div class="container trust-strip__grid">
         <article><i class="fa-regular fa-face-smile"></i><div><strong>10,000+</strong><span>Happy Travellers</span></div></article>
         <article><i class="fa-solid fa-route"></i><div><strong>150+</strong><span>Tour Packages</span></div></article>
@@ -270,6 +322,34 @@
       </div>
     </section>
 
+    
+    <section class="signature-experiences" id="experiences">
+      <div class="signature-experiences__overlay"></div>
+      <div class="container signature-experiences__inner">
+        <div class="signature-heading reveal">
+          <p><span></span> Walpakh Signature Experiences <span></span></p>
+          <h2>Experiences That Stay With You Forever</h2>
+          <p class="signature-heading__sub">Handpicked experiences that connect you with the heart, culture and soul of Kashmir.</p>
+        </div>
+        <div class="signature-grid">
+          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/sunset-shikara.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-mug-hot"></i></span><h3>Sunset Shikara with Kahwa</h3><p>Drift into peace as the sun sets with a warm cup of Kashmiri Kahwa.</p></div></article>
+          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/royal-wazwan.jpg')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-utensils"></i></span><h3>Royal Wazwan Night</h3><p>Relish the royal Kashmiri feast in a traditional, immersive setup.</p></div></article>
+          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/kashmiri-family-dinner.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-people-roof"></i></span><h3>Dinner with a Kashmiri Family</h3><p>Share stories, traditions and homemade happiness with a local family.</p></div></article>
+          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/private-houseboat.jpg')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-house-chimney-window"></i></span><h3>Private Houseboat Stay</h3><p>Experience luxury and serenity on the iconic waters of Dal Lake.</p></div></article>
+          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/village-homestay.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-house"></i></span><h3>Offbeat Village Homestay</h3><p>Live like a local in untouched villages surrounded by Kashmir's beauty.</p></div></article>
+          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/gurez-sunrise.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-sun"></i></span><h3>Sunrise in Gurez</h3><p>Witness magical Himalayan sunrise views in the breathtaking Gurez Valley.</p></div></article>
+          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/helicopter-tour.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-helicopter"></i></span><h3>Helicopter Tour</h3><p>See Kashmir from the skies — an unforgettable view of the Himalayas.</p><small>Subject to availability</small></div></article>
+          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/stargazing-camp.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-star-and-crescent"></i></span><h3>Stargazing Camp</h3><p>Sleep beneath a sky full of stars in the lap of nature.</p></div></article>
+          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/luxury-glamping.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-campground"></i></span><h3>Luxury Glamping</h3><p>Comfort meets nature with premium camping stays in scenic valleys.</p></div></article>
+          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/apple-picking.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-apple-whole"></i></span><h3>Apple Picking Experience</h3><p>Pick, taste and take home memories from Kashmir's beautiful orchards.</p></div></article>
+        </div>
+        <br>
+        <br>
+        <div class="center signature-experiences__cta reveal">
+          <a class="btn btn--gold" href="experiences.html">View All Experiences <i class="fa-solid fa-arrow-right"></i></a></div>
+      </div>
+    </section>
+
     <section class="section car-collection" id="car-collection">
       <div class="container">
         <div class="section-heading reveal">
@@ -307,28 +387,7 @@
       </div>
     </section>
 
-    <section class="signature-experiences" id="experiences">
-      <div class="signature-experiences__overlay"></div>
-      <div class="container signature-experiences__inner">
-        <div class="signature-heading reveal">
-          <p><span></span> Walpakh Signature Experiences <span></span></p>
-          <h2>Experiences That Stay With You Forever</h2>
-          <p class="signature-heading__sub">Handpicked experiences that connect you with the heart, culture and soul of Kashmir.</p>
-        </div>
-        <div class="signature-grid">
-          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/sunset-shikara.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-mug-hot"></i></span><h3>Sunset Shikara with Kahwa</h3><p>Drift into peace as the sun sets with a warm cup of Kashmiri Kahwa.</p></div></article>
-          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/royal-wazwan.jpg')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-utensils"></i></span><h3>Royal Wazwan Night</h3><p>Relish the royal Kashmiri feast in a traditional, immersive setup.</p></div></article>
-          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/kashmiri-family-dinner.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-people-roof"></i></span><h3>Dinner with a Kashmiri Family</h3><p>Share stories, traditions and homemade happiness with a local family.</p></div></article>
-          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/private-houseboat.jpg')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-house-chimney-window"></i></span><h3>Private Houseboat Stay</h3><p>Experience luxury and serenity on the iconic waters of Dal Lake.</p></div></article>
-          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/village-homestay.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-house"></i></span><h3>Offbeat Village Homestay</h3><p>Live like a local in untouched villages surrounded by Kashmir's beauty.</p></div></article>
-          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/gurez-sunrise.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-sun"></i></span><h3>Sunrise in Gurez</h3><p>Witness magical Himalayan sunrise views in the breathtaking Gurez Valley.</p></div></article>
-          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/helicopter-tour.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-helicopter"></i></span><h3>Helicopter Tour</h3><p>See Kashmir from the skies — an unforgettable view of the Himalayas.</p><small>Subject to availability</small></div></article>
-          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/stargazing-camp.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-star-and-crescent"></i></span><h3>Stargazing Camp</h3><p>Sleep beneath a sky full of stars in the lap of nature.</p></div></article>
-          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/luxury-glamping.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-campground"></i></span><h3>Luxury Glamping</h3><p>Comfort meets nature with premium camping stays in scenic valleys.</p></div></article>
-          <article class="signature-card reveal" style="--experience-image:url('../assets/images/experiences/apple-picking.png')"><div class="signature-card__content"><span class="signature-card__icon"><i class="fa-solid fa-apple-whole"></i></span><h3>Apple Picking Experience</h3><p>Pick, taste and take home memories from Kashmir's beautiful orchards.</p></div></article>
-        </div>
-      </div>
-    </section>
+    
 
     <section class="confidence" id="why-us">
       <div class="container confidence__grid">
@@ -386,14 +445,6 @@
         </div>
       </div>
     </section>
-
-    <section class="newsletter">
-      <div class="container newsletter__grid">
-        <div><h2><i class="fa-regular fa-envelope-open"></i> Subscribe to Our Newsletter</h2><p>Get travel tips, exclusive offers and latest updates.</p></div>
-        <form id="newsletter-form"><label class="sr-only" for="newsletter-email">Email address</label><input id="newsletter-email" type="email" placeholder="Enter your email" required /><button class="btn btn--primary" type="submit">Subscribe</button></form>
-        <div class="socials"><span>Follow Us</span><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer" id="footer">
@@ -406,9 +457,19 @@
       </div>
       <div><h3>Quick Links</h3><a href="#home">Home</a><a href="packages.html">Packages</a><a href="#destinations">Destinations</a><a href="#car-collection">Car Collection</a><a href="#experiences">Experiences</a><a href="shop.html">Shop in Kashmir</a></div>
       <div><h3>Group Travel</h3><a href="#groups">School Excursions</a><a href="#groups">Graduation Trips</a><a href="#groups">Corporate Retreats</a><a href="#groups">Group Tours</a></div>
-      <div><h3>Support</h3><a href="tel:+917006512345"><i class="fa-solid fa-phone"></i> +91 70065 12345</a><a href="mailto:info@walpakh.com"><i class="fa-regular fa-envelope"></i> info@walpakh.com</a><span><i class="fa-regular fa-clock"></i> Mon–Sun (24×7)</span><span><i class="fa-solid fa-location-dot"></i> Srinagar, J&K, India</span></div>
+      <div><h3>Support</h3><a href="care-protection.html"><i class="fa-solid fa-shield-heart"></i> Care &amp; Protection</a><a href="tel:+917006512345"><i class="fa-solid fa-phone"></i> +91 70065 12345</a><a href="mailto:info@walpakh.com"><i class="fa-regular fa-envelope"></i> info@walpakh.com</a><span><i class="fa-regular fa-clock"></i> Mon–Sun (24×7)</span><span><i class="fa-solid fa-location-dot"></i> Srinagar, J&K, India</span></div>
     </div>
-    <div class="container footer__bottom"><span>© 2026 Walpakh Tour Packages. All rights reserved.</span><div><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">Cancellation Policy</a></div></div>
+    <section class="newsletter">
+      <div class="container newsletter__grid">
+        <div><h2><i class="fa-regular fa-envelope-open"></i> Subscribe to Our Newsletter</h2><p>Get travel tips, exclusive offers and latest updates.</p></div>
+        <form id="newsletter-form"><label class="sr-only" for="newsletter-email">Email address</label><input id="newsletter-email" type="email" placeholder="Enter your email" required /><button class="btn btn--primary" type="submit">Subscribe</button></form>
+        <div class="socials"><span>Follow Us</span><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div>
+      </div>
+    </section>
+    <div class="container footer__bottom"><span>© 2026 Walpakh Tour Packages. All rights reserved.</span>
+      <div><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">Cancellation Policy</a></div>
+    </div>
+    
   </footer>
 
   <button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>

@@ -283,6 +283,16 @@ $$('.collection-itinerary-toggle').forEach(button => {
   });
 });
 
+/* Experience planner shortcuts */
+$$('.experience-card button, .experience-list button').forEach(button => {
+  button.addEventListener('click', () => {
+    const experience = $('h3', button.closest('article'))?.textContent || 'Experience';
+    button.classList.toggle('is-added');
+    button.innerHTML = button.classList.contains('is-added') ? 'Added to journey <i class="fa-solid fa-check"></i>' : 'Add to journey <i class="fa-solid fa-plus"></i>';
+    showToast(button.classList.contains('is-added') ? `${experience} added to your trip ideas.` : `${experience} removed from your trip ideas.`);
+  });
+});
+
 /* Back to top */
 const backToTop = $('.back-to-top');
 window.addEventListener('scroll', () => {
@@ -334,4 +344,12 @@ $('#join-membership')?.addEventListener('click', () => {
   window.setTimeout(() => {
     window.location.href = 'mailto:info@walpakh.com?subject=Walpakh%20VIP%20Membership%20Request';
   }, 900);
+});
+
+/* Home hero quick explorer */
+$('#hero-explorer-form')?.addEventListener('submit', event => {
+  event.preventDefault();
+  const destination = $('#hero-explorer-destination')?.value || 'Kashmir';
+  showToast(`Curated ${destination} journeys are ready to explore.`);
+  $('#packages')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
