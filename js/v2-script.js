@@ -227,41 +227,52 @@ $$('#newsletter-form').forEach(form => {
 
 /* Detailed collection package cards */
 const collectionSettings = {
-  'economy-page': { tier: 'essence', prefix: 'E', amenities: [['fa-bed', 'Comfort Stay'], ['fa-utensils', 'Breakfast & Dinner'], ['fa-car-side', 'Private Transport'], ['fa-headset', 'Local Support']], eyebrow: 'A gentle introduction to Kashmir' },
-  'premium-page': { tier: 'signature', prefix: 'S', amenities: [['fa-hotel', 'Handpicked Stay'], ['fa-utensils', 'Kashmiri Dining'], ['fa-car-side', 'Private Transfers'], ['fa-headset', 'Local Concierge']], eyebrow: 'An elevated Kashmir escape' }
+  'economy-page': { tier: 'essence', prefix: 'E', selector: '.economy-trip', grid: '.economy-grid', amenities: [['fa-bed', 'Comfort Stay'], ['fa-utensils', 'Breakfast & Dinner'], ['fa-car-side', 'Private Transport'], ['fa-headset', 'Local Support']], eyebrow: 'A gentle introduction to Kashmir' },
+  'premium-page': { tier: 'signature', prefix: 'S', selector: '.premium-trip', grid: '.premium-grid', amenities: [['fa-hotel', 'Handpicked Stay'], ['fa-utensils', 'Kashmiri Dining'], ['fa-car-side', 'Private Transfers'], ['fa-headset', 'Local Concierge']], eyebrow: 'An elevated Kashmir escape' },
+  'honeymoon-packages-page': { tier: 'honeymoon', prefix: 'H', selector: '.honeymoon-package-card', grid: '.honeymoon-package-grid', amenities: [['fa-bed', 'Romantic Stay'], ['fa-utensils', 'Dining'], ['fa-car-side', 'Private Transfers'], ['fa-headset', '24/7 Care']], eyebrow: 'A Kashmir memory, made for two' },
+  'offbeat-packages-page': { tier: 'offbeat', prefix: 'OB', selector: '.offbeat-package-card', grid: '.offbeat-package-grid', amenities: [['fa-campground', 'Homestay & Camps'], ['fa-bowl-food', 'Flexible Meals'], ['fa-car-side', '4×4 Transport'], ['fa-person-hiking', 'Local Guide']], eyebrow: 'Remote routes and real Kashmir' }
 };
 
 function formatCollectionPlans() {
   const config = Object.entries(collectionSettings).map(([name, value]) => ({ name, ...value })).find(item => document.body.classList.contains(item.name));
   if (!config) return;
 
-  const sourceCards = $$(config.tier === 'essence' ? '.economy-trip' : '.premium-trip');
+  const sourceCards = $$(config.selector);
   sourceCards.forEach((card, index) => {
     const header = $('header', card);
+    const isOffbeat = config.tier === 'offbeat';
     const image = $('img', card);
-    const title = $('h2', header)?.textContent.trim() || 'Kashmir journey';
-    const sourceCode = $('header > span', card)?.textContent.trim() || String(index + 1).padStart(2, '0');
+    const title = $('h2', isOffbeat ? card : header)?.textContent.trim() || 'Kashmir journey';
+    const sourceCode = $(isOffbeat ? ':scope > span' : 'header > span', card)?.textContent.trim() || String(index + 1).padStart(2, '0');
     const code = `${config.prefix}${sourceCode.replace(/^[A-Z]+/, '').padStart(2, '0')}`;
-    const duration = $('header p', card)?.textContent.trim() || 'Custom duration';
-    const destination = config.tier === 'essence' ? $('header small', card)?.textContent.trim() : $(':scope > b', card)?.textContent.trim();
+    const duration = (isOffbeat ? $('.offbeat-package-card > div b', card) : config.tier === 'honeymoon' ? $('header b', card) : $('header p', card))?.textContent.trim() || 'Custom duration';
+    const destination = isOffbeat ? $('.offbeat-package-card > div p', card)?.textContent.trim() : config.tier === 'essence' ? $('header small', card)?.textContent.trim() : config.tier === 'honeymoon' ? $('.honeymoon-package-card__route', card)?.textContent.trim() : $(':scope > b', card)?.textContent.trim();
     const sourceEyebrow = $('header em', card)?.textContent.trim();
-    const itinerary = $$('ul li', card).map(item => item.textContent.trim());
-    const twist = $('footer', card)?.textContent.replace(/^\s*Twist:\s*/i, '').trim() || 'A thoughtful local moment';
+    const itinerary = isOffbeat ? ['Arrive in Srinagar and begin the selected scenic route', `Explore ${title} with a local guide`, 'Return through Kashmir’s mountain landscapes'] : $$('ul li', card).map(item => item.textContent.trim());
+    const twist = isOffbeat ? 'Remote valleys, quiet camps and an authentic local pace' : (config.tier === 'honeymoon' ? $('.honeymoon-package-card__details aside span', card) : $('footer', card))?.textContent.replace(/^\s*Twist:\s*/i, '').trim() || 'A thoughtful local moment';
     const imageSrc = image?.getAttribute('src') || 'assets/images/package-economy.jpg';
     const imageAlt = image?.alt || title;
     const amenities = config.amenities.map(([icon, label]) => `<span><i class="fa-solid ${icon}"></i>${label}</span>`).join('');
     const itineraryList = itinerary.map(item => `<li>${item.replace(/^Day\s*\d+\s*:\s*/i, '')}</li>`).join('');
+    const twistIcon = config.tier === 'honeymoon' ? 'fa-heart' : isOffbeat ? 'fa-mountain' : 'fa-leaf';
 
     card.className = `collection-card collection-card--${config.tier} reveal`;
     card.setAttribute('data-package-card', '');
-    card.innerHTML = `<div class="collection-card__media"><img src="${imageSrc}" alt="${imageAlt}" loading="lazy" /><span class="collection-card__number">${code}</span><span class="collection-card__duration">${duration}</span></div><div class="collection-card__content"><p class="collection-card__eyebrow">${sourceEyebrow || config.eyebrow}</p><h3>${title}</h3><p class="collection-card__dest"><i class="fa-solid fa-location-dot"></i> ${destination || 'Kashmir'}</p><div class="collection-card__twist"><i class="fa-solid fa-leaf"></i><div><strong>Walpakh Twist</strong><span>${twist}</span></div></div><div class="collection-card__amenities">${amenities}</div><button class="collection-itinerary-toggle" type="button" aria-expanded="false"><span>View day-wise itinerary</span><i class="fa-solid fa-chevron-down"></i></button><ol class="collection-itinerary">${itineraryList}</ol></div>`;
+    card.innerHTML = `<div class="collection-card__media"><img src="${imageSrc}" alt="${imageAlt}" loading="lazy" /><span class="collection-card__number">${code}</span><span class="collection-card__duration">${duration}</span></div><div class="collection-card__content"><p class="collection-card__eyebrow">${sourceEyebrow || config.eyebrow}</p><h3>${title}</h3><p class="collection-card__dest"><i class="fa-solid fa-location-dot"></i> ${destination || 'Kashmir'}</p><div class="collection-card__twist"><i class="fa-solid ${twistIcon}"></i><div><strong>Walpakh Twist</strong><span>${twist}</span></div></div><div class="collection-card__amenities">${amenities}</div><button class="collection-itinerary-toggle" type="button" aria-expanded="false"><span>View day-wise itinerary</span><i class="fa-solid fa-chevron-down"></i></button><ol class="collection-itinerary">${itineraryList}</ol></div>`;
   });
 
-  const grid = $(config.tier === 'essence' ? '.economy-grid' : '.premium-grid');
+  const grid = $(config.grid);
   grid?.classList.add('collection-plan-grid');
 }
 
 formatCollectionPlans();
+
+/* Offbeat destination guide numbering */
+if (document.body.classList.contains('offbeat-page')) {
+  $$('.offbeat-grid > article > b').forEach((badge, index) => {
+    badge.textContent = `OB${String(index + 1).padStart(2, '0')}`;
+  });
+}
 
 $$('.collection-itinerary-toggle').forEach(button => {
   button.addEventListener('click', () => {
