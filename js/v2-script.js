@@ -23,6 +23,10 @@ $$('.primary-nav a').forEach(link => {
     navToggle?.setAttribute('aria-expanded', 'false');
   });
 });
+$('.marketplace-nav__close')?.addEventListener('click', () => {
+  nav?.classList.remove('open');
+  navToggle?.setAttribute('aria-expanded', 'false');
+});
 
 /* Homepage trip planner */
 const plannerTabs = $$('.planner-tab');
@@ -130,6 +134,13 @@ categoryButtons.forEach(button => {
     $('#wishlist-toggle')?.classList.remove('active');
     applyProductFilters();
     productTrack?.scrollTo({ left: 0, behavior: 'smooth' });
+  });
+});
+
+$$('[data-market-filter]').forEach(link => {
+  link.addEventListener('click', () => {
+    const category = link.dataset.marketFilter;
+    categoryButtons.find(button => button.dataset.category === category)?.click();
   });
 });
 
