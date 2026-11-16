@@ -3,49 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Walpakh Marketplace: authentic Kashmiri dry fruits, saffron, pashmina, tea and artisan-made keepsakes." />
-  <meta name="theme-color" content="#073d2b" />
+  <meta name="theme-color" content="#0b3b2c" />
+  <meta name="description" content="Shop authentic Kashmiri dry fruits, saffron, apparel and artisan-made gifts at Walpakh Marketplace." />
   <title>Walpakh Marketplace | Authentic Kashmir</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Italianno&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/v2-styles.css" />
+  <link rel="stylesheet" href="css/marketplace.css" />
 </head>
-<body class="shop-page marketplace-page">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="shop-utility"><div class="container shop-utility__inner"><span><i class="fa-solid fa-leaf"></i> 100% Authentic Kashmiri Products</span><span><i class="fa-solid fa-shield-heart"></i> Secure Payments</span><span><i class="fa-solid fa-truck-fast"></i> Pan-India Delivery</span><span><i class="fa-solid fa-hands-holding-heart"></i> Support Local Artisans</span></div></div>
-  <header class="site-header site-header--shop" id="top">
-    <div class="container nav-wrap nav-wrap--shop marketplace-head">
-      <a class="brand brand--image" href="index.html" aria-label="Walpakh home"><img class="brand-logo" src="assets/images/walpakh-logo.jpg" alt="Walpakh Marketplace" /></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-      <div class="shop-search marketplace-search"><label class="sr-only" for="shop-search">Search products</label><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="shop-search" type="search" placeholder="Search for saffron, dry fruits, shawls, gifts..." /><button type="button" aria-label="Search"><i class="fa-solid fa-arrow-right"></i></button></div>
-      <div class="shop-header-actions"><button class="icon-btn marketplace-account" aria-label="Account"><i class="fa-regular fa-user"></i></button><button class="icon-btn" id="wishlist-toggle" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button><button class="icon-btn cart-button" id="cart-button" aria-label="Shopping cart"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count">0</span></button></div>
+<body class="marketplace-body">
+  <a class="market-skip" href="#bestsellers">Skip to products</a>
+
+  <div class="market-topbar">
+    <div class="market-wrap market-topbar__inner">
+      <span><i class="fa-solid fa-leaf"></i> 100% Authentic Kashmiri Products</span>
+      <span><i class="fa-solid fa-shield-heart"></i> Secure Payments</span>
+      <span><i class="fa-solid fa-truck-fast"></i> Pan-India Delivery</span>
+      <span><i class="fa-solid fa-hands-holding-heart"></i> Support Local Artisans</span>
     </div>
-    <nav id="primary-nav" class="primary-nav marketplace-nav" aria-label="Marketplace navigation"><button class="marketplace-nav__close" type="button" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button><a class="active" href="shop.html">Home</a><a href="#shop-products" data-market-filter="dry-fruits">Dry Fruits</a><a href="#shop-products" data-market-filter="kahwa">Kashmiri Foods &amp; Beverages</a><a href="#shop-collections">Pashmina &amp; Apparel</a><a href="#shop-collections">Handicrafts</a><a href="#gift-hampers">Gift Hampers</a><a href="index.html#why-us">About Us</a></nav>
+  </div>
+
+  <header class="market-header" id="top">
+    <div class="market-wrap market-mainhead">
+      <button class="market-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="market-nav"><i class="fa-solid fa-bars"></i></button>
+      <a class="market-brand" href="index.html" aria-label="Walpakh home">
+        <img src="assets/images/walpakh-logo.jpg" alt="Walpakh" />
+        <span>Marketplace <small>Authentic Kashmir &middot; Local to global</small></span>
+      </a>
+      <form class="market-search" id="market-search" role="search">
+        <label class="market-sr-only" for="market-search-input">Search products</label>
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input id="market-search-input" type="search" placeholder="Search for saffron, dry fruits, shawls, gifts..." />
+        <button type="submit" aria-label="Search"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+      <div class="market-actions">
+        <button class="market-icon-button market-account" type="button" data-info="Our story" aria-label="About Walpakh"><i class="fa-regular fa-user"></i></button>
+        <button class="market-icon-button" id="market-wishlist-toggle" type="button" aria-label="View wishlist"><i class="fa-regular fa-heart"></i><span id="market-wish-count" class="market-count is-hidden">0</span></button>
+        <button class="market-icon-button" id="market-cart-toggle" type="button" aria-label="Open shopping cart"><i class="fa-solid fa-cart-shopping"></i><span id="market-cart-count" class="market-count">0</span></button>
+      </div>
+    </div>
+    <nav class="market-nav market-wrap" id="market-nav" aria-label="Marketplace navigation">
+      <button class="market-nav__close" type="button" aria-label="Close navigation"><i class="fa-solid fa-xmark"></i></button>
+      <a class="active" href="shop.html">Home</a>
+      <a href="#bestsellers" data-filter="Dry Fruits">Dry Fruits</a>
+      <a href="#bestsellers" data-filter="Foods">Kashmiri Foods &amp; Beverages</a>
+      <a href="#bestsellers" data-filter="Apparel">Pashmina &amp; Apparel</a>
+      <a href="#bestsellers" data-filter="Handicrafts">Handicrafts</a>
+      <a href="#gift-hampers" data-filter="Gifts">Gift Hampers</a>
+      <a href="index.html#why-us">About Us</a>
+    </nav>
   </header>
-  <main id="main">
-    <section class="market-hero">
-      <div class="container market-hero__inner"><div class="market-hero__copy reveal"><p class="market-overline">Authentic Kashmiri Products</p><h1>Bring Home<br>The Soul of <em>Kashmir</em></h1><p>Handpicked dry fruits, saffron, handcrafted treasures and more &mdash; directly from Kashmiri artisans.</p><a class="market-gold-button" href="#shop-products">Shop Now <i class="fa-solid fa-arrow-right"></i></a></div><div class="market-hero__seal" aria-hidden="true"><span>Kashmir</span><strong>Beyond</strong><span>Expectations</span><i class="fa-solid fa-seedling"></i></div></div>
-      <div class="container market-hero__promises"><span><i class="fa-solid fa-leaf"></i><b>100% Authentic</b><small>Kashmiri Products</small></span><span><i class="fa-solid fa-people-group"></i><b>Direct from</b><small>Local Artisans</small></span><span><i class="fa-solid fa-truck-fast"></i><b>Pan-India</b><small>Delivery</small></span><span><i class="fa-solid fa-shield-heart"></i><b>Secure</b><small>Payments</small></span></div>
+
+  <main>
+    <section class="market-hero" aria-label="Bring home the soul of Kashmir">
+      <div class="market-wrap market-hero__inner">
+        <p class="market-eyebrow">Authentic Kashmiri Products</p>
+        <h1>Bring Home<br>The Soul of<br><em>Kashmir</em></h1>
+        <p class="market-hero__description">Handpicked dry fruits, saffron, handicrafts, pashmina and more &mdash; directly from Kashmiri artisans.</p>
+        <a class="market-gold-button" href="#bestsellers" data-filter="all">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="market-hero__promises" aria-label="Marketplace promises">
+          <span><i class="fa-solid fa-leaf"></i>100% Authentic <small>Kashmiri Products</small></span>
+          <span><i class="fa-solid fa-people-group"></i>Direct from <small>Local Artisans</small></span>
+          <span><i class="fa-solid fa-truck-fast"></i>Pan-India <small>Delivery</small></span>
+          <span><i class="fa-solid fa-shield-heart"></i>Secure <small>Payments</small></span>
+        </div>
+      </div>
+      <p class="market-hero__script" aria-hidden="true">Kashmir<br>Beyond<br>Expectations</p>
     </section>
-    <section class="market-categories" aria-label="Shop by category"><div class="container"><div class="market-category-track" id="shop-categories"><button class="shop-category active" data-category="all"><span class="market-category__image market-category__image--walnut"></span><span>All Products</span></button><button class="shop-category" data-category="walnut"><span class="market-category__image market-category__image--walnut"></span><span>Walnuts</span></button><button class="shop-category" data-category="dry-fruits"><span class="market-category__image market-category__image--almond"></span><span>Dry Fruits</span></button><button class="shop-category" data-category="saffron"><span class="market-category__image market-category__image--saffron"></span><span>Saffron</span></button><button class="shop-category" data-category="kahwa"><span class="market-category__image market-category__image--kahwa"></span><span>Kashmiri Kahwa</span></button><button class="shop-category" data-category="pashmina"><span class="market-category__image market-category__image--pashmina"></span><span>Pashmina Shawls</span></button><button class="shop-category" data-category="pheran"><span class="market-category__image market-category__image--pheran"></span><span>Pherans</span></button><button class="shop-category" data-category="papier"><span class="market-category__image market-category__image--papier"></span><span>Papier M&acirc;ch&eacute;</span></button><button class="shop-category" data-category="gifts"><span class="market-category__image market-category__image--gift"></span><span>Gifting Collection</span></button></div></div></section>
-    <section class="shop-products market-products" id="shop-products"><div class="container"><div class="market-section-heading"><div><p class="market-overline">From the Valley, with care</p><h2>Our Bestsellers</h2><span>Handpicked favourites that carry the warmth of Kashmir.</span></div><button class="shop-view-all" id="clear-shop-filter">View All <i class="fa-solid fa-arrow-right"></i></button></div><div class="product-shell"><button class="product-nav product-nav--prev" aria-label="Previous products"><i class="fa-solid fa-chevron-left"></i></button><div class="product-track" id="product-track">
-      <article class="product-card" data-category="walnut" data-name="Kashmiri Walnuts"><div class="product-card__image"><img src="assets/images/walnut-box.jpg" alt="Kashmiri walnuts in a hand-finished box" /><button class="wish-btn" aria-label="Save Kashmiri Walnuts"><i class="fa-regular fa-heart"></i></button><span class="market-product-tag">Valley harvest</span></div><div class="product-card__body"><p>Handpicked dry fruit</p><h3>Kashmiri Walnuts</h3><div class="rating"><i class="fa-solid fa-star"></i> 4.9 <span>Freshly packed</span></div><button class="add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button></div></article>
-      <article class="product-card" data-category="dry-fruits" data-name="Kashmiri Almonds"><div class="product-card__image"><img src="assets/images/dry-fruits.jpg" alt="Kashmiri almonds and dry fruit selection" /><button class="wish-btn" aria-label="Save Kashmiri Almonds"><i class="fa-regular fa-heart"></i></button><span class="market-product-tag">Natural goodness</span></div><div class="product-card__body"><p>Premium selection</p><h3>Kashmiri Almonds</h3><div class="rating"><i class="fa-solid fa-star"></i> 4.8 <span>Artisan packed</span></div><button class="add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button></div></article>
-      <article class="product-card" data-category="saffron" data-name="Kashmiri Saffron"><div class="product-card__image"><img src="assets/images/saffron.jpg" alt="Kashmiri saffron strands" /><button class="wish-btn" aria-label="Save Kashmiri Saffron"><i class="fa-regular fa-heart"></i></button><span class="market-product-tag">Aromatic treasure</span></div><div class="product-card__body"><p>Pure valley spice</p><h3>Kashmiri Saffron</h3><div class="rating"><i class="fa-solid fa-star"></i> 5.0 <span>Small-batch packed</span></div><button class="add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button></div></article>
-      <article class="product-card" data-category="kahwa" data-name="Kashmiri Kahwa"><div class="product-card__image"><img src="assets/images/kahwa.jpg" alt="Warm Kashmiri kahwa tea" /><button class="wish-btn" aria-label="Save Kashmiri Kahwa"><i class="fa-regular fa-heart"></i></button><span class="market-product-tag">Valley comfort</span></div><div class="product-card__body"><p>Traditional tea blend</p><h3>Kashmiri Kahwa</h3><div class="rating"><i class="fa-solid fa-star"></i> 4.9 <span>Warm &amp; fragrant</span></div><button class="add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button></div></article>
-      <article class="product-card" data-category="pashmina" data-name="Pashmina Shawl"><div class="product-card__image"><img src="assets/images/pashmina.jpg" alt="Soft patterned pashmina shawl" /><button class="wish-btn" aria-label="Save Pashmina Shawl"><i class="fa-regular fa-heart"></i></button><span class="market-product-tag">Handwoven warmth</span></div><div class="product-card__body"><p>Artisan apparel</p><h3>Pashmina Shawl</h3><div class="rating"><i class="fa-solid fa-star"></i> 4.9 <span>Made with care</span></div><button class="add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button></div></article>
-      <article class="product-card" data-category="papier" data-name="Papier Mache Vase"><div class="product-card__image"><img src="assets/images/papier-mache.jpg" alt="Hand-painted papier mache vase" /><button class="wish-btn" aria-label="Save Papier Mache Vase"><i class="fa-regular fa-heart"></i></button><span class="market-product-tag">Made by hand</span></div><div class="product-card__body"><p>Kashmiri craft</p><h3>Papier M&acirc;ch&eacute; Vase</h3><div class="rating"><i class="fa-solid fa-star"></i> 4.8 <span>Unique artwork</span></div><button class="add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button></div></article>
-      <article class="product-card" data-category="pheran" data-name="Kashmiri Pheran"><div class="product-card__image"><img src="assets/images/pheran.jpg" alt="Traditional Kashmiri pheran" /><button class="wish-btn" aria-label="Save Kashmiri Pheran"><i class="fa-regular fa-heart"></i></button><span class="market-product-tag">Winter classic</span></div><div class="product-card__body"><p>Traditional apparel</p><h3>Kashmiri Pheran</h3><div class="rating"><i class="fa-solid fa-star"></i> 4.9 <span>Woven with care</span></div><button class="add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button></div></article>
-      <article class="product-card" data-category="gifts" data-name="Walpakh Gift Hamper"><div class="product-card__image"><img src="assets/images/shop home.png" alt="Walpakh gift hamper with dry fruits and saffron" /><button class="wish-btn" aria-label="Save Walpakh Gift Hamper"><i class="fa-regular fa-heart"></i></button><span class="market-product-tag">Gift-ready</span></div><div class="product-card__body"><p>Curated for gifting</p><h3>Walpakh Gift Hamper</h3><div class="rating"><i class="fa-solid fa-star"></i> 5.0 <span>Made to share</span></div><button class="add-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button></div></article>
-    </div><button class="product-nav product-nav--next" aria-label="Next products"><i class="fa-solid fa-chevron-right"></i></button></div></div></section>
-    <section class="market-hampers" id="gift-hampers"><div class="container market-hampers__inner"><div class="market-hampers__copy"><p class="market-overline">A little bit of Kashmir, beautifully packed</p><h2>Kashmiri Gift Hampers</h2><span>Perfect for every occasion</span></div><div class="market-hampers__occasions"><span><i class="fa-solid fa-gift"></i> Festivals</span><span><i class="fa-solid fa-heart"></i> Weddings</span><span><i class="fa-solid fa-building"></i> Corporate gifting</span><span><i class="fa-solid fa-box-open"></i> Personalised hampers</span></div><a class="market-gold-button" href="#shop-products">Explore Gift Hampers <i class="fa-solid fa-arrow-right"></i></a></div></section>
-    <section class="market-collections" id="shop-collections"><div class="container"><div class="market-section-heading"><div><p class="market-overline">Craft, flavour and warmth</p><h2>Shop by Collection</h2></div><a class="shop-view-all" href="#shop-products">View All <i class="fa-solid fa-arrow-right"></i></a></div><div class="market-collection-grid"><a class="market-collection-card market-collection-card--dry" href="#shop-products"><span>Nature's goodness</span><h3>Dry Fruits</h3><b>Shop Now <i class="fa-solid fa-arrow-right"></i></b></a><a class="market-collection-card market-collection-card--food" href="#shop-products"><span>Valley flavours</span><h3>Kashmiri Foods<br>&amp; Beverages</h3><b>Shop Now <i class="fa-solid fa-arrow-right"></i></b></a><a class="market-collection-card market-collection-card--apparel" href="#shop-products"><span>Elegance from the valley</span><h3>Pashmina &amp;<br>Apparel</h3><b>Shop Now <i class="fa-solid fa-arrow-right"></i></b></a><a class="market-collection-card market-collection-card--craft" href="#shop-products"><span>Art that tells a story</span><h3>Handicrafts</h3><b>Shop Now <i class="fa-solid fa-arrow-right"></i></b></a></div></div></section>
-    <section class="shop-benefits market-benefits"><div class="container market-benefits__grid"><article><i class="fa-solid fa-certificate"></i><div><strong>Authentic &amp; Verified</strong><span>Genuine Kashmiri products</span></div></article><article><i class="fa-solid fa-lock"></i><div><strong>Secure Payments</strong><span>Reliable payment options</span></div></article><article><i class="fa-solid fa-truck-fast"></i><div><strong>Pan-India Delivery</strong><span>Shipped with care</span></div></article><article><i class="fa-solid fa-arrow-rotate-left"></i><div><strong>Easy Returns</strong><span>Simple 7-day support</span></div></article><article><i class="fa-solid fa-hands-holding-heart"></i><div><strong>Support Artisans</strong><span>Empowering local makers</span></div></article></div></section>
-    <section class="newsletter newsletter--shop market-newsletter"><div class="container newsletter__grid"><div><p class="market-overline"><i class="fa-regular fa-envelope"></i> From Kashmir to your inbox</p><h2>Get Exclusive Offers &amp; New Arrivals</h2><p>Be first to hear about new products, seasonal hampers and small-batch treasures.</p></div><form id="newsletter-form"><label class="sr-only" for="newsletter-email">Email address</label><input id="newsletter-email" type="email" placeholder="Enter your email address" required /><button class="market-gold-button" type="submit">Subscribe</button></form><div class="socials"><span>Follow WALPAKH</span><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></div></div></section>
+
+    <section class="market-categories market-wrap" aria-label="Shop by category">
+      <div class="market-category-row" id="market-category-first"></div>
+      <div class="market-category-row market-category-row--second" id="market-category-second"></div>
+    </section>
+
+    <section class="market-section market-wrap" id="bestsellers">
+      <div class="market-section-heading">
+        <div><h2 id="market-product-heading">Our Bestsellers</h2><p id="market-product-subtitle">Handpicked favourites from the Valley of Kashmir</p></div>
+        <button class="market-text-link" id="market-view-all" type="button">View All <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="market-product-grid" id="market-products" aria-live="polite"></div>
+    </section>
+
+    <section class="market-gift-banner" id="gift-hampers">
+      <img src="assets/images/market/product-15.webp" alt="Carved walnut wood hamper filled with nuts and gifts" loading="lazy" />
+      <div class="market-gift-banner__content">
+        <p class="market-eyebrow">Thoughtfully curated for your people</p>
+        <h2>Kashmiri Gift Hampers</h2>
+        <p>Perfect for Every Occasion</p>
+        <div class="market-occasions"><span><i class="fa-solid fa-gift"></i> Festivals</span><span><i class="fa-solid fa-heart"></i> Weddings</span><span><i class="fa-solid fa-building"></i> Corporate Gifting</span><span><i class="fa-solid fa-box-open"></i> Personalised Hampers</span></div>
+        <a class="market-gold-button" href="#bestsellers" data-filter="Gifts">Explore Gift Hampers <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <section class="market-section market-collections market-wrap" id="collections">
+      <div class="market-section-heading"><h2>Shop by Collection</h2><button class="market-text-link" type="button" data-show-all>View All <i class="fa-solid fa-arrow-right"></i></button></div>
+      <div class="market-collection-grid">
+        <a class="market-collection" href="#bestsellers" data-filter="Dry Fruits"><img src="assets/images/market/product-5.webp" alt="Premium Kashmiri dry fruits" loading="lazy" /><span><b>Dry Fruits</b><small>Nature's Goodness</small><em>Shop Now <i class="fa-solid fa-arrow-right"></i></em></span></a>
+        <a class="market-collection" href="#bestsellers" data-filter="Foods"><img src="assets/images/market/product-7.webp" alt="Golden Kashmiri kahwa" loading="lazy" /><span><b>Kashmiri Foods<br>&amp; Beverages</b><small>A Taste of the Valley</small><em>Shop Now <i class="fa-solid fa-arrow-right"></i></em></span></a>
+        <a class="market-collection" href="#bestsellers" data-filter="Apparel"><img src="assets/images/market/product-11.webp" alt="Embroidered Kashmiri pheran" loading="lazy" /><span><b>Pashmina &amp; Apparel</b><small>Elegance from the Valley</small><em>Shop Now <i class="fa-solid fa-arrow-right"></i></em></span></a>
+        <a class="market-collection" href="#bestsellers" data-filter="Handicrafts"><img src="assets/images/market/product-13.webp" alt="Hand-painted papier mache vase" loading="lazy" /><span><b>Handicrafts</b><small>Art That Tells a Story</small><em>Shop Now <i class="fa-solid fa-arrow-right"></i></em></span></a>
+      </div>
+    </section>
+
+    <section class="market-benefits"><div class="market-wrap market-benefits__grid">
+      <article><i class="fa-solid fa-certificate"></i><span><b>Authentic &amp; Verified</b><small>100% genuine Kashmiri products</small></span></article>
+      <article><i class="fa-solid fa-shield-halved"></i><span><b>Secure Payments</b><small>Reliable payment options</small></span></article>
+      <article><i class="fa-solid fa-truck-fast"></i><span><b>Pan-India Delivery</b><small>Shipped with care</small></span></article>
+      <article><i class="fa-solid fa-arrow-rotate-left"></i><span><b>Easy Returns</b><small>Hassle-free support</small></span></article>
+      <article><i class="fa-solid fa-hands-holding-heart"></i><span><b>Support Local Artisans</b><small>Empowering local makers</small></span></article>
+    </div></section>
+
+    <section class="market-newsletter"><div class="market-wrap market-newsletter__inner">
+      <i class="fa-regular fa-envelope-open" aria-hidden="true"></i>
+      <div><h2>Get Exclusive Offers &amp; New Arrivals</h2><p>Subscribe for new products, special offers and stories from Kashmir.</p></div>
+      <form id="market-newsletter-form"><label class="market-sr-only" for="market-newsletter-email">Your email address</label><input id="market-newsletter-email" type="email" placeholder="Enter your email address" required /><button type="submit">Subscribe</button></form>
+    </div></section>
   </main>
-  <footer class="footer market-footer" id="footer"><div class="container footer__grid"><div class="footer__brand"><a class="brand brand--footer brand--image" href="index.html"><img class="brand-logo brand-logo--footer" src="assets/images/walpakh-logo.jpg" alt="Walpakh" /></a><p>More than a marketplace &mdash; a journey to Kashmir. Supporting local artisans and bringing authentic Kashmiri products to your door.</p></div><div><h3>Quick Links</h3><a href="index.html">Home</a><a href="index.html#about">About Us</a><a href="index.html#why-us">Our Story</a><a href="index.html#footer">Contact Us</a></div><div><h3>Shop</h3><a href="#shop-products">Dry Fruits</a><a href="#shop-products">Kashmiri Foods &amp; Beverages</a><a href="#shop-collections">Pashmina &amp; Apparel</a><a href="#shop-collections">Handicrafts</a><a href="#gift-hampers">Gift Hampers</a></div><div><h3>Customer Support</h3><a href="#">FAQs</a><a href="#">Shipping Policy</a><a href="#">Returns &amp; Refunds</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a></div><div><h3>Contact Us</h3><a href="tel:+917006512345"><i class="fa-solid fa-phone"></i> +91 70065 12345</a><a href="mailto:info@walpakh.com"><i class="fa-regular fa-envelope"></i> info@walpakh.com</a><span><i class="fa-solid fa-location-dot"></i> Srinagar, J&amp;K, India</span><span><i class="fa-regular fa-clock"></i> Mon - Sun | 9 AM - 7 PM</span></div></div><div class="container footer__bottom"><span>&copy; 2026 Walpakh Marketplace. All rights reserved.</span><div><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Returns Policy</a></div></div></footer>
-  <div class="mini-cart" id="mini-cart" aria-hidden="true"><div class="mini-cart__head"><strong>Your Cart</strong><button id="mini-cart-close" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button></div><div class="mini-cart__body" id="mini-cart-items"><p>Your cart is empty.</p></div><div class="mini-cart__foot"><span>Front-end demo cart &mdash; checkout will be connected to the backend later.</span><button class="btn btn--primary btn--block" type="button">Proceed to Checkout</button></div></div><div class="cart-backdrop" id="cart-backdrop"></div><button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button><div class="toast" role="status" aria-live="polite"></div><script src="js/v2-script.js"></script>
+
+  <footer class="market-footer" id="about"><div class="market-wrap market-footer__grid">
+    <div class="market-footer__brand"><a class="market-brand market-brand--footer" href="index.html"><img src="assets/images/walpakh-logo.jpg" alt="Walpakh" /><span>Marketplace <small>Authentic Kashmir &middot; Local to global</small></span></a><p>More than a marketplace &mdash; a journey to Kashmir. Supporting local artisans and sharing authentic Kashmiri products with the world.</p><div class="market-socials"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></div></div>
+    <div><h3>Quick Links</h3><a href="index.html">Home</a><a href="index.html#why-us">About Us</a><a href="index.html#footer">Contact Us</a></div>
+    <div><h3>Shop</h3><a href="#bestsellers" data-filter="Dry Fruits">Dry Fruits</a><a href="#bestsellers" data-filter="Foods">Foods &amp; Beverages</a><a href="#bestsellers" data-filter="Apparel">Pashmina &amp; Apparel</a><a href="#bestsellers" data-filter="Handicrafts">Handicrafts</a><a href="#gift-hampers" data-filter="Gifts">Gift Hampers</a></div>
+    <div><h3>Customer Support</h3><a href="#" data-info="FAQs">FAQs</a><a href="#" data-info="Shipping Policy">Shipping Policy</a><a href="#" data-info="Returns & Refunds">Returns &amp; Refunds</a><a href="#" data-info="Terms & Conditions">Terms &amp; Conditions</a><a href="#" data-info="Privacy Policy">Privacy Policy</a></div>
+    <div><h3>Contact Us</h3><span><i class="fa-solid fa-phone"></i> +91 70065 12345</span><span><i class="fa-regular fa-envelope"></i> info@walpakh.com</span><span><i class="fa-solid fa-location-dot"></i> Srinagar, J&amp;K, India</span><span><i class="fa-regular fa-clock"></i> Mon - Sun | 9 AM - 7 PM</span></div>
+  </div><div class="market-wrap market-copyright"><span>&copy; 2026 Walpakh Marketplace. All rights reserved.</span><span>Kashmir Beyond Expectations</span></div></footer>
+
+  <div class="market-shade" id="market-shade"></div>
+  <aside class="market-drawer" id="market-drawer" role="dialog" aria-modal="true" aria-labelledby="market-drawer-title" aria-hidden="true" inert><div class="market-drawer__head"><h2 id="market-drawer-title">Your cart</h2><button id="market-drawer-close" type="button" aria-label="Close dialog"><i class="fa-solid fa-xmark"></i></button></div><div id="market-drawer-body"></div></aside>
+  <div class="market-toast" id="market-toast" role="status" aria-live="polite"></div>
+  <script src="js/marketplace.js"></script>
 </body>
 </html>
