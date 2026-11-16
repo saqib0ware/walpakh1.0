@@ -5393,6 +5393,27 @@ button {
   display: block;
 }
 
+.membership-details-link {
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 38px;
+  margin: 19px auto 0;
+  padding: 9px 18px;
+  border: 1px solid #c9a253;
+  border-radius: 999px;
+  background: #fffdf7;
+  color: #174a35;
+  font-size: 10px;
+  font-weight: 800;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.membership-details-link:hover { background: #e9c46b; color: #173c2d; transform: translateY(-2px); }
+
 .membership-trust strong {
   font-size: 11px;
 }
