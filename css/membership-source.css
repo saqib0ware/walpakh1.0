@@ -73,3 +73,11 @@
     scroll-snap-stop: always;
   }
 }
+
+/* Override the homepage component: membership benefits have no panel background. */
+.membership-source ul.membership-benefits {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}

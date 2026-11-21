@@ -7451,6 +7451,35 @@ button {
   text-transform: uppercase;
 }
 
+/* Combined Adventure & Offbeat collection */
+.adventure-offbeat {
+  scroll-margin-top: 92px;
+  background: linear-gradient(180deg, #edf4ef 0%, #f8f7ee 100%);
+  border-top: 1px solid rgba(22, 83, 53, .12);
+}
+
+.adventure-offbeat .section-heading {
+  max-width: 780px;
+}
+
+.adventure-offbeat .section-heading .kicker {
+  color: #0d6a49;
+}
+
+.adventure-offbeat .section-heading h2 {
+  color: #0a4231;
+}
+
+.adventure-offbeat__grid {
+  margin-top: 27px;
+}
+
+@media (max-width: 760px) {
+  .adventure-offbeat {
+    scroll-margin-top: 72px;
+  }
+}
+
 @media (max-width: 900px) {
   .adventure-assurance .container {
     grid-template-columns: 1fr 1fr;
